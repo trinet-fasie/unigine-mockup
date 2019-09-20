@@ -1,0 +1,27 @@
+<base_material version="2.8.0.0" name="post_filter_wet">
+		
+	<state name="mask" type="switch" items="red,green,blue,alpha" defines="items" group="Options" tooltip="Mask Mode">0</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/filter_wet.frag"/>
+	
+	<!-- textures -->
+	<texture type="screen_color"/>
+	<texture type="opacity_depth"/>
+	<texture type="gbuffer_normal"/>
+	<texture type="auxiliary"/>
+	<texture name="normal" format="signed" group="Base" tooltip="Normal texture, two components">core/textures/post_filter_wet_normal.dds</texture>
+	<texture name="reflection" title="Static" group="Reflection" tooltip="Static reflection texture">core/textures/common/environment_default.dds</texture>
+	
+	<!-- parameters -->
+	<parameter name="normal_transform" type="expression" widget="uv">vec4(1,1,sin(time*0)*0+time*0.1*sin(0),cos(time*0)*0+time*0.1*cos(0))</parameter>
+	<parameter name="normal_threshold" type="slider" min="0.0" max="2.0" flags="max_expand">2.0</parameter>
+	<parameter name="reflection_distance" type="slider" min="0.0" max="1000.0">100.0</parameter>
+	<parameter name="reflection_normal" type="slider" min="0.0" max="1.0" flags="max_expand">0.12</parameter>
+	<parameter name="reflection_color" type="color" >1.0 1.0 1.0 1.0</parameter>
+	<parameter name="reflection_scale" type="slider" min="0.0" max="4.0" flags="max_expand">1.0</parameter>
+	<parameter name="fresnel_bias" type="slider" min="0.0" max="1.0">0.03</parameter>
+	<parameter name="fresnel_power" type="slider" min="0.0" max="1.0" flags="max_expand">10.0</parameter>
+	<parameter name="refraction_normal" type="slider" min="0.0" max="0.1" flags="max_expand">0.01</parameter>
+	
+</base_material>

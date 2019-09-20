@@ -1,0 +1,9 @@
+<base_material version="2.8.0.0" name="render_filter_vblur" hidden="1">
+	
+	<shader pass="post"
+		defines="VBLUR"
+		vertex="core/shaders/default/render/vertex_filter_blur.shader"
+		fragment="core/shaders/default/render/fragment_filter_blur.shader"/>
+	
+	<texture name="color" pass="post" type="procedural"/>
+</base_material>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.8.0.0" name="vr_player_spawner" parent_name="node_base" manual="1">
+	<group name="Vive">
+		<parameter name="vive_basestation_0" title="Vive First Basestation" type="node">0</parameter>
+		<parameter name="vive_basestation_1" title="Vive Second Basestation" type="node">0</parameter>
+		<parameter name="vive_controller_0" title="Vive Left Controller" type="node">0</parameter>
+		<parameter name="vive_controller_1" title="Vive Right Controller" type="node">0</parameter>
+		<parameter name="vive_teleport_marker" title="Vive Teleport Marker" type="node">0</parameter>
+		<parameter name="vive_teleport_marker_mat" title="Vive Teleport Marker Material" type="material">0</parameter>
+		<parameter name="vive_obstacles" title="Vive Obstacles" type="node">0</parameter>
+		<parameter name="vive_hand_force_multiplier" title="Vive Hand Force Multiplier" type="float">1.3</parameter>
+		<parameter name="vive_controller_buffer_count" title="Vive Controller&apos;s Buffer" tooltip="Used in Linear Regression. Big value removes noise, but looks unnatural" type="int">4</parameter>
+	</group>
+	<group name="Oculus">
+		<parameter name="oculus_warning_message" title="Oculus Warning Message" type="node">0</parameter>
+		<parameter name="oculus_success_message" title="Oculus Success Message" type="node">0</parameter>
+		<parameter name="oculus_controller_0" title="Oculus Left Controller" type="node">0</parameter>
+		<parameter name="oculus_controller_1" title="Oculus Right Controller" type="node">0</parameter>
+		<parameter name="oculus_teleport_marker" title="Oculus Teleport Marker" type="node">0</parameter>
+		<parameter name="oculus_teleport_marker_mat" title="Oculus Teleport Marker Material" type="material">0</parameter>
+		<parameter name="oculus_obstacles" title="Oculus Obstacles" type="node">0</parameter>
+		<parameter name="oculus_hand_force_multiplier" title="Oculus Hand Force Multiplier" type="float">1.3</parameter>
+		<parameter name="oculus_controller_buffer_count" title="Oculus Controller&apos;s Buffer" tooltip="Used in Linear Regression. Big value removes noise, but looks unnatural" type="int">4</parameter>
+	</group>
+	<group name="PC">
+		<parameter name="move_speed" title="PC Move Speed" type="float">2.5</parameter>
+		<parameter name="acceleration" title="PC Acceleration" type="float">8</parameter>
+		<parameter name="damping" title="PC Damping" type="float">8</parameter>
+		<parameter name="hand_length" title="PC Hand Length" type="float">1.3</parameter>
+		<parameter name="throw_force" title="PC Throw Force" type="float">7</parameter>
+	</group>
+</property>

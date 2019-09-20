@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>1c613bbca0afd78c1ef165fc8e419352c5903d9e</guid>
+	<type>property</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="1c613bbca0afd78c1ef165fc8e419352c5903d9e" name="node_base.prop" link="0"/>
+	</runtimes>
+</asset>

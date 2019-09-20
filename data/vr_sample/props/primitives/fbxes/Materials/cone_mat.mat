@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="cone_mat" guid="7df1af38c11ed8dc87667f78d03c499f65075002" base_material="mesh_base">
+	<parameter name="albedo_color" use_expression="0">0.5 0.5 0.5 1</parameter>
+</material>

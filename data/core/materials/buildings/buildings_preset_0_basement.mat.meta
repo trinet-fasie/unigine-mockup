@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>afd4ba0f443eec40ef93c5ed4a1c1cf70e6b4df6</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="afd4ba0f443eec40ef93c5ed4a1c1cf70e6b4df6" name="buildings_preset_0_basement" link="0"/>
+	</runtimes>
+</asset>

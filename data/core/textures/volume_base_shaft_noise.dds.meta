@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>471de804625aee18f9608d4147ae493c73c08fd3</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="471de804625aee18f9608d4147ae493c73c08fd3" name="volume_base_shaft_noise.dds" link="0"/>
+	</runtimes>
+</asset>

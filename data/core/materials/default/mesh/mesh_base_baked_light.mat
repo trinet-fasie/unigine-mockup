@@ -1,0 +1,12 @@
+<material version="2.8.0.0" name="mesh_base_baked_light" base_material="mesh_base" manual="1" hidden="1">
+	<options two_sided="1"/>
+	<parameter name="albedo_color">1 0 0 1</parameter>
+	
+	<state name="deferred">0</state>
+	<state name="emission">1</state>
+	<parameter name="emission_color">1 1 1 1</parameter>
+	
+	<state name="geometry_inflation">1</state>
+	<parameter name="vertex_balloon">1.0</parameter>
+	
+</material>

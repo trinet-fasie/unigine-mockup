@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="table_mat" guid="0e59fa203450b20e59b1398494c3797fc0a67a7e" base_material="mesh_base">
+	<texture name="albedo" wrap="repeat" anisotropy="0">guid://baa9168a4de1219f88a79a01756e216a4b950c98</texture>
+	<texture name="shading" wrap="repeat" anisotropy="0">guid://5de23d3ed7b926263e0b69ebf917ca467a409400</texture>
+	<texture name="normal" wrap="repeat" anisotropy="0">guid://d2c7bb1fd61f559a3e6dcd64908394553b7e7e29</texture>
+	<parameter name="metalness" use_expression="0">1</parameter>
+</material>

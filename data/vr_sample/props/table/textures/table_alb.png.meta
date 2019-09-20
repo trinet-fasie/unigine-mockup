@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>bcdfed95cfcf3b84a1d7fdf371e23d3e213658ed</guid>
+	<type>texture</type>
+	<hash>ee3ef312</hash>
+	<parameters>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="int" name="width">0</parameter>
+		<parameter type="int" name="height">0</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="preset_name">albedo (rgb)</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="baa9168a4de1219f88a79a01756e216a4b950c98" name="table_alb.dds" link="1"/>
+		<runtime id="bcdfed95cfcf3b84a1d7fdf371e23d3e213658ed" name="table_alb.png" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,26 @@
+<base_material version="2.8.0.0" name="render_ssrtgi_upscaling" hidden="1">
+	
+	<state name="ao"					defines="name"/>
+	<state name="gi"					defines="name"/>
+	<state name="bent_normal"			defines="name"/>
+	
+	<state name="resolution"			defines="name" type="int"/>
+	
+	<state name="ao_out_num"			defines="name" type="int"/>
+	<state name="gi_out_num"			defines="name" type="int"/>
+	<state name="bent_normal_out_num"	defines="name" type="int"/>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/ssrtgi_upscaling.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="linear_depth"/>
+	<texture unit="1" type="normal_unpack"/>
+	<texture unit="2" type="screen_color_old_reprojection"/>
+	<texture unit="3" name="noise"	filter="point">core/textures/common/noise.dds</texture>
+	<texture unit="4" ao="1"			type="ssao"/>
+	<texture unit="5" gi="1"			type="ssgi"/>
+	<texture unit="6" bent_normal="1"	type="bent_normal"/>
+	
+</base_material>

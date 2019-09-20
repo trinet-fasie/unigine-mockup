@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.8.0.0" name="player_oculus" parent_name="vr_player" manual="1">
+	<parameter name="hand_force_multiplier" title="Hand Force Multiplier" type="float">1.3</parameter>
+	<parameter name="warning_message" title="Warning Message" type="node">0</parameter>
+	<parameter name="success_message" title="Success Message" type="node">0</parameter>
+	<parameter name="controller_0" title="Left Controller" type="node">0</parameter>
+	<parameter name="controller_1" title="Right Controller" type="node">0</parameter>
+	<parameter name="teleport_marker" title="Teleport Marker" type="node">0</parameter>
+	<parameter name="teleport_marker_mat" title="Teleport Marker Material" type="material">0</parameter>
+	<parameter name="obstacles" title="VR Obstacles" type="node">0</parameter>
+	<parameter name="controller_buffer_count" title="Controller&apos;s Buffer" tooltip="Used in Linear Regression. Big value removes noise, but looks unnatural" type="int">4</parameter>
+</property>

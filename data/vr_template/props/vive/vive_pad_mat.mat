@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="vive_pad_mat" guid="ed7107044398b39d2fe07e2cbbdf06935f850a1a" base_material="mesh_base">
+	<state name="ao_map">1</state>
+	<state name="emission">1</state>
+	<texture name="albedo" wrap="repeat" anisotropy="0">guid://338f711aa68f61b950073d2c7f2b8d2110d57b00</texture>
+	<texture name="shading" wrap="repeat" anisotropy="0">guid://5219d6ddb5dbd1520e843a369ad2b64326bb24e2</texture>
+	<texture name="ambient_occlusion" wrap="repeat" anisotropy="0">guid://994919219642f5265465eb780a7ed09f2896b23c</texture>
+	<texture name="emission" wrap="repeat" anisotropy="0">guid://f2e5e336966d2649dfe98661117426f8c3b0543b</texture>
+	<parameter name="roughness" use_expression="0">0.5</parameter>
+</material>

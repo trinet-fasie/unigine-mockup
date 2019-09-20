@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>9f2f4594005da4e941a5d275268a8ebdea663b79</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="9f2f4594005da4e941a5d275268a8ebdea663b79" name="mie.tga" link="0"/>
+	</runtimes>
+</asset>

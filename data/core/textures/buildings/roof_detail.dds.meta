@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>e4d299078df70a69aaadd12d2f969ba2c5250f8f</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="e4d299078df70a69aaadd12d2f969ba2c5250f8f" name="roof_detail.dds" link="0"/>
+	</runtimes>
+</asset>

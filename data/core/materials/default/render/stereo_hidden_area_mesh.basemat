@@ -1,0 +1,3 @@
+<base_material version="2.8.0.0" name="stereo_hidden_area_mesh" hidden="1">
+	<shader pass="post" vertex="core/shaders/stereo_hidden_area/stereo_hidden_area.vert"/>
+</base_material>

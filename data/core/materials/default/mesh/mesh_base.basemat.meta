@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>401e90ccd85f4f2bb97c19ab9e1351325c4012eb</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="401e90ccd85f4f2bb97c19ab9e1351325c4012eb" name="mesh_base.basemat" link="0"/>
+	</runtimes>
+</asset>

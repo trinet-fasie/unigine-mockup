@@ -1,0 +1,168 @@
+<base_material version="2.8.0.0" name="particles_base" editable="0">
+		
+	<!-- blending -->
+	<blend src="one" dest="one"/>
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" cast_world_shadow="0"/>
+	<options transparent="2"/>
+	<state name="dynamic" internal="1">0</state>
+	
+	<!-- states -->
+	<state name="ambient_light" internal="1">1</state>
+	<state name="refraction_background_incorrect" internal="1">0</state>
+	
+	<state name="deferred" title="Deferred Buffers" group="Default" tooltip="&lt;p&gt;Enable rendering of the material during the deferred pass.&lt;/p&gt;">0</state>
+	
+	
+	<group name="Options">
+		<state name="auxiliary"		tooltip="&lt;p&gt;Enable rendering of the material during the auxiliary pass.&lt;/p&gt;">0</state>
+		<state name="refraction"	tooltip="&lt;p&gt;Enable rendering of the material during the refraction pass.&lt;/p&gt;">0</state>
+		
+		<state name="animation"	defines="name"										tooltip="Procedural animation of wind.">0</state>
+		<state name="volume"	defines="name"			title="Soft Interaction"	tooltip="&lt;p&gt;Soft depth interaction.&lt;/p&gt;&lt;p&gt;Provides a proper interaction of volumetric particles with other objects.&lt;/p&gt;">1</state>
+		<state name="alpha"		defines=",ALPHA_FADE"	title="Alpha Fade"			tooltip="Fade alpha component only.">1</state>
+		
+		<state name="disable_render_in_underwater"	defines=",DISABLE_RENDER_IN_UNDERWATER"	title="Disable Underwater Rendering" tooltip="Disable underwater rendering of particles.">0</state>
+		<state name="use_voxel_probe" ambient="1" defines="name">0</state>
+
+		<state name="transparent_blur"		transparent="2"							tooltip="&lt;p&gt;Enable rendering of transparent blur effect.&lt;/p&gt;&lt;p&gt;This effect makes it possible to create transparent matte objects (e.g. matte glass).&lt;/p&gt;"/>
+
+	</group>
+	
+	<group name="Light Passes">
+		<state name="ambient"		title="Ambient"		tooltip="Ambient light rendering">1</state>
+		<state name="light_omni"	title="Light Omni"	tooltip="Light omni rendering">0</state>
+		<state name="light_proj"	title="Light Proj"	tooltip="Light proj rendering">0</state>
+		<state name="light_world"	title="Light World"	tooltip="Light world rendering">1</state>
+	</group>
+	
+	<group name="Shadows">
+		<state name="shadow"						defines="DISABLE_OBJECT_SHADOW,"		title="Receive Shadows"			tooltip="&lt;p&gt;Receive shadows from omni, projected or cubemap (environment/voxel probe) light sources.&lt;/p&gt;">0</state>
+		<state name="world_shadow"	light_world="1"	defines="DISABLE_OBJECT_WORLD_SHADOW,"	title="Receive World Shadows"	tooltip="&lt;p&gt;Receive shadows from world light sources.&lt;/p&gt;">0</state>
+		
+		<state name="lerp_cascades"			title="Lerp Cascades"	defines=",USE_LERP_CASCADES">0</state>
+		<state name="shadow_filter_mode"	title="Filter Mode"		defines="name_items"		items="none,low,medium,high,ultra"	tooltip="&lt;p&gt;Filtering mode to be used for shadows from all light sources cast on the material.&lt;/p&gt;&lt;p&gt;This mode determines the quality of soft shadows reducing the stair-step effect.&lt;/p&gt;&lt;p&gt;When disabled no filtering is performed, the stair-step effect is clearly seen at the edges of shadows.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Higher&lt;/em&gt; quality produces &lt;em&gt;smoother&lt;/em&gt; shadow edges.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;: &lt;em&gt;this parameter is not affected by global shadow settings defined via &lt;b&gt;Settings -> Render -> Shadows&lt;/b&gt;.&lt;/em&gt;&lt;/p&gt;">0</state>
+		<state name="shadow_penumbra_mode"	title="Penumbra Mode"	defines="name_items"		items="none,low,medium,high,ultra"	tooltip="&lt;p&gt;Quality mode to be used for rendering penumbra from all light sources cast on the material.&lt;/p&gt;&lt;p&gt;This mode enables simulation of real-world shadows by keeping sharp contact shadows closer to the base and softening the farther the shadow stretches away.&lt;/p&gt;&lt;p&gt;When disabled shadow edges are crisp and sharp (no shadow softness at all).&lt;/p&gt;&lt;p&gt;&lt;em&gt;Higher&lt;/em&gt; quality produces &lt;em&gt;softer&lt;/em&gt; shadows.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;: &lt;em&gt;this parameter is not affected by global shadow settings defined via &lt;b&gt;Settings -> Render -> Shadows&lt;/b&gt;.&lt;/em&gt;&lt;/p&gt;">0</state>
+		<state name="shadow_filter_noise"	title="Filter Noise"	shadow_filter_mode="1,2,3,4"	defines="name"					tooltip="&lt;p&gt;Toggles the use of noise for shadow filtering on and off. This noise is used for smoothing shadows cast on the material.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;: &lt;em&gt;this parameter is not affected by global shadow settings defined via &lt;b&gt;Settings -> Render -> Shadows&lt;/b&gt;.&lt;/em&gt;&lt;/p&gt;">0</state>
+		<state name="shadow_penumbra_noise"	title="Penumbra Noise"	shadow_penumbra_mode="1,2,3,4"	defines="name"					tooltip="&lt;p&gt;Toggles the use of noise for penumbra rendering on and off. This noise is used for smoothing shadows cast on the material.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;: &lt;em&gt;this parameter is not affected by global shadow settings defined via &lt;b&gt;Settings -> Render -> Shadows&lt;/b&gt;.&lt;/em&gt;&lt;/p&gt;">0</state>
+	</group>
+	
+	<group name="Post Processing">
+		<state name="material_dof"			deferred="1"	title="DOF">1</state>
+		<state name="material_motion_blur"	deferred="1"	title="Motion Blur">1</state>
+		<state name="material_sun_shafts"	deferred="1"	title="Sun Shafts">1</state>
+	</group>
+	
+	<shader pass="wireframe" node="object_particles"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/particles/vertex/default.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="deferred" node="object_particles"
+		deferred="1"
+		vertex="core/shaders/particles/vertex/deferred.vert"
+		fragment="core/shaders/particles/fragment/deferred.frag"/>
+	
+	<shader pass="depth_pre_pass" node="object_particles"
+		deferred="1"
+		vertex="core/shaders/particles/vertex/default.vert"
+		fragment="core/shaders/particles/fragment/depth.frag"/>
+	
+	<shader pass="shadow" node="object_particles"
+		defines="BASE_SHADOW"
+		vertex="core/shaders/particles/vertex/default.vert"
+		fragment="core/shaders/particles/fragment/depth.frag"/>
+	
+	<shader pass="auxiliary" node="object_particles"
+		auxiliary="1"
+		defines="BASE_AUXILIARY"
+		vertex="core/shaders/particles/vertex/default.vert"
+		fragment="core/shaders/particles/fragment/auxiliary.frag"/>
+	
+	<shader pass="refraction" node="object_particles"
+		refraction="1"
+		defines="BASE_REFRACTION"
+		vertex="core/shaders/particles/vertex/refraction.vert"
+		fragment="core/shaders/particles/fragment/refraction.frag"/>
+	
+	<shader pass="ambient" node="object_particles"
+		ambient="0"
+		receive_world_shadow_defines=",SHADOW"
+		light_world_defines=",WORLD_LIGHT"
+		vertex="core/shaders/particles/vertex/ambient.vert"
+		fragment="core/shaders/particles/fragment/ambient.frag"/>
+	
+	<shader pass="ambient" node="object_particles"
+		ambient="1"
+		defines="AMBIENT"
+		receive_world_shadow_defines=",SHADOW"
+		light_world_defines=",WORLD_LIGHT"
+		vertex="core/shaders/particles/vertex/ambient.vert"
+		fragment="core/shaders/particles/fragment/ambient.frag"/>
+	
+	<shader pass="emission" node="object_particles"
+		vertex="core/shaders/particles/vertex/emission.vert"
+		fragment="core/shaders/particles/fragment/emission.frag"/>
+	
+	<shader pass="transparent_blur" node="object_particles"
+		transparent="2"
+		transparent_blur="1"
+		vertex="core/shaders/particles/vertex/default.vert"
+		fragment="core/shaders/particles/fragment/transparent_blur.frag"/>
+	
+	<shader pass="light_omni" node="object_particles"
+		light_omni="1"
+		defines="OMNI"
+		receive_shadow_defines=",SHADOW"
+		vertex="core/shaders/particles/vertex/light.vert"
+		fragment="core/shaders/particles/fragment/light.frag"/>
+	
+	<shader pass="light_proj" node="object_particles"
+		light_proj="1"
+		defines="PROJ"
+		receive_shadow_defines=",SHADOW"
+		vertex="core/shaders/particles/vertex/light.vert"
+		fragment="core/shaders/particles/fragment/light.frag"/>
+	
+	<shader pass="light_world" node="object_particles"
+		light_world="1"
+		defines="WORLD"
+		receive_world_shadow_defines=",SHADOW"
+		vertex="core/shaders/particles/vertex/light.vert"
+		fragment="core/shaders/particles/fragment/light.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" name="diffuse"								wrap="clamp"	group="Base"								tooltip="&lt;p&gt;Diffuse texture, 4 channels: RGB - color, A - transparency information.&lt;/p&gt;&lt;p&gt;This texture can also store an animation atlas that is used to play animated particles (for example, the burning fire).&lt;/p&gt;">core/textures/particles/diffuse.dds</texture>
+	<texture unit="1" name="attenuation"							wrap="clamp_x"	group="Base"								tooltip="&lt;p&gt;Attenuation map, 4 channels: RGB - color, A - transparency information.&lt;/p&gt;&lt;p&gt;This texture defines the color and alpha component change throughout the particle's life time, from left to right.&lt;/p&gt;">core/textures/particles/attenuation.dds</texture>
+	<texture unit="2" name="normal"				pass="refraction"	refraction="1" format="signed" wrap="clamp"	group="Base"	tooltip="&lt;p&gt;Normal texture, 2 channels: RG - normal components.&lt;/p&gt;&lt;p&gt;This texture stores information about a surface's normals deviation and is used to simulate refraction.&lt;/p&gt;">core/textures/particles/normal.dds</texture>
+	<texture unit="3" name="transparent_blur"	pass="transparent_blur" transparent_blur="1" group="Base"								tooltip="">core/textures/common/white.dds</texture>
+	<texture unit="10" type="wbuffer_wu_mask"						disable_render_in_underwater="1"/>
+	<texture unit="11" type="opacity_depth"							volume="1"/>
+	<texture unit="12" type="reflection_cube"	pass="ambient"/>
+	<texture unit="14" type="light_image"		pass="forward"/>
+	<texture unit="15" type="light_depth"		pass="forward"/>
+	
+	<!-- parameters -->
+	<parameter name="material_mask"			deferred="1" shared="0" type="expression"	group="Default" widget="mask24"	tooltip="&lt;p&gt;Material bitmask.&lt;/p&gt;&lt;p&gt;The decal will be projected onto the particles if the material mask of the decal material matches this mask (one bit, at least).&lt;/p&gt;">0xffffffff</parameter>
+	
+	<parameter name="diffuse_color"			type="color" title="Diffuse" group="Base" tooltip="Diffuse color multiplier.">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="diffuse_scale"			type="slider" max="4.0" flags="max_expand" title="Diffuse Scale" group="Base" tooltip="Diffuse multiplier">1.0</parameter>
+	<parameter name="emission_scale"		type="slider" max="4.0" flags="max_expand" title="Emission Scale" group="Base" tooltip="Emission intensity">0.0</parameter>
+	<parameter name="environment_scale"		type="slider" max="4.0" flags="max_expand" title="Environment Scale" group="Base" tooltip="&lt;p&gt;Environment lighting intensity.&lt;/p&gt;&lt;p&gt;Determines how much environment lighting affects particles.&lt;/p&gt;">1.0</parameter>
+	<parameter name="animation_transform"	type="expression" title="Animation Coordinates" group="Base" tooltip="&lt;p&gt;Animation coordinates, X,Y - atlas size, Z - time scale, W - Y coordinate of attenuation.&lt;/p&gt;" widget="uv">vec4(1.0f,1.0f,1.0f,0.5f)</parameter>
+	<parameter name="deferred_threshold"	deferred="1" type="slider" flags="max_expand" group="Base" tooltip="&lt;p&gt;Deferred rendering pass alpha threshold.&lt;/p&gt;&lt;p&gt;If alpha component is greater than this value, the particle will be written to the deferred buffer.&lt;/p&gt;">0.5</parameter>
+	
+	<parameter name="auxiliary_color"		auxiliary="1" type="color" tooltip="Auxiliary color multiplier">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="auxiliary_threshold"	auxiliary="1" type="slider" flags="max_expand"		tooltip="&lt;p&gt;Auxiliary rendering pass alpha threshold.&lt;/p&gt;&lt;p&gt;If alpha component is greater than this value, the particle will be written to the auxiliary buffer.&lt;/p&gt;">0.5</parameter>
+	<parameter name="volume_scale"			volume="1" type="slider" min="-3.0" max="1.0" flags="max_expand"	title="Soft Interaction"	tooltip="&lt;p&gt;Depth factor that controls the particles color fading depending on their position relative to the object.&lt;/p&gt;">1.0</parameter>
+	<group name="Refraction">
+		<parameter name="refraction_scale"		refraction="1" type="slider" min="-2.0" max="2.0" flags="min_expand,max_expand"	title="Scale"	tooltip="&lt;p&gt;Refraction area scale.&lt;/p&gt;">1.0</parameter>
+	</group>
+
+	<parameter name="softness_multiplier"	shadow_filter_mode="1,2,3,4" type="slider" max="2.0">1.0</parameter>
+	
+	<parameter name="transparent_blur"	transparent_blur="1" type="slider" max="1.0">0.5</parameter>
+	
+</base_material>

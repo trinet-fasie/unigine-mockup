@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="water_global_base_error" base_material="water_global_base" manual="1" hidden="1">
+	<state name="geometry_contraction">0</state>
+	<state name="caustics">0</state>
+	<state name="material_dof">0</state>
+	<state name="material_motion_blur">0</state>
+	<state name="material_sun_shafts">0</state>
+	<state name="material_backface_dof">0</state>
+	<state name="material_backface_motion_blur">0</state>
+	<parameter name="max_tessellation_factor">1</parameter>
+	<parameter name="tessellation_pow">1</parameter>
+	<parameter name="subsurface_color">1 0 0 1</parameter>
+	<parameter name="ambient_subsurface_intensity">1</parameter>
+	<parameter name="wave_subsurface_intensity">0.483999997</parameter>
+	<parameter name="underwater_fog_transparency">0.00100000005</parameter>
+	<parameter name="underwater_fog_color">1 0 0 1</parameter>
+	<parameter name="underwater_fog_depth">0</parameter>
+</material>

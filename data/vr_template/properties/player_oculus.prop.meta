@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>07079dbddd763f4257537e86072ae02db5e4c44d</guid>
+	<type>property</type>
+	<hash>fa04e834</hash>
+	<runtimes>
+		<runtime id="07079dbddd763f4257537e86072ae02db5e4c44d" name="player_oculus.prop" link="0"/>
+	</runtimes>
+</asset>

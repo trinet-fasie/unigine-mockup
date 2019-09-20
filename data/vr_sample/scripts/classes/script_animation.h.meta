@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>e6a8ba0c584d2dfbf62f4b1eeab1b7e5ec178800</guid>
+	<type>script</type>
+	<hash>a29f70ef</hash>
+	<runtimes>
+		<runtime id="e6a8ba0c584d2dfbf62f4b1eeab1b7e5ec178800" name="script_animation.h" link="0"/>
+	</runtimes>
+</asset>

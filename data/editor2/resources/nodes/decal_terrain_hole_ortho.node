@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="DecalOrtho" material="969fb531bc3fa082754bb44440a0ca624866ffba">
+		<radius>1</radius>
+		<width>1</width>
+		<height>1</height>
+		<znear>0.001</znear>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

@@ -1,0 +1,15 @@
+<base_material version="2.8.0.0" name="render_shadow_shafts_sample" hidden="1">
+	
+	<state name="has_clouds_shadow_shafts"	defines="name" type="toggle">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/screen_space/vertex/shadow_shafts.vert"
+		fragment="core/shaders/screen_space/fragment/shadow_shafts_sample.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="gbuffer_material_mask"/>
+	<texture type="current_depth"/>
+	<texture type="clouds_screen" has_clouds_shadow_shafts="1"/>
+	
+</base_material>

@@ -1,0 +1,32 @@
+<base_material version="2.8.0.0" name="render_light_voxel_probe" hidden="1">
+	
+	<state name="water_probe"					defines="name">0</state>
+	<state name="bent_normal"					defines="name">0</state>
+	<state name="bent_normal_fix_overlit_areas"	defines="name">0</state>
+	<state name="sun_color_influence"			defines="name">0</state>
+	<state name="ambient_cubic_filtering"		defines="name">0</state>
+	<state name="reflection_cubic_filtering"	defines="name">0</state>
+	<state name="use_reflection"				defines="name">0</state>
+	<state name="interleaved"					defines="name">0</state>
+	<state name="interleaved_samples"			defines="name_items" items="1x2,2x2"/>
+	
+	<!-- shaders -->
+	<shader pass="light_voxel_probe"
+		defines="PROBE"
+		fragment="core/shaders/screen_space/fragment/light/deferred_voxel_probe.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="current_depth"/>
+	
+	<texture unit="1" type="gbuffer_normal"			water_probe="0"/>
+	<texture unit="2" type="gbuffer_shading"		water_probe="0"/>
+	<texture unit="3" type="bent_normal"			water_probe="0" bent_normal="1" />
+	
+	<texture unit="1" type="wbuffer_normal"			water_probe="1" />
+	<texture unit="2" type="wbuffer_water"			water_probe="1"/>
+	<texture unit="3" type="wbuffer_constant_id"	water_probe="1"/>
+	
+	<texture unit="13" type="reflection_cube"/>
+	<texture unit="14" type="light_image"/>
+	
+</base_material>

@@ -1,0 +1,102 @@
+﻿  AppEditorLogic.cpp
+  vr_sample.cpp
+  AppSystemLogic.cpp
+  AppWorldLogic.cpp
+  ComponentSystem.cpp
+  Utils.cpp
+  SoundManager.cpp
+  Triggers.cpp
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\triggers.cpp(6): warning C4458: объявление "extra_scale" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\triggers.h(29): note:  см. объявление "Triggers::extra_scale"
+  VRPlayerSpawner.cpp
+  ObjHandle.cpp
+  ObjMovable.cpp
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(92): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(93): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(94): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(221): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(229): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(247): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(265): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(271): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(279): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(310): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(200): warning C4458: объявление "id" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(263): note:  см. объявление "Action<void (Unigine::BodyPtr)>::id"
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(201): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.cpp(315): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Action<void (Unigine::BodyPtr)>::removeListener(int)"
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(51): note: выполняется компиляция ссылки на экземпляр шаблон класс "Action<void (Unigine::BodyPtr)>"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(245): warning C4018: <: несоответствие типов со знаком и без знака
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(93): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Action<void (Unigine::BodyPtr,int)>::operator ()<Unigine::BodyPtr&,int&>(Unigine::BodyPtr &,int &)"
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(93): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Action<void (Unigine::BodyPtr,int)>::operator ()<Unigine::BodyPtr&,int&>(Unigine::BodyPtr &,int &)"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(254): warning C4018: <: несоответствие типов со знаком и без знака
+  ObjScript.cpp
+c:\users\user\unigine sdk browser\sdks\evaluation_entertainment_windows_2.9.0.2\include\unigineinterface.h(262): warning C4458: объявление "args" скрывает член класса
+  c:\users\user\unigine sdk browser\sdks\evaluation_entertainment_windows_2.9.0.2\include\unigineinterface.h(439): note:  см. объявление "Unigine::ExternFunction<Unigine::TypeList<T0,Unigine::TypeList<int,Unigine::MakeTypeList<Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd>::Type>>,Ret (__cdecl *)(A0)>::args"
+          with
+          [
+              T0=ObjScript *,
+              Ret=ObjScript *,
+              A0=int
+          ]
+  c:\users\user\unigine sdk browser\sdks\evaluation_entertainment_windows_2.9.0.2\include\unigineinterface.h(262): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+  c:\users\user\unigine sdk browser\sdks\evaluation_entertainment_windows_2.9.0.2\include\unigineinterface.h(460): note: выполняется компиляция ссылки на экземпляр шаблон класс "Unigine::ExternFunction<Unigine::TypeList<T0,Unigine::TypeList<int,Unigine::MakeTypeList<Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd,Unigine::TypeListEnd>::Type>>,Ret (__cdecl *)(A0)>"
+          with
+          [
+              T0=ObjScript *,
+              Ret=ObjScript *,
+              A0=int
+          ]
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objscript.cpp(196): note: выполняется компиляция ссылки на экземпляр шаблон функции "Unigine::ExternFunctionBase *Unigine::MakeExternFunction<ObjScript*,int>(Ret (__cdecl *)(A0),const char *)"
+          with
+          [
+              Ret=ObjScript *,
+              A0=int
+          ]
+  ObjSwitch.cpp
+  VRPlayerVR.cpp
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(92): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(93): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(94): warning C4458: объявление "body" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(58): note:  см. объявление "ObjMovable::body"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayervr.cpp(284): warning C4458: объявление "node" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\componentsystem\componentsystem.h(1187): note:  см. объявление "ComponentBase::node"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayervr.cpp(391): warning C4457: объявление "num" скрывает параметр функции
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayervr.cpp(342): note:  см. объявление "num"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(245): warning C4018: <: несоответствие типов со знаком и без знака
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(93): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Action<void (Unigine::BodyPtr,int)>::operator ()<Unigine::BodyPtr&,int&>(Unigine::BodyPtr &,int &)"
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(93): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Action<void (Unigine::BodyPtr,int)>::operator ()<Unigine::BodyPtr&,int&>(Unigine::BodyPtr &,int &)"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(254): warning C4018: <: несоответствие типов со знаком и без знака
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(200): warning C4458: объявление "id" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(263): note:  см. объявление "Action<void (Unigine::BodyPtr)>::id"
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(201): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\utils.h(255): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Action<void (Unigine::BodyPtr)>::removeListener(int)"
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\objects\objmovable.h(51): note: выполняется компиляция ссылки на экземпляр шаблон класс "Action<void (Unigine::BodyPtr)>"
+  AppViveProxy.cpp
+  AppOculusProxy.cpp
+  VRPlayerPC.cpp
+  VRPlayer.cpp
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayer.cpp(108): warning C4458: объявление "node" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\componentsystem\componentsystem.h(1187): note:  см. объявление "ComponentBase::node"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayer.cpp(113): warning C4458: объявление "node" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\componentsystem\componentsystem.h(1187): note:  см. объявление "ComponentBase::node"
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayer.cpp(126): warning C4458: объявление "node" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\componentsystem\componentsystem.h(1187): note:  см. объявление "ComponentBase::node"
+  VRPlayerVive.cpp
+d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayervive.cpp(142): warning C4458: объявление "controller" скрывает член класса
+  d:\repos\niokr_unigine\niokr\unigine_project\source\framework\components\players\vrplayervr.h(87): note:  см. объявление "VRPlayerVR::controller"
+  VRPlayerOculus.cpp
+  Создание кода...
+LINK : fatal error LNK1104: не удается открыть файл "Unigine_x86d.lib"

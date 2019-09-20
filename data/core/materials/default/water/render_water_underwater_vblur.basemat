@@ -1,0 +1,16 @@
+<base_material version="2.8.0.0" name="render_water_underwater_vblur" parameters_prefix="m" hidden="1">
+
+	<!-- shaders -->
+	<shader pass="post"
+		defines="VBLUR"
+		vertex="core/shaders/screen_space/vertex/default.vert"
+		fragment="core/shaders/water/screen_space/fragment/water_underwater_blur.frag"/>
+
+	<!-- textures -->
+	<texture unit="0" name="color" type="procedural"/>
+	<texture unit="1" type="wbuffer_wu_mask"/>
+	<texture unit="2" type="opacity_depth"/>
+
+	<parameter name="underwater_dof_distance" shared="1" type="slider" min="0.0" max="128.0" flags="max_expand">12.0</parameter>
+
+</base_material>

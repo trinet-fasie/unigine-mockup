@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>8065f4ce1c294c8df4eac20309539be1a39c7c47</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="8065f4ce1c294c8df4eac20309539be1a39c7c47" name="debug_ssr.mat" link="0"/>
+	</runtimes>
+</asset>

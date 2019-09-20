@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>0c40ae1197df44f7194b7837ee3355747b159bbd</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="0c40ae1197df44f7194b7837ee3355747b159bbd" name="b1_level1_atlas_alb.dds" link="0"/>
+	</runtimes>
+</asset>

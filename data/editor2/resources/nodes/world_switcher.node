@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="WorldSwitcher">
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

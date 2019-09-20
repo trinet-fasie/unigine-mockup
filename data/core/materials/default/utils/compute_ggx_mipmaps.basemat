@@ -1,0 +1,16 @@
+<base_material version="2.8.0.0" name="compute_ggx_mipmaps" hidden="1">
+	
+	<shader pass="post"
+		vertex="core/shaders/cube_mipmaps/ggx_mipmaps.vert"
+		geometry="core/shaders/cube_mipmaps/ggx_mipmaps.geom"
+		fragment="core/shaders/cube_mipmaps/ggx_mipmaps.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" shader="all" type="procedural"/>
+	
+	<!-- parameters -->
+	<parameter name="roughness_sqr" type="slider" >1.0</parameter>
+	<parameter name="sample_count" type="slider" >1.0</parameter>
+	<parameter name="angle_texel" type="slider" >1.0</parameter>
+	
+</base_material>

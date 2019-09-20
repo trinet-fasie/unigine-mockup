@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>3029b50b55b2d3e5d7ae2c4536836c220955b5b4</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="3029b50b55b2d3e5d7ae2c4536836c220955b5b4" name="render_composite_dithering.dds" link="0"/>
+	</runtimes>
+</asset>

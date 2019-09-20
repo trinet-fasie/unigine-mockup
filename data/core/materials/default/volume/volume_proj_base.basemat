@@ -1,0 +1,41 @@
+<base_material version="2.8.0.0" name="volume_proj_base" editable="0">
+	
+	<!-- blending -->
+	<blend src="one" dest="one"/>
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" cast_world_shadow="0" receive_shadow="0" receive_world_shadow="0"/>
+	<options transparent="2"/>
+	
+	<!-- states -->
+	<state name="volume" type="toggle" title="Soft Interaction" group="Options" tooltip="&lt;p&gt;Soft depth interaction.&lt;/p&gt;&lt;p&gt;Allows to avoid visual artifacts (such as sharp edges) when the VolumeProj intersects other objects.&lt;/p&gt;">0</state>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_volume_proj"
+		vertex="core/shaders/volume/vertex/proj_ambient.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="visualizer_solid" node="object_volume_proj"
+		vertex="core/shaders/volume/vertex/proj_ambient.vert"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- ambient shaders -->
+	<shader pass="ambient" node="object_volume_proj"
+		volume_defines=",VOLUME"
+		vertex="core/shaders/volume/vertex/proj_ambient.vert"
+		fragment="core/shaders/volume/fragment/proj_ambient.frag"/>
+	
+	<!-- textures -->
+	<texture name="diffuse" wrap="clamp" group="Base" tooltip="&lt;p&gt;Diffuse texture, 3 channels: RGB - color.&lt;/p&gt;&lt;p&gt;This texture is used to create a light beam.&lt;/p&gt;">core/textures/volume_base_proj_diffuse.dds</texture>
+	<texture name="attenuation" wrap="clamp_x" group="Base" tooltip="&lt;p&gt;Attenuation map, 4 channels.&lt;/p&gt;&lt;p&gt;Specifies how the object fades out from the center (the left side of the texture) to the edges (the right side of the texture).&lt;/p&gt;">core/textures/volume_base_proj_attenuation.dds</texture>
+	<texture unit="15" type="opacity_depth" volume="1"/>
+	
+	<!-- parameters -->
+	<group name="Transform">
+		<parameter name="attenuation_transform" type="slider" min="0.0" max="1.0"						title="Attenuation"		tooltip="&lt;p&gt;Transformation of the V coordinate of the attenuation texture.&lt;/p&gt;&lt;p&gt;For a default texture, changing this option doesn't affect the VolumeProj, since a simple gradient is used.&lt;/p&gt;">0.5</parameter>
+	</group>
+	<parameter name="diffuse_color" type="color" title="Diffuse" group="Base"													tooltip="&lt;p&gt;Color of the VolumeProj object.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="diffuse_scale" type="slider" min="0.0" max="4.0" flags="max_expand" title="Diffuse Scale" group="Base"		tooltip="&lt;p&gt;Multiplier for the diffuse color of the VolumeProj object.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value, the brighter the diffuse color is.&lt;/p&gt;">1.0</parameter>
+	<parameter name="volume_scale" volume="1" type="slider" min="-3.0" max="0.0" flags="max_expand"	title="Soft Interaction" group="Options"	tooltip="&lt;p&gt;Soft interaction scale.&lt;/p&gt;&lt;p&gt;Controls the VolumeProj object intensity when it is close to or intersects other objects.&lt;/p&gt;">1.0</parameter>
+</base_material>

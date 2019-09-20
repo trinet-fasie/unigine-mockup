@@ -1,0 +1,19 @@
+<base_material version="2.8.0.0" name="render_refraction" hidden="1">
+	
+	<!-- states -->
+	<state name="dispersion_enable" defines=",DISPERSION">0</state>
+	<state name="background_type" items="correct,incorrect,texture_source" defines="name_items" internal="1">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/screen_space/vertex/refraction.vert"
+		fragment="core/shaders/screen_space/fragment/refraction.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	<texture type="refraction"/>
+	<texture type="refraction_mask" background_type="2"/>
+	
+	<!-- parameters -->
+	<float4 name="dispersion">1.0 1.0 1.0 1.0</float4>
+</base_material>

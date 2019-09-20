@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>8c3bea59ca77bd849756e12347b6daf8bcc82458</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="8c3bea59ca77bd849756e12347b6daf8bcc82458" name="water_base_caps.dds" link="0"/>
+	</runtimes>
+</asset>

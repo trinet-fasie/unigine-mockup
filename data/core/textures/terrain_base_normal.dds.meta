@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>a96d54460ceaccbfbe2f694d7c3dd3028df0ff36</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="a96d54460ceaccbfbe2f694d7c3dd3028df0ff36" name="terrain_base_normal.dds" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,99 @@
+<base_material version="2.8.0.0" name="render_composite_deferred" hidden="1">
+	<state name="debug"					defines=",DEBUG"			internal="1">0</state>
+	<state name="show_ambient"			defines="name"				internal="1">0</state>
+	<state name="ssao"					defines="name"				internal="1">0</state>
+	<state name="ssgi"					defines="name"				internal="1">0</state>
+	<state name="bent_normal"			defines="name"				internal="1">0</state>
+	<state name="ssr"					defines="name"				internal="1">0</state>
+	<state name="cavity"				defines="name"				internal="1">0</state>
+	<state name="haze"					defines="DISABLE_HAZE,"		internal="1">0</state>
+	<state name="use_lights"			defines="name"				internal="1">0</state>
+	
+	<state name="use_taa">1</state>
+	
+	<state name="srgb"						defines=",DEBUG_SRGB"			title="sRGB"		tooltip="Enable sRGB correction">0</state>
+	<state name="auto_exposure"				defines=",DEBUG_AUTO_EXPOSURE"	title="Auto-Exposure"	tooltip="Enable automatic exposure">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		receive_shadow_defines=",SHADOW"
+		fragment="core/shaders/screen_space/fragment/composite_deferred.frag"/>
+	
+	<!-- textures -->
+	<texture unit="1" filter="point" type="lights"/>
+	
+	<texture unit="3" type="scattering_sky_lut"/>
+	
+	<texture unit="4" ssao="1"			type="ssao"/>
+	<texture unit="5" ssr="1"			type="ssr"/>
+	<texture unit="6" ssgi="1"			type="ssgi"/>
+	<texture unit="7" bent_normal="1"	type="bent_normal"/>
+	
+	<texture unit="2" name="noise"	filter="point">core/textures/common/noise.dds</texture>
+	
+	<texture unit="10" type="auto_exposure"	debug="1"/>
+	<texture unit="11" name="mask"			debug="1"	title="Mask Texture"	tooltip="Mask texture for the rendering debug image">core/textures/common/red.dds</texture>
+
+	<texture unit="16" filter="point" type="opacity_depth"/>
+	<texture unit="17" filter="point" type="gbuffer_normal"/>
+	<texture unit="18" filter="point" type="gbuffer_albedo"/>
+	<texture unit="19" filter="point" type="gbuffer_shading"/>
+	<texture unit="20" filter="point" type="gbuffer_lightmap"/>
+	<texture unit="21" filter="point" type="gbuffer_material_mask"/>
+	
+	<!-- parameters -->
+	<parameter name="ssao_intensity_lighted_side"	internal="1"	type="slider"/>
+	<parameter name="ssao_intensity_reflection"		internal="1"	type="slider"/>
+	<parameter name="ssao_cavity_intensity"			internal="1"	type="slider"/>
+	<parameter name="ssao_cavity_radius"			internal="1"	type="slider"/>
+	
+	<!-- parameters debug-->
+	<parameter name="exposure"			type="slider"	debug="1"		title="Exposure"			tooltip="Exposure value for the rendering debug image"/>
+	
+	<parameter name="offset_x"			type="slider"	debug="1"		title="X Offset"			tooltip="Horizontal offset of the rendering debug image">0.0</parameter>
+	<parameter name="offset_y"			type="slider"	debug="1"		title="Y Offset"			tooltip="Vertical offset of the rendering debug image">0.0</parameter>
+	<parameter name="width"				type="slider"	debug="1"		title="Width"				tooltip="Width of the rendering debug image">1.0</parameter>
+	<parameter name="height"			type="slider"	debug="1"		title="Height"				tooltip="Height of the rendering debug image">1.0</parameter>
+	
+	<parameter name="intensity"			type="slider"		debug="1"	title="Intensity"			tooltip="Intensity of the rendering debug image">1.0</parameter>
+	<parameter name="transparent"		type="slider"		debug="1"	title="Transparency"		tooltip="Transparency of the rendering debug image">1.0</parameter>
+	<parameter name="mask_uv_transform"	type="expression"	debug="1"	title="Mask UV Transform"	tooltip="UV Transform for the mask texture">vec4(1.0f,1.0f,0.0f,0.0f)</parameter>
+	
+	<parameter name="sky_color"			type="color"	debug="1"					title="Sky Color"					tooltip="Sky color multiplier">1.0 1.0 1.0 1.0</parameter>
+	
+	<parameter name="albedo"			type="color"	debug="1"					title="Albedo"						tooltip="Albedo color multiplier">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="albedo_visible"	type="slider"	debug="1"					title="Albedo Visibility"			tooltip="Visibility factor for albedo color multiplier">0.0</parameter>
+	
+	<parameter name="metalness"				type="slider"	debug="1"				title="Metalness"					tooltip="Metalness multiplier">0.0</parameter>
+	<parameter name="metalness_visible"		type="slider"	debug="1"				title="Metalness Visibility"		tooltip="Visibility factor for metalness multiplier">0.0</parameter>
+	
+	<parameter name="baked_lightmap_visible"	type="slider"	debug="1"			title="Baked Lightmap Visibility"	tooltip="Visibility factor for baked lightmaps">0.0</parameter>
+	<parameter name="baked_ao_visible"			type="slider"	debug="1"			title="Baked AO Visibility"			tooltip="Visibility factor for baked ambient occlusion">0.0</parameter>
+	<parameter name="ssao_visible"				type="slider"	debug="1"			title="SSAO Visibility"				tooltip="Visibility factor for the SSAO effect">0.0</parameter>
+	<parameter name="ssr_visible"				type="slider"	debug="1"			title="SSR Visibility"				tooltip="Visibility factor for the SSR effect">0.0</parameter>
+	<parameter name="ssgi_visible"				type="slider"	debug="1"			title="SSGI Visibility"				tooltip="Visibility factor for the SSGI effect">0.0</parameter>
+	<parameter name="haze_visible"				type="slider"	debug="1"			title="Haze Visibility"				tooltip="Visibility factor for haze">0.0</parameter>
+	
+	<parameter name="environment_ambient_visible"		type="slider"	debug="1"	title="Environment Ambient Visibility"		tooltip="Visibility factor for environment probe ambient lighting">0.0</parameter>
+	<parameter name="environment_reflection_visible"	type="slider"	debug="1"	title="Environment Reflection Visibility"	tooltip="Visibility factor for environment reflections">0.0</parameter>
+	
+	<parameter name="lights_diffuse_visible"	type="slider"	debug="1"			title="Diffuse Lighting Visibility"			tooltip="Visibility factor for diffuse lighting">0.0</parameter>
+	<parameter name="lights_specular_visible"	type="slider"	debug="1"			title="Specular Lighting Visibility"		tooltip="Visibility factor for specular lighting">0.0</parameter>
+	<group name="Buffers">
+		<parameter name="buffer_albedo_visible"			type="slider"	debug="1"	title="Albedo Visibility"			tooltip="Visibility factor for albedo buffer">0.0</parameter>
+		<parameter name="buffer_roughness_visible"		type="slider"	debug="1"	title="Roughness Visibility"		tooltip="Visibility factor for roughness buffer">0.0</parameter>
+		<parameter name="buffer_metalness_visible"		type="slider"	debug="1"	title="Metalness Visibility"		tooltip="Visibility factor for metalness buffer">0.0</parameter>
+		<parameter name="buffer_specular_visible"		type="slider"	debug="1"	title="Specular Visibility"			tooltip="Visibility factor for specular buffer">0.0</parameter>
+		<parameter name="buffer_translucent_visible"	type="slider"	debug="1"	title="Translucency Visibility"		tooltip="Visibility factor for translucency buffer">0.0</parameter>
+		<parameter name="buffer_microfiber_visible"		type="slider"	debug="1"	title="Microfiber Visibility"		tooltip="Visibility factor for microfiber buffer">0.0</parameter>
+		<parameter name="buffer_normal_visible"			type="slider"	debug="1"	title="Normal Visibility"			tooltip="Visibility factor for normal buffer">0.0</parameter>
+		<parameter name="buffer_bent_normal_visible"	type="slider"	debug="1"	title="Bent Normal Visibility"		tooltip="Visibility factor for bent normal buffer">0.0</parameter>
+		<parameter name="buffer_depth"					type="slider"	debug="1"	title="Depth Visibility"			tooltip="Visibility factor for depth buffer">0.0</parameter>
+		<parameter name="buffer_baked_lightmap_visible"	type="slider"	debug="1"	title="Baked Lightmap Visibility"	tooltip="Visibility factor for baked lightmaps buffer">0.0</parameter>
+		<parameter name="buffer_bevel_visible"			type="slider"	debug="1"	title="Bevel Visibility"			tooltip="Visibility factor for bevel buffer">0.0</parameter>
+		<parameter name="buffer_baked_ao_visible"		type="slider"	debug="1"	title="Baked AO Visibility"			tooltip="Visibility factor for baked ambient occlusion buffer">0.0</parameter>
+		<parameter name="buffer_ssao_visible"			type="slider"	debug="1"	title="SSAO Visibility"				tooltip="Visibility factor for SSAO buffer">0.0</parameter>
+		<parameter name="buffer_ssr_visible"			type="slider"	debug="1"	title="SSR Visibility"				tooltip="Visibility factor for SSR buffer">0.0</parameter>
+		<parameter name="buffer_ssgi_visible"			type="slider"	debug="1"	title="SSGI Visibility"				tooltip="Visibility factor for SSGI buffer">0.0</parameter>
+	</group>
+</base_material>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>3585b2194803e83e824b6bee76bb65297fe1a83b</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="3585b2194803e83e824b6bee76bb65297fe1a83b" name="render_volumetric_noise.dds" link="0"/>
+	</runtimes>
+</asset>

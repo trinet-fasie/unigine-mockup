@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="ObjectVolumeSphere" collider="0">
+		<radius>10 10 10</radius>
+		<surface name="volume" material="d6ced8e87e163c86cded294ea5e2d87216a74680"/>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

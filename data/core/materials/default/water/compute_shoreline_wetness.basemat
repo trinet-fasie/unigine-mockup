@@ -1,0 +1,13 @@
+<base_material version="2.8.0.0" name="compute_shoreline_wetness" hidden="1" parameters_prefix="m">
+
+	<!-- shaders -->
+	<shader pass="post"
+		compute="core/shaders/water/compute/shoreline_wetness.comp"/>
+
+	<texture unit="0" shader="all" type="opacity_depth"/>
+	<texture unit="1" shader="all" type="gbuffer_material_mask"/>
+
+	<parameter name="water_level" shared="1" type="slider">0.0</parameter>
+	<parameter name="shoreline_params" shared="1" type="color">0 0 0 0</parameter>
+
+</base_material>

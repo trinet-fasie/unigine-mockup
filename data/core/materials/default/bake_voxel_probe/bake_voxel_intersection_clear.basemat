@@ -1,0 +1,4 @@
+<base_material version="2.8.0.0" name="bake_voxel_intersection_clear" hidden="1" parameters_prefix="m">
+	<shader pass="post"
+		compute="core/shaders/bake_voxel_probe/bake_voxel_intersection_clear.comp"/>
+</base_material>

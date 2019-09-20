@@ -1,0 +1,15 @@
+<material version="2.8.0.0" name="particles_base_error" base_material="particles_base" editable="0" manual="1" hidden="1">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options overlap="1"/>
+	<state name="light_world">0</state>
+	<state name="ambient">0</state>
+	<state name="volume">0</state>
+	<state name="alpha">0</state>
+	<state name="material_dof"			>0</state>
+	<state name="material_motion_blur"	>0</state>
+	<state name="material_sun_shafts"	>0</state>
+	<parameter name="diffuse_color">1 0 0 1</parameter>
+	<parameter name="emission_scale">1.0f</parameter>
+	<texture name="diffuse">core/textures/common/white.dds</texture>
+	<texture name="attenuation">core/textures/common/white.dds</texture>
+</material>

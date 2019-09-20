@@ -1,0 +1,28 @@
+<base_material version="2.8.0.0" name="post_curvature_composite" hidden="1">
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/curvature_composite.frag"/>
+	
+	<!-- textures -->
+	<texture type="gbuffer_features"/>	
+	<texture type="curvature"/>
+	<texture type="opacity_depth"/>
+	<texture name="albedo_cavity"/>
+	<texture name="shading_cavity"/>
+	<texture name="albedo_convexity"/>
+	<texture name="shading_convexity"/>
+	
+	<!-- parameters -->
+	<parameter name="cavity_texture_size" type="slider" >1.0</parameter>
+	<parameter name="cavity_color" type="color" >1, 1, 1, 1</parameter>
+	<parameter name="cavity_metalness" type="slider" >0.0</parameter>
+	<parameter name="cavity_metalness_visibility" type="slider" >0.0</parameter>
+	<parameter name="camera_cavity_delta" type="color" >1, 1, 1, 1</parameter>
+	
+	<parameter name="convexity_texture_size" type="slider" >1.0</parameter>
+	<parameter name="convexity_color" type="color" >1, 1, 1, 1</parameter>
+	<parameter name="convexity_metalness" type="slider" >0.0</parameter>
+	<parameter name="convexity_metalness_visibility" type="slider" >0.0</parameter>
+	<parameter name="camera_convexity_delta" type="color" >1, 1, 1, 1</parameter>
+	
+</base_material>

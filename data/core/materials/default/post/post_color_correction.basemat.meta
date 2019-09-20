@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>2caa57e75d4d03ccbfd31845ae246d800947d04b</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="2caa57e75d4d03ccbfd31845ae246d800947d04b" name="post_color_correction.basemat" link="0"/>
+	</runtimes>
+</asset>

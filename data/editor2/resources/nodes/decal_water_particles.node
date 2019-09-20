@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node material="68e62471352ba157442cf759f8c64fb259f84107" type="DecalOrtho">
+		<radius>5</radius>
+		<width>5</width>
+		<height>5</height>
+		<znear>0.001</znear>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+		<node type="ObjectParticles" collider="0" name="ObjectParticles">
+			<warming>0</warming>
+			<clear_on_enable>0</clear_on_enable>
+			<number_per_spawn>1</number_per_spawn>
+			<spawn_rate>10</spawn_rate>
+			<emitter_enabled>1</emitter_enabled>
+			<life_mean>2</life_mean>
+			<life_spread>0</life_spread>
+			<velocity_mean>2</velocity_mean>
+			<velocity_spread>0</velocity_spread>
+			<radius_mean>1.0</radius_mean>
+			<radius_spread>0</radius_spread>
+			<procedural_rendering>1</procedural_rendering>
+			<procedural_parenting>1</procedural_parenting>
+			<surface name="particles" viewport_mask="0x0" material="3c7c894c55e2343bd37e1c5efe51d825de52ab40"/>
+			<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+		</node>
+	</node>
+</nodes>

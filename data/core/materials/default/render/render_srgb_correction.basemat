@@ -1,0 +1,12 @@
+<base_material version="2.8.0.0" name="render_srgb_correction" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/srgb_correction.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	
+	<!-- parameters -->
+	<parameter name="exposure" type="slider">1.0</parameter>
+</base_material>

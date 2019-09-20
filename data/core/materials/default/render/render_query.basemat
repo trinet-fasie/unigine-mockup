@@ -1,0 +1,10 @@
+<base_material version="2.8.0.0" name="render_query" defines="VERTEX_ATTRIBUTE_GEOMETRY" hidden="1">
+	
+	<shader pass="ambient"
+		vertex="core/shaders/query/query.shader"/>
+	
+	<shader pass="visualizer_solid"
+		vertex="core/shaders/query/query.shader"
+		fragment="core/shaders/query/query.shader"/>
+	
+</base_material>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>a21555ec09c755789b8296d98a99692d7b2a66d2</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="a21555ec09c755789b8296d98a99692d7b2a66d2" name="post_filter_sobel.basemat" link="0"/>
+	</runtimes>
+</asset>

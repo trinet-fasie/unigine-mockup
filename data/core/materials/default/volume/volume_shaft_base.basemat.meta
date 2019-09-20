@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>7b42f6244bf0dfc6a0540f577a5b22eb78f865a7</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="7b42f6244bf0dfc6a0540f577a5b22eb78f865a7" name="volume_shaft_base.basemat" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,26 @@
+<material version="2.8.0.0" name="water_global_beaufort_7" base_material="water_global_base" editable="0" manual="1">
+	<parameter name="max_tessellation_factor">16</parameter>
+	<parameter name="tessellation_pow">10</parameter>
+	<parameter name="tessellation_distance">0.7</parameter>
+	<parameter name="procedural_normal_blur">0.1</parameter>
+	<parameter name="procedural_normal_easing">0.2</parameter>
+	<parameter name="geometry_contraction_normal_blur">0.5</parameter>
+	<parameter name="geometry_contraction_normal_easing">7</parameter>
+	<parameter name="wave0_uv_transform">vec4(0.07f,0.07f,0.5f,0.0f)</parameter>
+	<parameter name="wave0_height_scale">20</parameter>
+	<parameter name="wave1_uv_transform">vec4(0.3f,0.3f,-0.5f,0.0f)</parameter>
+	<parameter name="wave1_height_scale">4</parameter>
+	<parameter name="wave2_uv_transform">vec4(0.5f,0.5f,1.0f,0.0f)</parameter>
+	<parameter name="wave2_height_scale">2.5</parameter>
+	<parameter name="detail0_uv_transform">vec4(10.0f,10.0f,2.5f,2.5f)</parameter>
+	<parameter name="detail0_intensity">0.2</parameter>
+	<parameter name="detail1_uv_transform">vec4(40.0f,40.0f,10.0f,-10.0f)</parameter>
+	<parameter name="detail1_intensity">0.2</parameter>
+	<parameter name="foam0_uv_size">100</parameter>
+	<parameter name="foam0_uv_speed">0.01</parameter>
+	<parameter name="foam1_uv_size">20</parameter>
+	<parameter name="foam1_uv_speed">0</parameter>
+	<parameter name="wave_foam_contrast">1.65</parameter>
+	<parameter name="wave_foam_intensity">0.001</parameter>
+	<parameter name="refraction_scale">1</parameter>
+</material>

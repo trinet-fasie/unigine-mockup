@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="1664394303" name="Household_Props_001">
+		<transform>1 2.646978e-22 -3.8213714e-15 0.0 9.2644229e-23 1 8.7422777e-08 0.0 3.8213714e-15 -8.7422777e-08 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="580172629" name="Mesh1_Group1_Component_1_1_Model">
+			<mesh_name>guid://e23fd542fc1713b92887a9c4ed1aaa5388c1ab96</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>9.0297499e-07 11.960266 -5.2279967e-07 0.0 -11.960266 9.0297493e-07 -1.4257755e-06 0.0 -1.4257754e-06 5.2279978e-07 11.960266 0.0 -40.422638 29.838367 -0.0028393795 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="493601560" name="Hand_saw">
+			<mesh_name>guid://1a486dfd2ba4573872ffb1374265dd2acad3ea81</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>-1.071867e-07 8.9884949 -1.1786988e-06 0.0 -2.8571293e-07 1.1786988e-06 8.9884949 0.0 8.9884949 1.0718674e-07 2.857129e-07 0.0 -38.953812 28.169718 0.01602279 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="112479522" name="Hoe">
+			<mesh_name>guid://df3a41ec38b4545b34167dfe25948d4521009de0</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>-42.862309 -1.66912e-05 1.0124969e-12 0.0 1.66912e-05 -42.862309 -3.2360142e-06 0.0 2.2726473e-12 -3.2360142e-06 42.862309 0.0 1.0124607 31.909409 0.045112096 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="307006285" name="Screwdriver">
+			<mesh_name>guid://933e37bff274e21232339a4969a7df1445cb3f63</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>8.2621892e-07 10.943602 -4.7835982e-07 0.0 -10.943602 8.2621887e-07 -1.3045794e-06 0.0 -1.3045793e-06 4.7835994e-07 10.943602 0.0 -37.599178 28.24316 0.0047051948 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="297443213" name="Wrench">
+			<mesh_name>guid://f3ad9d6627ec958d21cdb9880a158f47548c83fa</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>16.199635 1.8847759e-20 2.3073107e-13 0.0 1.853741e-20 16.199635 -2.6392559e-06 0.0 -2.3073107e-13 2.6392559e-06 16.199635 0.0 -36.598309 26.320562 -0.041617397 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1422727545" name="watering_can">
+			<mesh_name>guid://67914311ec31213c0d078b6b84d0a9ceb3cda6d5</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.0056966e-06 -26.566257 1.1612482e-06 0.0 26.566257 2.0056966e-06 -3.1669456e-06 0.0 3.1669456e-06 1.1612484e-06 26.566257 0.0 15.892956 27.604723 0.043151066 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="373739204" name="Toolbox">
+			<mesh_name>guid://99264a30839fd7cfaec062e26bac04d9b74aa864</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>7.1365394e-06 94.526329 -4.1318763e-06 0.0 -94.526329 7.1365389e-06 -1.1268422e-05 0.0 -1.1268421e-05 4.1318772e-06 94.526329 0.0 -34.730186 27.438843 -0.01018097 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="518085618" name="Telescope">
+			<mesh_name>guid://bc155873edfd4336cb58e11df578efd84f3b3157</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>57.869362 6.605613e-20 8.2423212e-13 0.0 6.5395419e-20 57.869362 -9.4281158e-06 0.0 -8.2423212e-13 9.4281158e-06 57.869362 0.0 -18.7904 24.103962 0.10096871 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1994754429" name="Ladder">
+			<mesh_name>guid://a9981eca7726ffa1c9fd148c5624c67ba565099e</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>82.170609 9.4117773e-20 1.1703543e-12 0.0 9.4367155e-20 82.170609 -1.3387292e-05 0.0 -1.1703543e-12 1.3387292e-05 82.170609 0.0 -61.73243 -2.8190715 0.041462418 1.0</transform>
+		</node>
+		<node type="NodeDummy" id="1486410925" name="panel_source.002">
+			<transform>100 8.7422795e-06 -8.7422777e-06 0.0 8.7422795e-06 -1.6292068e-05 100 0.0 8.7422777e-06 -100 -1.6292068e-05 0.0 0 0 0 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="649615717" name="Hand_rake">
+			<mesh_name>guid://d4d3646513084a80c809bbdf9e8f57b2f7095369</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.4865117e-06 17.18329 -7.5110557e-07 0.0 17.18329 -6.4865117e-06 1.8434996e-06 0.0 1.8434993e-06 -7.5110626e-07 -17.18329 0.0 -1.342404 28.069187 0.016022813 1.0</transform>
+		</node>
+		<node type="NodeDummy" id="609248549" name="panel_source.001">
+			<transform>100 8.7422795e-06 -8.7422777e-06 0.0 8.7422795e-06 -1.6292068e-05 100 0.0 8.7422777e-06 -100 -1.6292068e-05 0.0 0 0 0 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="924838272" name="Caldron">
+			<mesh_name>guid://a46505b46469f583876d9d061f2650adf66afa28</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>12.944267 1.45972e-20 1.8436493e-13 0.0 1.4694691e-20 12.944267 -2.1088888e-06 0.0 -1.8436493e-13 2.1088888e-06 12.944267 0.0 -31.318834 26.08947 0.099004015 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1725174852" name="Chandelier">
+			<mesh_name>guid://cd719767b695ad9a193e20316a331bdcb69d058b</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>14.117813 1.5959576e-20 2.0107971e-13 0.0 1.595187e-20 14.117813 -2.3000837e-06 0.0 -2.0107971e-13 2.3000837e-06 14.117813 0.0 -54.26918 31.01848 0.24960831 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1600016024" name="Bird_House">
+			<mesh_name>guid://9d309d6ef65ec5f5d70b9ed04b9ce3efd88ec082</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>10.943602 1.2423863e-20 1.5586949e-13 0.0 1.2787433e-20 10.943602 -1.782939e-06 0.0 -1.5586949e-13 1.782939e-06 10.943602 0.0 21.852409 10.00077 5.7318039 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1183635789" name="Dumbbell">
+			<mesh_name>guid://e91485f9552bf704337a1693b2fbaad6482de43d</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>1.4512071e-06 19.221821 -8.4021224e-07 0.0 -19.221821 1.451207e-06 -2.2914205e-06 0.0 -2.2914203e-06 8.4021241e-07 19.221821 0.0 15.046353 19.855057 0.022751343 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="2135380642" name="baseballBat">
+			<mesh_name>guid://79a8d878d3f9c17767d2306afbbfa4c177a8372c</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>-7.2026376e-07 10.943602 1.5752596e-07 0.0 -8.1765451 -4.3344738e-07 -7.2736869 0.0 -7.2736869 -5.9642076e-07 8.1765451 0.0 -42.146542 23.746103 -4.0968418 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1100832448" name="Trophy">
+			<mesh_name>guid://b941489bbed0653ed868cb85dad5472045ba4fff</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>18.358881 2.0964822e-20 2.614852e-13 0.0 2.0740467e-20 18.358881 -2.991042e-06 0.0 -2.614852e-13 2.991042e-06 18.358881 0.0 -28.863136 17.633724 0.017476523 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="769701158" name="Safe">
+			<mesh_name>guid://d2ab9d52acd69c89cf147c540e36bba316e46ca6</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>8.2621892e-07 -10.943602 4.7836005e-07 0.0 10.943602 8.2621887e-07 -1.3045793e-06 0.0 1.3045793e-06 4.7836016e-07 10.943602 0.0 -55.045872 19.279367 0.028777696 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="689491527" name="Rubber_duck">
+			<mesh_name>guid://05889bcd29778ac88654af87f0daa73aead48d51</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.6230118 2.9952826e-21 3.7359503e-14 0.0 3.0046855e-21 2.6230118 -4.2734285e-07 0.0 -3.7359503e-14 4.2734285e-07 2.6230118 0.0 -35.085747 -6.7636428 5.2541885 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1007582118" name="Propane_tank">
+			<mesh_name>guid://a671667ce1228fab7821610e1d2a7515114a4370</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>21.436077 2.4617173e-20 3.0531364e-13 0.0 2.4277008e-20 21.436077 -3.4923805e-06 0.0 -3.0531364e-13 3.4923805e-06 21.436077 0.0 -2.3832986 -3.2091188 0.00012978038 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="824220313" name="piggy_bank">
+			<mesh_name>guid://4a03000f3212ee229398971948d395a4d9d0e4b3</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>8.2621892e-07 10.943602 -4.7835982e-07 0.0 -10.943602 8.2621887e-07 -1.3045794e-06 0.0 -1.3045793e-06 4.7835994e-07 10.943602 0.0 -43.208755 21.182037 0.0051893629 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1077556489" name="Pumpkin">
+			<mesh_name>guid://dca4e276408f775d555c1118ec4361979c7c120a</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>32.689972 4.0108786e-20 4.8025798e-13 0.0 4.0834097e-20 32.689972 -5.4935108e-06 0.0 -3.9632384e-13 4.5334159e-06 28.854862 0.0 -24.703842 25.621202 0.048429742 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1963999332" name="Empty_box">
+			<mesh_name>guid://60e5d9e103e3a9ccb991dabb224090ded91cc2a5</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.8510814 7.8819011e-21 9.7579801e-14 0.0 7.7599211e-21 6.8510814 -1.1161828e-06 0.0 -9.7579801e-14 1.1161828e-06 6.8510814 0.0 -8.3510809 26.673656 0.050098624 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="536559873" name="doll">
+			<mesh_name>guid://ba8f93c05857f41f9b31b2f264e375a97a5e42f4</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>4.2544217 3.7193342e-07 -3.719334e-07 0.0 3.7193342e-07 -6.8006653e-07 4.2544217 0.0 3.4579989e-07 -3.9554894 -6.5749771e-07 0.0 -69.408119 19.730709 4.8552055 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="27465016" name="Closed_umbrella">
+			<mesh_name>guid://8bb991c380fa0c469cdb76ed421b6b6801c6d7a7</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>12.979656 1.4631898e-20 1.8486899e-13 0.0 1.4925204e-20 12.979656 -2.1146545e-06 0.0 -1.8486899e-13 2.1146545e-06 12.979656 0.0 -86.572357 13.731178 3.8362262 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="230497395" name="Present">
+			<mesh_name>guid://9cc370da169c8a714694011ce62029cbd18af4ae</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.2934408 7.0175184e-21 8.9637343e-14 0.0 7.0408911e-21 6.2934408 -1.0253316e-06 0.0 -8.9637343e-14 1.0253316e-06 6.2934408 0.0 -45.016243 21.182039 0.0061561735 1.0</transform>
+		</node>
+		<node type="NodeDummy" id="1478430058" name="panel_source">
+			<transform>100 8.7422795e-06 -8.7422777e-06 0.0 8.7422795e-06 -1.6292068e-05 100 0.0 8.7422777e-06 -100 -1.6292068e-05 0.0 0 0 0 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="510239710" name="wine_glass">
+			<mesh_name>guid://22f8b435b40a3810ecda2c2f81b4ebc2ee803839</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>61.681026 7.0640365e-20 8.7852159e-13 0.0 6.9956461e-20 61.681026 -1.0049115e-05 0.0 -8.7852159e-13 1.0049115e-05 61.681026 0.0 -32.603706 21.323786 0.020874478 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="8093950" name="Jar">
+			<mesh_name>guid://ece9844439a1c2d3a3e0ea1608459a7d79ba99b8</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>3.5020688 3.9630449e-21 4.98799e-14 0.0 4.0263953e-21 3.5020688 -5.7055945e-07 0.0 -4.98799e-14 5.7055945e-07 3.5020688 0.0 -41.68362 21.182039 -0.0016346148 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1242389958" name="Frying_pan">
+			<mesh_name>guid://c72011b7dafdc3aa92e19f011e576c6c329e7cdb</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.0653099e-06 6.5791698 -2.8758456e-07 0.0 -6.5791698 2.0653099e-06 -7.8429832e-07 0.0 -7.8429821e-07 2.8758481e-07 6.5791698 0.0 0.81552529 -2.6531086 5.0922394 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="59307664" name="Cup_of_tea">
+			<mesh_name>guid://259d8c7ea3b749c5c85f30600feaa83ff8899892</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.6832309 3.0543254e-21 3.8217205e-14 0.0 3.036598e-21 2.6832309 -4.3715386e-07 0.0 -3.8217205e-14 4.3715386e-07 2.6832309 0.0 -34.199711 21.182041 0.018011026 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1971701017" name="Candlestick">
+			<mesh_name>guid://9477dec94aea5994297a77e3d8967be64ae6e20d</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.148654 2.4507829e-21 3.0603233e-14 0.0 2.4356687e-21 2.148654 -3.5006016e-07 0.0 -3.0603233e-14 3.5006016e-07 2.148654 0.0 -56.708023 10.757932 6.245481 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1437244" name="Wall_corkboard_with_post_it_notes">
+			<mesh_name>guid://1b7e9c0850d00fc7c7b80a7abade17918442ebbc</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>10.943602 1.2423863e-20 1.5586949e-13 0.0 1.2787433e-20 10.943602 -1.782939e-06 0.0 -1.5586949e-13 1.782939e-06 10.943602 0.0 -27.396105 21.182041 0.23530959 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1965198746" name="Table_large_circular">
+			<mesh_name>guid://a31dd3eb1955584e26918355ff737cb0662a684f</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>35.725998 4.0533734e-20 5.0884465e-13 0.0 4.053184e-20 35.725998 -5.8205042e-06 0.0 -5.0884465e-13 5.8205042e-06 35.725998 0.0 25.619886 21.182047 0.044301968 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="723494020" name="Table">
+			<mesh_name>guid://81dcb962e1136959b015c2e4e174b0f37597c1b6</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>61.259663 6.93802e-20 8.7252016e-13 0.0 6.8886134e-20 61.259663 -9.9804674e-06 0.0 -8.7252016e-13 9.9804674e-06 61.259663 0.0 1.1026078 20.303541 0.021479137 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="542305606" name="Stool">
+			<mesh_name>guid://97184d9d2bec7258d797d1d72abf454a61faf421</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>15.246084 1.7277564e-20 2.1714968e-13 0.0 1.7396814e-20 15.246084 -2.4839023e-06 0.0 -2.1714968e-13 2.4839023e-06 15.246084 0.0 -16.461264 17.0047 -0.007710157 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1508956473" name="Rocking_chair">
+			<mesh_name>guid://0aab7f0c83ef2efbd2cf581e290060e5ee6c1d00</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>69.44519 7.8252843e-20 9.8910647e-13 0.0 7.9153171e-20 69.44519 -1.1314059e-05 0.0 -9.8910647e-13 1.1314059e-05 69.44519 0.0 -10.616221 17.709578 -0.0011978869 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1296688572" name="Mailbox">
+			<mesh_name>guid://407a6c5fdf1b4e3214dbd7e9f960c03438016e03</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>30.889946 3.494513e-20 4.3996485e-13 0.0 3.5004426e-20 30.889946 -5.0326112e-06 0.0 -4.3996485e-13 5.0326112e-06 30.889946 0.0 25.899878 9.9628706 0.034125432 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="156147558" name="Lamp_with_shade">
+			<mesh_name>guid://64a1bb861972dd2de4c91ca8c87857e7f320741a</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>5.0848427 5.6737142e-21 7.2423309e-14 0.0 5.7651367e-21 5.0848427 -8.2842598e-07 0.0 -7.2423309e-14 8.2842598e-07 5.0848427 0.0 -61.408302 19.82888 5.0635457 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1655146665" name="Grandfathers_clock">
+			<mesh_name>guid://d9e134b12d26265c79a38e0b73688bee6abce275</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>42.29668 4.8246592e-20 6.0243076e-13 0.0 4.8672564e-20 42.29668 -6.891004e-06 0.0 -6.0243076e-13 6.891004e-06 42.29668 0.0 -50.010563 15.692474 0.0076340358 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1738480945" name="Desk_lamp">
+			<mesh_name>guid://07ae1150abfbb46fe0f25702b69a2a7915005184</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.0858331 6.9198465e-21 8.6680405e-14 0.0 6.8249937e-21 6.0858331 -9.9150816e-07 0.0 -8.6680405e-14 9.9150816e-07 6.0858331 0.0 -43.005157 12.433864 0.021787338 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1445085995" name="Coat_rack">
+			<mesh_name>guid://63d1af13f2b1695688cf90bd05199af8d4b2a1f7</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>25.96282 2.9267233e-20 3.6978791e-13 0.0 2.9428747e-20 25.96282 -4.2298802e-06 0.0 -3.6978791e-13 4.2298802e-06 25.96282 0.0 -86.81514 13.343683 0.017476447 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1494374603" name="cabinet">
+			<mesh_name>guid://072896ea8279d941a087e1ac910bf11be7bdf3be</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>52.986271 6.0421408e-20 7.546824e-13 0.0 5.9419563e-20 52.986271 -8.6325599e-06 0.0 -7.546824e-13 8.6325599e-06 52.986271 0.0 -62.531204 21.182037 0.15088019 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1076766013" name="Towel_rack">
+			<mesh_name>guid://7dc00805eade59a0820f407f374ed3d223576109</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>11.637622 1.3104323e-20 1.657544e-13 0.0 1.3366977e-20 11.637622 -1.8960093e-06 0.0 -1.657544e-13 1.8960093e-06 11.637622 0.0 -48.59375 -5.2190695 0.041685928 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="130677586" name="hair_dryer">
+			<mesh_name>guid://526976d40bd67423a003cb26b647684d2122ed48</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>1.2674402e-06 -8.5361341e-07 -6.5094671 0.0 -1.3450646e-06 6.5094671 -8.5361364e-07 0.0 6.5094671 1.3450648e-06 1.26744e-06 0.0 -18.69544 -5.4770217 5.7390065 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1503799579" name="Bathtub">
+			<mesh_name>guid://01c7b0071464adba59ede1d1a2e5b0fc4f39582b</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>90.478668 1.0226351e-19 1.2886857e-12 0.0 1.0385209e-19 90.478668 -1.4740845e-05 0.0 -1.2886857e-12 1.4740845e-05 90.478668 0.0 -39.288036 -4.0399737 0.017476937 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1593647292" name="Toilet">
+			<mesh_name>guid://b7ac8f8e5642d195b4e1f5f07856108f415dc4a2</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>9.9411297 1.1335096e-20 1.4159129e-13 0.0 1.1515032e-20 9.9411297 -1.6196154e-06 0.0 -1.4159129e-13 1.6196154e-06 9.9411297 0.0 -27.333582 -5.0423179 0.016529633 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="107247791" name="Bathroom sink">
+			<mesh_name>guid://1e5c7b99b25130245740bd33f015e0f61d3363dd</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>17.131577 1.4976903e-06 -1.4976901e-06 0.0 1.4976903e-06 -2.7910883e-06 17.131577 0.0 1.4976901e-06 -17.131577 -2.7910883e-06 0.0 -19.870848 -4.4503069 2.3558676 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="506075071" name="FruitBowl">
+			<mesh_name>guid://f26a1398b97882175fa1b88a8ca64e614b94944c</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.351933 5.553037e-07 -5.5530364e-07 0.0 5.5530376e-07 -1.0348613e-06 6.351933 0.0 5.5530364e-07 -6.351933 -1.0348613e-06 0.0 -31.445366 19.142218 -0.031932164 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1645198324" name="Trashbin">
+			<mesh_name>guid://c17cc33bd6515f5edabe3f254fdde64030b1249f</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>13.792269 1.2057586e-06 -1.2057584e-06 0.0 1.2057587e-06 -2.2470458e-06 13.792269 0.0 1.2057585e-06 -13.792269 -2.2470458e-06 0.0 -14.064107 -5.0324912 0.020279061 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1546923702" name="Refrigirator">
+			<mesh_name>guid://dd8c297261327a2936ac7d74fd818a4339a4aac6</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>23.18681 2.0270556e-06 -2.0270552e-06 0.0 2.0270559e-06 -3.7776106e-06 23.18681 0.0 2.0270554e-06 -23.18681 -3.777611e-06 0.0 -8.7154026 -3.8303559 -0.041164886 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1100765537" name="Stove">
+			<mesh_name>guid://732c836da7b40de8d9c6182794ecb75a054c1ef1</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.3484736e-06 -22.501945 -9.8359146e-07 0.0 -4.649623e-06 -9.8359283e-07 22.501945 0.0 -22.501945 -6.3484736e-06 -4.6496234e-06 0.0 2.4348335 -3.9634008 -0.071736395 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="294746766" name="Barbecue">
+			<mesh_name>guid://db298b9c8d67324b7209632e73eb50b5c3372a90</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>5.2816653 5.972572e-21 7.5226656e-14 0.0 6.0811984e-21 5.2816653 -8.6049261e-07 0.0 -7.5226656e-14 8.6049261e-07 5.2816653 0.0 11.321878 -2.758502 -0.04703182 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1057539153" name="Treadmill">
+			<mesh_name>guid://49417caf398702422ba25cb932b05ec45649db53</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>27.364016 2.3021892e-06 -2.3905432e-06 0.0 2.3021892e-06 1.030043 27.344625 0.0 2.3905432e-06 -27.344625 1.030043 0.0 15.303129 12.350289 -0.4934549 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="477076906" name="Ceiling Fan">
+			<mesh_name>guid://76ad2896380bc6fd3505dc38c4f172379792aa2a</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>11.135353 9.7348368e-07 -9.7348345e-07 0.0 9.7348368e-07 -1.8141792e-06 11.135353 0.0 9.7348357e-07 -11.135353 -1.8141794e-06 0.0 -52.06448 23.390127 1.4361774 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1140769385" name="Bed">
+			<mesh_name>guid://fcc853810b7996ec00c9a55bc4719afe9cc30645</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>30.074211 2.6291716e-06 -2.6291711e-06 0.0 2.6291714e-06 -4.8997108e-06 30.074211 0.0 2.6291711e-06 -30.074211 -4.8997108e-06 0.0 -76.98999 19.358345 0.033626903 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1306628299" name="Globe">
+			<mesh_name>guid://8392c2e06c6818bfa23b4f12d3b523499ad1d414</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>10.943602 9.5672021e-07 -9.5671999e-07 0.0 9.5672033e-07 -1.7829391e-06 10.943602 0.0 9.567201e-07 -10.943602 -1.7829391e-06 0.0 -44.474995 17.447515 0.0034870033 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="125612291" name="Dresser">
+			<mesh_name>guid://698ab063146c5a6645ea2e8da3a47e88717b9047</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>13.970974 1.2213816e-06 -1.2213814e-06 0.0 1.2213816e-06 -2.2761606e-06 13.970974 0.0 1.2213814e-06 -13.970974 -2.2761606e-06 0.0 -57.080349 11.107921 0.00051241246 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1811835900" name="End Table">
+			<mesh_name>guid://522090fa8a43ec115f99b63c21b51c6be26706ce</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>25.699821 2.2467502e-06 -2.2467498e-06 0.0 2.2467502e-06 -4.1870321e-06 25.699821 0.0 2.2467498e-06 -25.699821 -4.1870326e-06 0.0 -2.8701622 10.016608 -0.018447479 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="578999185" name="Armchair">
+			<mesh_name>guid://727e5fd5c2d5af3060c5f8cf53d60fe255b3cdd9</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>22.226843 1.9431327e-06 -1.9431322e-06 0.0 1.9431327e-06 -3.6212123e-06 22.226843 0.0 1.9431325e-06 -22.226843 -3.6212123e-06 0.0 5.5290065 9.8718195 0.043209955 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1074866804" name="Couch">
+			<mesh_name>guid://54c5dd64ff750973c35f40366120ba1d6214f4d8</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>31.81785 2.7816054e-06 -2.781605e-06 0.0 2.7816052e-06 -5.1837851e-06 31.81785 0.0 2.781605e-06 -31.81785 -5.183786e-06 0.0 -17.200315 10.61316 0.032189921 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="280007692" name="Books">
+			<mesh_name>guid://7a25725786636bca3327e8a173dee98cbe7a977b</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>1.8213786 1.5923001e-07 -1.5922997e-07 0.0 1.5923001e-07 -2.9674021e-07 1.8213786 0.0 1.5922998e-07 -1.8213786 -2.9674027e-07 0.0 -49.559719 9.2597952 10.566088 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="465599109" name="Bookshelf">
+			<mesh_name>guid://8c06a69e44965d65c024ef80193c1cdf49c444b2</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>40.77253 3.5644487e-06 -3.564448e-06 0.0 3.5644484e-06 -6.6426883e-06 40.77253 0.0 3.564448e-06 -40.77253 -6.6426883e-06 0.0 -50.665009 9.1532784 0.0039335066 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="955765079" name="Alarm Clock">
+			<mesh_name>guid://e4275c6987817ab4b079e6834742da06c84869ad</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.1361856 3.198317e-22 2.3448645e-14 0.0 3.5061149e-22 6.1361856 -2.6822119e-07 0.0 -2.3448645e-14 2.6822119e-07 6.1361856 0.0 -32.798519 16.679087 -0.00064319267 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1580105085" name="Desk_Fan">
+			<mesh_name>guid://941c3f282df018679d683a9a7b1d49314dde30dc</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.1307976e-06 1.4350803e-06 10.943602 0.0 3.0875183e-06 -10.943602 1.4350796e-06 0.0 10.943602 3.0875178e-06 -2.1307981e-06 0.0 -42.271339 19.469049 -0.0031531916 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="2000429734" name="Printer">
+			<mesh_name>guid://7dab168bfcad7a6e24c3fef517e583d0c4eb84ef</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>4.4516549 3.8917611e-07 -3.8917605e-07 0.0 3.8917611e-07 -7.252666e-07 4.4516549 0.0 3.8917605e-07 -4.4516549 -7.2526672e-07 0.0 -32.834656 9.1178007 4.3482885 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="2855570" name="Desk_lamp.001">
+			<mesh_name>guid://0eb2ed8277d8cef9eb39ac04f54a4793471427d6</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>5.0269097e-07 4.6855927 -6.1444132e-07 0.0 9.6819372e-07 6.1444121e-07 4.6855927 0.0 4.6855927 -5.0269108e-07 -9.681936e-07 0.0 -42.99966 9.9013624 0.021786258 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="603988715" name="Computer">
+			<mesh_name>guid://c43a3d3d62bf5d78a01c8277777bfd6a740d0dc1</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>16.733877 1.4629223e-06 -1.4629221e-06 0.0 1.4629222e-06 -2.7262947e-06 16.733877 0.0 1.4629221e-06 -16.733877 -2.7262947e-06 0.0 -41.655746 10.052344 4.370553 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="475406539" name="Mouse">
+			<mesh_name>guid://ac6c8c2cee17999bbaf8823e7700448513bc6c20</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>3.9350915 3.4401668e-07 -3.4401666e-07 0.0 3.4401668e-07 -6.4110782e-07 3.9350915 0.0 3.4401663e-07 -3.9350915 -6.4110782e-07 0.0 -39.404644 11.763144 4.3589144 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="453752123" name="Keyboard">
+			<mesh_name>guid://df3530ff8c8f0a525fd125891963715436d72ca3</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>6.7759967 5.9237652e-07 -4.5365049e-08 0.0 5.9237652e-07 -3.5804774e-07 0.51891565 0.0 5.9237647e-07 -6.7759967 -8.3044432e-07 0.0 -36.711052 11.822189 4.340755 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1950899685" name="Monitor">
+			<mesh_name>guid://1d1029a6380f34cd4c434fc8b82bb0873c2bb43a</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>-10.943602 -5.2183159e-06 -9.5671987e-07 0.0 -9.5671987e-07 1.3050061e-07 10.943602 0.0 -5.2183159e-06 10.943602 -1.3050106e-07 0.0 -36.706337 10.102642 4.4100795 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1192383029" name="Chair">
+			<mesh_name>guid://4e203651579efb7c96d120ab68c4be0e81842e15</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.1079686e-06 19.648418 -2.5765789e-06 0.0 4.0599934e-06 2.5765785e-06 19.648418 0.0 19.648418 -2.1079693e-06 -4.059993e-06 0.0 -27.694807 12.30235 0.014179706 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="2025591355" name="Desk">
+			<mesh_name>guid://fa8ea8703fba210fdc859b22d1596019dcb3caa4</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>30.479548 2.6646071e-06 -2.6646069e-06 0.0 2.6646071e-06 -4.9657483e-06 30.479548 0.0 2.6646069e-06 -30.479548 -4.9657483e-06 0.0 -34.397316 10.363609 0.021786833 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="576670317" name="Flowers">
+			<mesh_name>guid://de5195b3a6b3df763120505d742d161841dea297</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>0.50560212 4.4201318e-08 -1.4606418e-06 0.0 4.4201318e-08 -2.013825e-06 16.707794 0.0 4.4201144e-08 -0.50560212 -7.9059339e-07 0.0 -35.707653 16.723343 -0.027896302 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1404398001" name="Headphones">
+			<mesh_name>guid://2a445f0ae7bfc2e170ca7ecc0728abbb932f2dde</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>2.560169 2.2381712e-07 -2.238171e-07 0.0 2.2381712e-07 -4.1710445e-07 2.560169 0.0 2.238171e-07 -2.560169 -4.1710445e-07 0.0 -35.808784 18.184612 0.042021524 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1199116751" name="Mug with office tools">
+			<mesh_name>guid://fcc8bba5608138c02a5b551f17039ff277fa7ea9</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>4.5065889 3.9397861e-07 -3.9397855e-07 0.0 3.9397858e-07 -7.3421643e-07 4.5065889 0.0 3.9397852e-07 -4.5065889 -7.3421654e-07 0.0 -35.910362 21.997517 0.036835827 1.0</transform>
+		</node>
+		<node type="LightWorld" id="1873326489" name="Sun.001">
+			<scattering>1</scattering>
+			<disable_angle>180</disable_angle>
+			<shadow_height>10</shadow_height>
+			<shadow_width>10</shadow_width>
+			<shadow_zfar>100</shadow_zfar>
+			<shadow_cascade_mode>0</shadow_cascade_mode>
+			<num_shadow_cascades>4</num_shadow_cascades>
+			<shadow_cascade_borders>0.0149999997 0.0500000007 0.200000003</shadow_cascade_borders>
+			<color>0.800000012 0.800000012 0.800000012 1</color>
+			<shadow>0</shadow>
+			<shadow_bias>1</shadow_bias>
+			<mode>0</mode>
+			<shadow_filter_mode>-1</shadow_filter_mode>
+			<shadow_filter>1</shadow_filter>
+			<shadow_penumbra_mode>-1</shadow_penumbra_mode>
+			<shadow_penumbra>0</shadow_penumbra>
+			<shadow_screen_space>0</shadow_screen_space>
+			<shadow_screen_space_num_rays>8</shadow_screen_space_num_rays>
+			<shadow_screen_space_num_steps>8</shadow_screen_space_num_steps>
+			<shadow_screen_space_noise_ray>1</shadow_screen_space_noise_ray>
+			<shadow_screen_space_noise_step>0.5</shadow_screen_space_noise_step>
+			<shadow_screen_space_step_size>0.5</shadow_screen_space_step_size>
+			<shadow_screen_space_threshold>1</shadow_screen_space_threshold>
+			<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
+			<lens_flare_enabled>0</lens_flare_enabled>
+			<lens_flare_texture>core/textures/lens_flares_default.dds</lens_flare_texture>
+			<lens_flare_intensity>1</lens_flare_intensity>
+			<lens_flare_occlusion_fade>1</lens_flare_occlusion_fade>
+			<lens_flare_occlusion_fade_border>0.200000003</lens_flare_occlusion_fade_border>
+			<lens_flare_position_offset>0 0 0</lens_flare_position_offset>
+			<lens_flare_use_light_color>0</lens_flare_use_light_color>
+			<transform>93.119705 -29.241751 21.763275 0.0 22.547968 93.119705 28.641048 0.0 -28.641045 -21.763285 93.306221 0.0 -9.0622053 -13.17334 32.860783 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1926005517" name="Floor.001">
+			<mesh_name>guid://811fb7f4652a82c314bc494677068fedf341b068</mesh_name>
+			<surface name="surface_0" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+			<transform>17621.326 0.0015405056 -0.0015405053 0.0 0.0015405056 -0.0028708782 17621.326 0.0 0.0015405053 -17621.326 -0.0028708782 0.0 0 0 0 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="2124622239" name="Chips">
+			<mesh_name>guid://fd3658a767d2fdda5d94b371c284161ce6af3acb</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>3.2303677 2.8240777e-07 -3.3539825e-07 0.0 2.8240777e-07 -6.250466e-07 3.8365088 0.0 3.3539825e-07 -3.8365088 -6.250466e-07 0.0 -34.146339 20.439934 0.022452587 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="257044996" name="Hamburger">
+			<mesh_name>guid://8294d1aea386ed3576f91d105f39cd2f23b618c2</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>4.6933336 4.1030435e-07 -4.103043e-07 0.0 4.1030432e-07 -7.6464113e-07 4.6933336 0.0 4.1030427e-07 -4.6933336 -7.6464113e-07 0.0 -35.365829 19.831821 0.03651078 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="74826923" name="Soda Can">
+			<mesh_name>guid://057d813923dc39446512f3d3bb2667161b9af37d</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>-2.5862856 -0.43320656 -3.2665287e-07 0.0 -1.9573258e-07 -4.6375845e-08 3.9530761 0.0 -0.43320656 2.5862856 -8.7865246e-08 0.0 -34.285309 18.811171 0.026725341 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="960144933" name="Stapler">
+			<mesh_name>guid://27861eb8ae73d2b7d22490aa9a88080110a0c16c</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>5.7278123 5.0074135e-07 -5.0074124e-07 0.0 5.0074135e-07 -9.3317902e-07 5.7278123 0.0 5.0074129e-07 -5.7278123 -9.3317914e-07 0.0 -36.847752 19.722694 0.025295375 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1540879309" name="Potted_Plant.000">
+			<mesh_name>guid://0535cddb0a92a97ec2b7c2c55c9b55602ab6893f</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>5.9305596 5.1846609e-07 -5.1846598e-07 0.0 5.1846609e-07 -9.6621079e-07 5.9305596 0.0 5.1846604e-07 -5.9305596 -9.6621079e-07 0.0 -38.687794 17.69862 0.021807784 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1284550105" name="Painting">
+			<mesh_name>guid://898a0592c1eb67c9035e4e94a7fbe8e3e12f38e6</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>13.393097 1.170862e-06 -1.1708618e-06 0.0 1.170862e-06 -2.1820124e-06 13.393097 0.0 1.1708618e-06 -13.393097 -2.1820124e-06 0.0 -39.333973 21.024649 0.033951055 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1066627365" name="Tissue Box">
+			<mesh_name>guid://0af67b0d043f61082e1810c7cdc6177ae7c2c091</mesh_name>
+			<surface name="Material" material="763afb2444020c33b260e3f629348addd3030e98"/>
+			<transform>1.0214367e-06 9.5208321 -1.2485064e-06 0.0 1.7093397e-06 1.2485061e-06 9.5208321 0.0 3.619175 -3.8828108e-07 -1.0058072e-06 0.0 -37.463051 21.96277 0.020723579 1.0</transform>
+		</node>
+		<node type="LightWorld" id="1709612272" name="Sun">
+			<scattering>1</scattering>
+			<disable_angle>180</disable_angle>
+			<shadow_height>10</shadow_height>
+			<shadow_width>10</shadow_width>
+			<shadow_zfar>100</shadow_zfar>
+			<shadow_cascade_mode>0</shadow_cascade_mode>
+			<num_shadow_cascades>4</num_shadow_cascades>
+			<shadow_cascade_borders>0.0149999997 0.0500000007 0.200000003</shadow_cascade_borders>
+			<color>0.800000012 0.800000012 0.800000012 1</color>
+			<shadow>0</shadow>
+			<shadow_bias>1</shadow_bias>
+			<mode>0</mode>
+			<shadow_filter_mode>-1</shadow_filter_mode>
+			<shadow_filter>1</shadow_filter>
+			<shadow_penumbra_mode>-1</shadow_penumbra_mode>
+			<shadow_penumbra>0</shadow_penumbra>
+			<shadow_screen_space>0</shadow_screen_space>
+			<shadow_screen_space_num_rays>8</shadow_screen_space_num_rays>
+			<shadow_screen_space_num_steps>8</shadow_screen_space_num_steps>
+			<shadow_screen_space_noise_ray>1</shadow_screen_space_noise_ray>
+			<shadow_screen_space_noise_step>0.5</shadow_screen_space_noise_step>
+			<shadow_screen_space_step_size>0.5</shadow_screen_space_step_size>
+			<shadow_screen_space_threshold>1</shadow_screen_space_threshold>
+			<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
+			<lens_flare_enabled>0</lens_flare_enabled>
+			<lens_flare_texture>core/textures/lens_flares_default.dds</lens_flare_texture>
+			<lens_flare_intensity>1</lens_flare_intensity>
+			<lens_flare_occlusion_fade>1</lens_flare_occlusion_fade>
+			<lens_flare_occlusion_fade_border>0.200000003</lens_flare_occlusion_fade_border>
+			<lens_flare_position_offset>0 0 0</lens_flare_position_offset>
+			<lens_flare_use_light_color>0</lens_flare_use_light_color>
+			<transform>93.119705 -29.241751 21.763275 0.0 22.547968 93.119705 28.641048 0.0 -28.641045 -21.763285 93.306221 0.0 -9.0622053 -13.17334 32.860783 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1403716555" name="Floor">
+			<mesh_name>guid://683580bc6acd64eb5a05b54ec9943c556d4ce1b0</mesh_name>
+			<surface name="surface_0" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+			<transform>8747.7959 0.00076475675 -0.00076475664 0.0 0.00076475675 -0.0014251968 8747.7959 0.0 0.00076475664 -8747.7959 -0.001425197 0.0 0 0 0 1.0</transform>
+		</node>
+		<node type="PlayerDummy" id="1895472386" name="Camera">
+			<znear>0.101327799</znear>
+			<zfar>100000</zfar>
+			<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
+			<is_oblique_frustum>0</is_oblique_frustum>
+			<is_main>0</is_main>
+			<controlled>1</controlled>
+			<transform>44.224609 -41.23204 79.649879 0.0 -68.192787 -73.141945 9.6388285e-05 0.0 58.257431 -54.315514 -60.464012 0.0 -96.911987 84.825363 77.524261 1.0</transform>
+		</node>
+	</node>
+</nodes>

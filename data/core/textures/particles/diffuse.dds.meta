@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>608a8dc4c5a4b83bf534a24c501b2190f73fd599</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="608a8dc4c5a4b83bf534a24c501b2190f73fd599" name="diffuse.dds" link="0"/>
+	</runtimes>
+</asset>

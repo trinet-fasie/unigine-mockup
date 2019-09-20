@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>70889d39d4538634ad8be842640f7206ffd17c21</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="70889d39d4538634ad8be842640f7206ffd17c21" name="clouds_base.basemat" link="0"/>
+	</runtimes>
+</asset>

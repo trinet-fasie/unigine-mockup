@@ -1,0 +1,10 @@
+<base_material version="2.8.0.0" name="post_deferred_bent_normal" defines="BENT_NORMAL_SELECT" hidden="1">
+	
+	<state name="use_taa">1</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/deferred_extraction.frag"/>
+	
+	<texture type="opacity_depth"/>
+	<texture type="bent_normal"/>
+</base_material>

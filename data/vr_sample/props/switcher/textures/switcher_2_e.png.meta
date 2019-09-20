@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>d051b1ed6928a5b480aac23fd524f96348a2389b</guid>
+	<type>texture</type>
+	<hash>661c2b13</hash>
+	<parameters>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="string" name="width">512</parameter>
+		<parameter type="string" name="height">512</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="preset_name">emission</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="5ac01b88686a29b0744abdfe6ded7b623d30f5dc" name="switcher_2_e.dds" link="1"/>
+		<runtime id="d051b1ed6928a5b480aac23fd524f96348a2389b" name="switcher_2_e.png" link="0"/>
+	</runtimes>
+</asset>

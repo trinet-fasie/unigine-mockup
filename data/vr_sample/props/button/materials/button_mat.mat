@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="button_mat" guid="152c435e75d6ef60e1df8cbe24f612c42b50be6e" base_material="mesh_base">
+	<texture name="albedo" wrap="repeat" anisotropy="0">guid://309383db2f98ca05447c71947db4fafdbfb5eb3d</texture>
+	<texture name="shading" wrap="repeat" anisotropy="0">guid://f92ac497aa47a4c2b1e930993a2ef84eabe8311d</texture>
+	<texture name="normal" wrap="repeat" anisotropy="0">guid://8fd3aead8985f8f2e5029d1dc2c36c07cb115b5c</texture>
+	<parameter name="metalness" use_expression="0">1</parameter>
+</material>

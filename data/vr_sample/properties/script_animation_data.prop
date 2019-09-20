@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.8.0.0" name="script_animation_data" manual="1">
+	<parameter name="animations" title="Animations" type="array" array_type="file"/>
+</property>

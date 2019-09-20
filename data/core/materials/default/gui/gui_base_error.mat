@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="gui_base_error" base_material="gui_base" manual="1" hidden="1">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options transparent="2"/>
+	<state name="material_dof">0</state>
+	<state name="material_motion_blur">0</state>
+	<state name="material_sun_shafts">0</state>
+	<parameter name="color">1 0 0 1</parameter>
+</material>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>2e3bf6d594a05a307b32a7cf1014f2e21e5754d9</guid>
+	<type>animation</type>
+	<hash>1dca3c51</hash>
+	<runtimes>
+		<runtime id="2e3bf6d594a05a307b32a7cf1014f2e21e5754d9" name="agent_punch.anim" link="0"/>
+	</runtimes>
+</asset>

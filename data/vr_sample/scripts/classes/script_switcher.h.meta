@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>4a45d4ec9fdccb5b2f8e88fed20f1c45af33e0e0</guid>
+	<type>script</type>
+	<hash>013729b4</hash>
+	<runtimes>
+		<runtime id="4a45d4ec9fdccb5b2f8e88fed20f1c45af33e0e0" name="script_switcher.h" link="0"/>
+	</runtimes>
+</asset>

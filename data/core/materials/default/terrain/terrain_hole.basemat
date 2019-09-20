@@ -1,0 +1,3 @@
+<base_material version="2.8.0.0" name="terrain_hole" hidden="1">
+	<shader pass="post" fragment="core/shaders/terrain_global/hole.frag"/>
+</base_material>

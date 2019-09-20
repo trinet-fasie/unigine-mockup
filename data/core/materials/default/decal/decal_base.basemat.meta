@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>d626ba7f36683890e57d35177133036d85ee9053</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="d626ba7f36683890e57d35177133036d85ee9053" name="decal_base.basemat" link="0"/>
+	</runtimes>
+</asset>

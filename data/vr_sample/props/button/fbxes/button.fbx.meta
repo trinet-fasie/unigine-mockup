@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>e9ec87f246fb2e60cba03877805eeef7bf41b3c5</guid>
+	<type>fbx</type>
+	<hash>a16bf025</hash>
+	<parameters>
+		<parameter type="bool" name="merge_static_meshes">0</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+		<parameter type="bool" name="import_meshes">1</parameter>
+		<parameter type="bool" name="import_materials">1</parameter>
+		<parameter type="bool" name="import_materials_mode">0</parameter>
+		<parameter type="bool" name="import_textures">1</parameter>
+		<parameter type="bool" name="import_animations">1</parameter>
+		<parameter type="bool" name="import_joints">0</parameter>
+		<parameter type="bool" name="import_lights">1</parameter>
+		<parameter type="bool" name="import_cameras">1</parameter>
+		<parameter type="bool" name="import_tangent_space">0</parameter>
+		<parameter type="bool" name="import_morph_targets">0</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="float" name="fps">60</parameter>
+		<parameter type="int" name="workflow">0</parameter>
+		<parameter type="bool" name="combine_by_lods">0</parameter>
+		<parameter type="int" name="index_max_count_lods">1</parameter>
+		<parameter type="string" name="lods">_lod_0,-1e+9,_lod_1,3,_lod_2,9</parameter>
+		<parameter type="string" name="materials_imported">button_mat</parameter>
+		<parameter type="string" name="material_guids">button_mat,4442d5d804bb54c79cca899424a4107e7c0b640d</parameter>
+		<parameter type="bool" name="joints_reorientation">1</parameter>
+		<parameter type="int" name="front_axis">0</parameter>
+		<parameter type="bool" name="merge_surfaces_by_materials">0</parameter>
+		<parameter type="bool" name="use_instances">1</parameter>
+		<parameter type="bool" name="merge_similar_materials">0</parameter>
+		<parameter type="bool" name="import_bones_without_skin">0</parameter>
+		<parameter type="bool" name="create_transform_bones_for_joints">0</parameter>
+		<parameter type="string" name="prefix_materials"/>
+		<parameter type="int" name="up_axis">0</parameter>
+		<parameter type="bool" name="need_split">0</parameter>
+		<parameter type="bool" name="need_repivot">0</parameter>
+		<parameter type="bool" name="need_triagulate">1</parameter>
+		<parameter type="bool" name="skip_empty_nodes">0</parameter>
+		<parameter type="float" name="bound_size">10000</parameter>
+		<parameter type="float" name="linear_deflection">0.200000003</parameter>
+		<parameter type="float" name="angular_deflection">0.699999988</parameter>
+		<parameter type="string" name="animations"/>
+	</parameters>
+	<runtimes>
+		<runtime id="15e6faa2a0f73b8483f60d03114d1e89390a684a" name="button.node" link="1" type="3">
+			<parameters>
+				<parameter type="string" name="id">409c0797</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="75350f762ade2aabfd454ca852a021f48e149f10" name="button_base.mesh" link="2" type="1">
+			<parameters>
+				<parameter type="string" name="id">2d67041d</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="2ccc6e371864baba27a45acd8f5512e81a318290" name="button.mesh" link="2" type="1">
+			<parameters>
+				<parameter type="string" name="id">98baf9f5</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="e9ec87f246fb2e60cba03877805eeef7bf41b3c5" name="button.fbx" link="0"/>
+	</runtimes>
+</asset>

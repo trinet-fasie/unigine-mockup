@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="ObjectGrass" collider="0">
+		<thinning>1</thinning>
+		<variation>1</variation>
+		<orientation>0</orientation>
+		<intersection>1</intersection>
+		<num_textures>4</num_textures>
+		<seed>0</seed>
+		<size_x>10</size_x>
+		<size_y>10</size_y>
+		<step>400</step>
+		<subdivision>8</subdivision>
+		<density>1</density>
+		<threshold>0</threshold>
+		<angle>0</angle>
+		<probability>1 1 1 1</probability>
+		<min_bend_mean>0 0 0 0</min_bend_mean>
+		<min_bend_spread>0 0 0 0</min_bend_spread>
+		<max_bend_mean>0 0 0 0</max_bend_mean>
+		<max_bend_spread>0 0 0 0</max_bend_spread>
+		<min_height_mean>9.99999997e-007 9.99999997e-007 9.99999997e-007 9.99999997e-007</min_height_mean>
+		<min_height_spread>0.1 0.1 0.1 0.1</min_height_spread>
+		<max_height_mean>0.3 0.3 0.3 0.3</max_height_mean>
+		<max_height_spread>0.1 0.1 0.1 0.1</max_height_spread>
+		<aspect_mean>1 1 1 1</aspect_mean>
+		<aspect_spread>0.1 0.1 0.1 0.1</aspect_spread>
+		<offset_mean>0 0 0 0</offset_mean>
+		<offset_spread>0 0 0 0</offset_spread>
+		<rotation_mean>0 0 0 0</rotation_mean>
+		<rotation_spread>180 180 180 180</rotation_spread>
+		<surface name="grass" max_visible_distance="100" max_fade_distance="100" material="333412e9d86cbad371301ef8345533fea57fa810"/>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

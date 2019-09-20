@@ -1,0 +1,169 @@
+/* Copyright (C) 2005-2019, UNIGINE. All rights reserved.
+ *
+ * This file is a part of the UNIGINE 2.9 SDK.
+ *
+ * Your use and / or redistribution of this software in source and / or
+ * binary form, with or without modification, is subject to: (i) your
+ * ongoing acceptance of and compliance with the terms and conditions of
+ * the UNIGINE License Agreement; and (ii) your inclusion of this notice
+ * in any version of this software that you use or redistribute.
+ * A copy of the UNIGINE License Agreement is available by contacting
+ * UNIGINE. at http://unigine.com/
+ */
+
+
+#include <core/unigine.h>
+
+//////////////////////////////////////////////////////////////////////////
+// init/shutdown
+//////////////////////////////////////////////////////////////////////////
+string worlds[0];
+string render_settings[0];
+int current_render_settings;
+int current_world;
+int current_frame;
+int num_frames = 200;
+
+PlayerDummy player;
+
+void generate()
+{
+	log.message("createCacheShaders\n");
+	engine.materials.compileShaders();
+}
+
+void finish()
+{
+	engine.filesystem.saveGUIDs("guids.db", false);
+	log.message("finish_generate\n");
+	engine.console.run("quit");
+}
+
+int init()
+{
+	engine.world.setScriptExecute(0);
+	engine.app.setUpdate(1);
+	
+	player = new PlayerDummy();
+	player.setPosition(Vec3(0.0f,5.0f,2.0f));
+	player.setDirection(Vec3(0.0f, -1.0f,0.0f));
+	player.setZFar(400000.0f);
+	player.setZNear(1.0f);
+	
+	current_render_settings = -1;
+	current_world = -1;
+	current_frame = -1;
+	
+	string files[0];
+	engine.filesystem.getVirtualFiles(files);
+	
+	foreach(string file; files)
+	{
+		if(strrstr(file,".world") == -1)
+			continue;
+		if(strrstr(file,".meta") != -1)
+			continue;
+		worlds.append(file);
+		log.message("%s\n", file);
+	}
+	
+	foreach(string file; files)
+	{
+		if(strrstr(file,".render") == -1)
+			continue;
+		if(strrstr(file,".meta") != -1)
+			continue;
+		render_settings.append(file);
+		log.message("%s\n", file);
+	}
+	
+	engine.render.createCacheTextures();
+	engine.filesystem.saveGUIDs("guids.db", false);
+	
+	generate();
+	return 1;
+}
+
+int shutdown()
+{
+	return 1;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// update/render
+//////////////////////////////////////////////////////////////////////////
+
+int update()
+{
+	if(current_world >= worlds.size())
+	{
+		finish();
+		return;
+	}
+	
+	player.setPosition(Vec3(0.0f,5.0f,(float(current_frame) / float(num_frames) - 0.5f) * 100.0f));
+	
+	int face = current_frame % 6;
+	if(face == 0)
+		player.setDirection(Vec3( 1.0f, 0.0f, 0.0f));
+	else if(face == 1)
+		player.setDirection(Vec3(-1.0f, 0.0f, 0.0f));
+	else if(face == 2)
+		player.setDirection(Vec3(0.0f, 1.0f, 0.0f));
+	else if(face == 3)
+		player.setDirection(Vec3(0.0f,-1.0f, 0.0f));
+	else if(face == 4)
+		player.setDirection(Vec3(0.0f, 0.0f, 1.0f));
+	else if(face == 5)
+		player.setDirection(Vec3(0.0f, 0.0f,-1.0f));
+	
+	if(current_frame == 0)
+	{
+		player.setPosition(Vec3(0.0f,5.0f,-5000.0f));
+		player.setDirection(Vec3(0.0f, 1.0f,0.0f));
+	}
+	
+	if(current_frame < 0 && current_render_settings <= 0)
+	{
+		current_render_settings = render_settings.size() - 1;
+		current_frame = num_frames;
+		current_world++;
+		if(current_world >= worlds.size())
+		{
+			finish();
+			return;
+		}
+		
+		engine.game.setPlayer(0);
+		string file = worlds[current_world];
+		log.message("\n\n====================\n");
+		log.message("World: %s\n", file);
+		
+		engine.world.loadWorld(file);
+		engine.game.setPlayer(player);
+		player.setPosition(Vec3(0.0f,5.0f,5000.0f));
+		player.setDirection(Vec3(0.0f, 1.0f,0.0f));
+		generate();
+	}
+	
+	if(current_frame < 0 && current_render_settings >= 0)
+	{
+		current_frame = num_frames;
+		string file = render_settings[current_render_settings];
+		log.message("\n\nRender settings: %s\n", file);
+		
+		engine.render.loadSettings(file);
+		player.setPosition(Vec3(0.0f,5.0f,5000.0f));
+		player.setDirection(Vec3(0.0f, 1.0f,0.0f));
+		current_render_settings--;
+		generate();
+	}
+	
+	current_frame--;
+	return 1;
+}
+
+int render()
+{
+	return 1;
+}

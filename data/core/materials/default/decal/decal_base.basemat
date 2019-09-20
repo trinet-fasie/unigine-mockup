@@ -1,0 +1,196 @@
+<base_material version="2.8.0.0" name="decal_base" editable="0" parameters_prefix="m">
+	
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options transparent="2" depth_mask="0"/>
+	
+	<!-- states -->
+	<state name="alpha_fade"		internal="1"/>
+	
+	<group name="Options">
+		<state name="water_decal"		defines="name"		title="Water Decal"				tooltip="&lt;p&gt;Project decals on water surface.&lt;/p&gt;&lt;p&gt;When enabled, decals are projected only on the top of the water surface. Otherwise, decals are displayed on the meshes overwater and underwater.&lt;/p&gt;"/>
+		<state name="distance_fade"		defines="name"		title="Distance Fade"			tooltip="&lt;p&gt;Enable smooth fading depending on the distance to the surface on which the decal is projected.&lt;/p&gt;"/>
+		<state name="angle_fade"		defines="name"		title="Angle Fade"				tooltip="&lt;p&gt;Enable smooth fading depending on the orientation of the surface on which the decal is projected.&lt;/p&gt;">1</state>
+		<state name="normal_substitute"	defines="name"		title="Normal Substitute"		tooltip="&lt;p&gt;Rendering mode for normals.&lt;/p&gt;&lt;p&gt;By default, normal maps of a base and overlapping material are combined together. With this option enabled, only normals of the overlapping material are used.&lt;/p&gt;">1</state>
+		
+		<state name="specular_map"		water_decal="0" defines="name"	tooltip="&lt;p&gt;Use B-channel of the &lt;b&gt;Shading Texture&lt;/b&gt; as a specular reflection intensity map.&lt;/p&gt;"/>
+		<state name="microfiber_map"	water_decal="0" defines="name"	tooltip="&lt;p&gt;Use A-channel of the &lt;b&gt;Shading Texture&lt;/b&gt; as a microfiber map.&lt;/p&gt;"/>
+		
+		<state name="screen_projection"	defines="name"		title="Screen Projection"			tooltip="&lt;p&gt;Enable screen projection of the decal instead of projecting it onto a surface.&lt;/p&gt;"/>
+		<state name="parallax"			defines="name"		title="Parallax"					tooltip="&lt;p&gt;Enable parallax occlusion mapping.&lt;/p&gt;&lt;p&gt;Can be used to fake surface relief adding more realism with less influence on the performance.&lt;/p&gt;"/>
+		<state name="auxiliary"			defines="name"		title="Auxiliary" water_decal="0"	tooltip="&lt;p&gt;Enable auxiliary rendering pass for the material.&lt;/p&gt;&lt;p&gt;Can be used for custom post-effects, such as thermal vision, etc.&lt;/p&gt;"/>
+	</group>
+	
+	<state name="detail" defines="name" group="Options"	title="Detail"	tooltip="&lt;p&gt;Enable detail rendering.&lt;/p&gt;&lt;p&gt;This effect can be used to add details for objects, that are close to camera, or variations for distant ones, to make them look more realistic.&lt;/p&gt;"/>
+	<group name="Detail">
+		<state name="detail_alpha_blendable"	detail="1"											defines="name"			title="Use Alpha for Blending" 		tooltip="&lt;p&gt;Use Alpha-channel of the detail for blending.&lt;/p&gt;"/>
+		<state name="detail_3d_texture"			detail="1"											defines="name"			title="3D Texture"		tooltip="Use 3D Texture for the decal."/>
+		<state name="detail_blend"				detail="1"	items="alpha_blend,overlay,multiply"	defines="name_items"	title="Blending"	tooltip="&lt;p&gt;Blending mode: determines how base and detail textures are blended.&lt;/p&gt;"/>
+	</group>
+	
+	<group name="Parallax">
+		<state name="parallax_shadow"		parallax="1"	defines="name"	title="Shadow"	tooltip="&lt;p&gt;Enable shadows for surfaces with parallax maps.&lt;/p&gt;&lt;p&gt;This effect makes the relief look more realistic.&lt;/p&gt;"/>
+		<state name="parallax_cutout"		parallax="1"	defines="name"	title="Cutout"	tooltip="&lt;p&gt;Enable the cutout effect providing smooth edges between the opaque and transparent areas.&lt;/p&gt;"/>
+	</group>
+	
+	<group name="UV Mapping">
+		<state name="base_mapping"					items="uv,world,triplanar"	defines="name_items"	title="Base"	tooltip="UV map source for base textures"/>
+		<state name="detail_mapping"	detail="1"	items="uv,world,triplanar"	defines="name_items"	title="Detail"	tooltip="UV map source for detail textures"/>
+	</group>
+	
+	<!-- textures -->
+	<group name="Base">
+		<texture unit="0"	name="albedo"	anisotropy="1"					tooltip="&lt;p&gt;Albedo color texture, 4 channels: RGB - color, A - opacity&lt;/p&gt;">core/textures/common/white.dds</texture>
+		<texture unit="1"	name="normal"	anisotropy="1"	format="signed"	tooltip="&lt;p&gt;Normal texture, 2 channels: RG - normal map&lt;/p&gt;">core/textures/common/normal.dds</texture>
+		<texture unit="2"	name="shading"	water_decal="0"	anisotropy="1"	tooltip="&lt;p&gt;Shading texture, 4 channels: R - metalness map, G - roughness map, B - specular reflection intensity for non-metals, A - microfiber map&lt;/p&gt;">core/textures/common/white.dds</texture>
+		
+		<texture unit="4"	name="detail_albedo"					detail="1"	anisotropy="1"					title="Albedo"	tooltip="&lt;p&gt;Additional albedo texture, 4 channels: RGB - color, A - opacity.&lt;/p&gt;&lt;p&gt;Can be used to add details for decals, that are close to camera, or variations for distant ones, depending on UV transform settings.&lt;/p&gt;">core/textures/common/white.dds</texture>
+		<texture unit="5"	name="detail_normal"					detail="1"	anisotropy="1"	format="signed"	title="Normal"	tooltip="&lt;p&gt;Additional normal texture, 2 channels: RG - normal map.&lt;/p&gt;&lt;p&gt;Can be used to add details for decals, that are close to camera, or variations for distant ones, depending on UV transform settings.&lt;/p&gt;">core/textures/common/normal.dds</texture>
+		<texture unit="6"	name="detail_shading"	water_decal="0"	detail="1"	anisotropy="1"					title="Shading"	tooltip="&lt;p&gt;Additional shading texture, 4 channels: R - metalness map, G - roughness map, B - specular reflection intensity for non-metals, A - microfiber map&lt;/p&gt;&lt;p&gt;Can be used to add details for decals, that are close to camera, or variations for distant ones, depending on UV transform settings.&lt;/p&gt;">core/textures/common/white.dds</texture>
+	</group>
+	
+	<group name="Options">
+		<texture unit="7"	name="parallax" parallax="1" anisotropy="1" tooltip="&lt;p&gt;Parallax height map texture, 1 channel: R - height map&lt;/p&gt;&lt;p&gt;This texture can be used to fake surface relief adding more realism with less influence on the performance.&lt;/p&gt;">core/textures/common/red.dds</texture>
+		<texture unit="8"	name="auxiliary" auxiliary="1" water_decal="0" anisotropy="1" tooltip="&lt;p&gt;Auxiliary texture, 4 channels.&lt;/p&gt;&lt;p&gt;This texture can be used for custom effects, such as thermal vision, etc.&lt;/p&gt;">core/textures/common/white.dds</texture>
+	</group>
+	
+	<texture unit="12" type="decal_depth"/>
+	<texture unit="13" type="decal_normal"/>
+	<texture unit="14" type="gbuffer_material_mask"/>
+	
+	<parameter name="material_mask" water_decal="0" shared="0" type="expression" group="Default" widget="mask24" tooltip="&lt;p&gt;Decal bit-mask.&lt;/p&gt;&lt;p&gt;A decal will be projected onto a surface if this mask matches the mask of the surface material (one bit, at least).&lt;/p&gt;">0xffffffff</parameter>
+	
+	<!-- base -->
+	<group name="Base">
+		<parameter name="albedo" type="color" title="Albedo" tooltip="Albedo color multiplier">1.0 1.0 1.0 1.0</parameter>
+		
+		<parameter name="metalness"		water_decal="0" shared="0"	type="slider"	title="Metalness"	tooltip="Metalness multiplier">0.0</parameter>
+		<parameter name="roughness"		water_decal="0" shared="0"	type="slider"	title="Roughness"	tooltip="Roughness multiplier">1.0</parameter>
+		<parameter name="specular"		water_decal="0" shared="0"	type="slider"	title="Specular"	tooltip="Specular multiplier">0.5</parameter>
+		<parameter name="microfiber"	water_decal="0" shared="0"	type="slider"	title="Microfiber"	tooltip="Microfiber multiplier">0.0</parameter>
+		
+		<parameter name="normal_scale"						type="slider" max="2.0"	flags="max_expand"	title="Normal Intensity"	tooltip="Intensity of the normal texture">1.0</parameter>
+		<parameter name="translucent"		water_decal="0"	type="slider"								title="Translucency"			tooltip="Translucency multiplier">0.0</parameter>
+		
+		<parameter name="uv_transform"							type="expression"						title="UV Transform"		tooltip="UV transform" widget="uv">vec4(1.0f,1.0f,0.0f,0.0f)</parameter>
+		<parameter name="triplanar_blend"	base_mapping="2"	type="slider"							title="Triplanar blend"		tooltip="Triplanar blending factor.">0.5</parameter>
+	</group>
+	
+	<parameter name="shading" type="combiner"
+		metalness="X" roughness="Y" specular="Z" microfiber="W"
+	/>
+	
+	<parameter name="albedo_visible"					shared="0"	type="slider"						title="Albedo Visibility"		tooltip="&lt;p&gt;Specifies the influence of the albedo of the decal on the surface material.&lt;/p&gt;">1.0</parameter>
+	<parameter name="metalness_visible"	water_decal="0"	shared="0"	type="slider"						title="Metalness Visibility"	tooltip="&lt;p&gt;Specifies the influence of the metalness of the decal on the surface material.&lt;/p&gt;">1.0</parameter>
+	<parameter name="roughness_visible"	water_decal="0"	shared="0"	type="slider"						title="Roughness Visibility"	tooltip="&lt;p&gt;Specifies the influence of the roughness of the decal on the surface material.&lt;/p&gt;">1.0</parameter>
+	<parameter name="normal_visible"					shared="0"	type="slider"						title="Normal Visibility"		tooltip="&lt;p&gt;Specifies the influence of the normal of the decal on the surface material.&lt;/p&gt;">1.0</parameter>
+
+	<parameter name="visible" type="combiner"
+		albedo_visible="X" metalness_visible="Y" roughness_visible="Z" normal_visible="W"
+	/>
+
+	<!--detail-->
+	<group name="Detail">
+		<parameter name="detail_albedo"							detail="1"				type="color"	title="Albedo"	tooltip="&lt;p&gt;Detail albedo color multiplier.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+		<parameter name="detail_metalness"		water_decal="0" detail="1"	shared="0"	type="slider"	title="Metalness"	tooltip="&lt;p&gt;Detail metalness multiplier.&lt;/p&gt;">0.0</parameter>
+		<parameter name="detail_roughness"		water_decal="0"	detail="1"	shared="0"	type="slider"	title="Roughness"	tooltip="&lt;p&gt;Detail roughness multiplier.&lt;/p&gt;">1.0</parameter>
+
+		<parameter name="detail_specular"		water_decal="0"	detail="1"	shared="0"	specular_map="1"	type="slider"	title="Specular"	tooltip="&lt;p&gt;Detail specular multiplier.&lt;/p&gt;">0.5</parameter>
+		<parameter name="detail_microfiber"		water_decal="0"	detail="1"	shared="0"	microfiber_map="1"	type="slider"	title="Microfiber"	tooltip="&lt;p&gt;Detail microfiber multiplier.&lt;/p&gt;">0.0</parameter>
+
+		<parameter name="detail_shading" type="combiner"
+			detail_metalness="X" detail_roughness="Y" detail_specular="Z" detail_microfiber="W"
+		/>
+
+		<parameter name="detail_uv_transform"		detail="1"	type="expression" widget="uv"								title="UV Transform"	tooltip="&lt;p&gt;Detail texture coordinates transformation. (X,Y) - scale, (Z,W) - offset.&lt;/p&gt;">vec4(1.0f,1.0f,0.0f,0.0f)</parameter>
+		<parameter name="detail_triplanar_blend"	detail="1"	detail_mapping="2"		type="slider"						title="Triplanar Blend"	tooltip="&lt;p&gt;Triplanar blending factor.&lt;/p&gt;">0.5</parameter>
+		<parameter name="detail_3d_transform"		detail="1"	detail_3d_texture="1"	type="expression" widget="uv"		title="3D Transform"	tooltip="&lt;p&gt;Detail texture depth coordinate offset.&lt;/p&gt;">0.0f</parameter>
+
+		<parameter name="detail_visible"				detail="1"	type="slider"	max="2.0"	title="Visibility"	tooltip="&lt;p&gt;Specifies the influence of the detail on the base decal shading effects.&lt;/p&gt;">1.0</parameter>
+		<parameter name="detail_visible_threshold"		detail="1"	type="slider"				title="Visibility Threshold"	>1.0</parameter>
+
+		<parameter name="detail_albedo_visible"							detail="1"				type="slider"						title="Albedo Visibility"		tooltip="&lt;p&gt;Specifies the influence of the detail albedo texture on the base albedo texture.&lt;/p&gt;">1.0</parameter>
+		<parameter name="detail_metalness_visible"		water_decal="0" detail="1"	shared="0"	type="slider"						title="Metalness Visibility"	tooltip="&lt;p&gt;Specifies the influence of the detail metallness texture on the base metallness texture.&lt;/p&gt;">1.0</parameter>
+		<parameter name="detail_roughness_visible"		water_decal="0" detail="1"	shared="0"	type="slider"						title="Roughness Visibility"	tooltip="&lt;p&gt;Specifies the influence of the detail roughness texture on the base roughness texture.&lt;/p&gt;">1.0</parameter>
+
+		<parameter name="detail_specular_visible"		water_decal="0" detail="1"	shared="0"	specular_map="1"	type="slider"	title="Specular Visibility"		tooltip="&lt;p&gt;Specifies the influence of the detail specular texture on the base specular texture.&lt;/p&gt;">1.0</parameter>
+		<parameter name="detail_microfiber_visible"		water_decal="0" detail="1"	shared="0"	microfiber_map="1"	type="slider"	title="Microfiber Visibility"	tooltip="&lt;p&gt;Specifies the influence of the detail microfiber texture on the base microfiber texture.&lt;/p&gt;">1.0</parameter>
+
+
+		<parameter name="detail_shading_visible" type="combiner"
+			detail_metalness_visible="X" detail_roughness_visible="Y" detail_specular_visible="Z" detail_microfiber_visible="W"
+		/>
+
+		<parameter name="detail_normal_visible"		detail="1"	type="slider"			title="Normal Visibility"	tooltip="&lt;p&gt;Specifies the influence of the detail normal texture on the base normal texture.&lt;/p&gt;">0.5</parameter>
+	</group>
+	<!-- fade -->
+	<group name="Fade">
+		<parameter name="distance_fade_threshold"	distance_fade="1"	shared="0"	type="slider" max="2.0"		title="Distance Threshold"	tooltip="&lt;p&gt;Coefficient to scale a threshold fade for projected overlap materials.&lt;/p&gt;&lt;p&gt;The higher the value, the bigger area is rendered.&lt;/p&gt;">1.0</parameter>
+		<parameter name="distance_fade_pow"			distance_fade="1"	shared="0"	type="slider" max="2.0"		title="Distance Power"		tooltip="&lt;p&gt;Distance fade power, indicates the fading intensity depending on the distance.&lt;/p&gt;&lt;p&gt;The lower the value, the bigger area is rendered.&lt;/p&gt;">1.0</parameter>
+
+		<parameter name="angle_fade_threshold"	angle_fade="1"	shared="0"	type="slider" min="-1.0" max="1.0"	title="Angle Threshold"		tooltip="&lt;p&gt;Coefficient to scale a threshold angle for projected overlap materials.&lt;/p&gt;&lt;p&gt;The lower the value, the bigger area is rendered.&lt;/p&gt;">0.0</parameter>
+		<parameter name="angle_fade_pow"		angle_fade="1"	shared="0"	type="slider" max="2.0"				title="Angle Power"			tooltip="&lt;p&gt;Angle fade power, indicates the fading intensity depending on the angle.&lt;/p&gt;">1.0</parameter>
+	
+		<parameter name="fade" type="combiner"
+			distance_fade_threshold="X" distance_fade_pow="Y"
+			angle_fade_threshold="Z" angle_fade_pow="W"
+		/>
+	</group>
+	
+	<!--parallax-->
+	<group name="Parallax">
+		<parameter name="parallax_scale"				parallax="1"						type="slider" max="0.2" flags="max_expand"	title="Height"				tooltip="&lt;p&gt;Parallax height map offset scale.&lt;/p&gt;">0.1</parameter>
+		<parameter name="parallax_min_layers"			parallax="1"						type="slider" min="1" max="64.0"			title="Min Layers"			tooltip="&lt;p&gt;Parallax mapping minimum steps.&lt;/p&gt;">1</parameter>
+		<parameter name="parallax_max_layers"			parallax="1"						type="slider" min="1" max="64.0"			title="Max Layers"			tooltip="&lt;p&gt;Parallax mapping maximum steps.&lt;/p&gt;">16</parameter>
+		<parameter name="parallax_noise"				parallax="1"						type="slider" min="0" max="2.0"				title="Noise"				tooltip="&lt;p&gt;Size of the noise used for parallax mapping.&lt;/p&gt;">1.0f</parameter>
+		<parameter name="parallax_cutout_uv_transform"	parallax="1"	parallax_cutout="1"	type="expression" widget="uv"				title="Cutout UV Transform"	tooltip="&lt;p&gt;Parallax texture coordinates transformation. (X,Y) - scale, (Z,W) - offset.&lt;/p&gt;">vec4(1.0f,1.0f,0.0f,0.0f)</parameter>
+	</group>
+	
+	<!--parallax shadow-->
+	<group name="Parallax Shadow">
+		<parameter name="parallax_shadow_min_layers"	parallax="1"	parallax_shadow="1"	type="slider" min="1" max="64.0">1</parameter>
+		<parameter name="parallax_shadow_max_layers"	parallax="1"	parallax_shadow="1"	type="slider" min="1" max="64.0">16</parameter>
+		<parameter name="parallax_shadow_noise"			parallax="1"	parallax_shadow="1"	type="slider" min="0" max="2.0">1.0f</parameter>
+	
+		<parameter name="parallax_shadow_intensity"		parallax="1"	parallax_shadow="1"	type="slider">1.0f</parameter>
+		<parameter name="parallax_shadow_softness"		parallax="1"	parallax_shadow="1"	type="slider">1.0f</parameter>
+	
+		<parameter name="parallax_shadow_visible"					parallax="1"	parallax_shadow="1"	type="slider">1.0f</parameter>
+		<parameter name="parallax_shadow_angle_visible"				parallax="1"	parallax_shadow="1"	type="slider">1.0f</parameter>
+		<parameter name="parallax_shadow_angle_visible_threshold"	parallax="1"	parallax_shadow="1"	type="slider">1.0f</parameter>
+	</group>
+	
+	<!--auxiliary-->
+	<group name="Options">
+		<color name="auxiliary_color" auxiliary="1" water_decal="0">1.0 1.0 1.0 1.0</color>
+	</group>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="decal_proj"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/decal/decal.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="ambient" node="decal_proj"
+		defines="BASE_AMBIENT,AMBIENT"
+		vertex="core/shaders/decal/decal.vert"
+		geometry="core/shaders/decal/decal.geom"
+		fragment="core/shaders/decal/decal.frag"/>
+	
+	<shader pass="depth_pre_pass" node="decal_proj"
+		defines="DEPTH_PRE_PASS"
+		vertex="core/shaders/decal/decal.vert"
+		geometry="core/shaders/decal/decal.geom"
+		fragment="core/shaders/decal/depth.frag"/>
+	
+	<shader pass="auxiliary" node="decal_proj"
+		auxiliary="1"
+		vertex="core/shaders/decal/decal.vert"
+		geometry="core/shaders/decal/decal.geom"
+		fragment="core/shaders/decal/auxiliary.frag"/>
+	
+	<!-- bindings -->
+	<bind node="decal_ortho" to="decal_proj"/>
+	<bind node="decal_mesh" to="decal_proj" defines="DEFERRED_MESH"/>
+	
+</base_material>

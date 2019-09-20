@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>637ad77445d81c43a63614c640cae56dc5cb07e8</guid>
+	<type>script</type>
+	<hash>698095a3</hash>
+	<runtimes>
+		<runtime id="637ad77445d81c43a63614c640cae56dc5cb07e8" name="script_lamp_bindings.cpp" link="0"/>
+	</runtimes>
+</asset>

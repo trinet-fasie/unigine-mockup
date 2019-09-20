@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="2081125146" name="switcher_2">
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="585479392" name="switcher_2_key">
+			<mesh_name>guid://d68c3e7d1ca8edb836b255b7708337aaaae08301</mesh_name>
+			<surface name="switcher_2_mat" material="952cd9ed9fdc34d0f64b616a14980eeff01d815c"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.03806543 8.9686364e-05 0.034438293 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="457504008" name="switcher_2">
+			<mesh_name>guid://2921006c83d300db15e0407efed26dc5bd180460</mesh_name>
+			<surface name="switcher_2_mat" material="952cd9ed9fdc34d0f64b616a14980eeff01d815c"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.018654432 7.6176366e-05 0.034300458 1.0</transform>
+		</node>
+	</node>
+</nodes>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>cca3d547599a6afd0188042f80c9b4e97e59c0f3</guid>
+	<type>property</type>
+	<hash>0a73ae82</hash>
+	<runtimes>
+		<runtime id="cca3d547599a6afd0188042f80c9b4e97e59c0f3" name="script_animation_data" link="0"/>
+	</runtimes>
+</asset>

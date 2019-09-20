@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>d000e9e192954b8486a43dd732dee10501ecf72f</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="d000e9e192954b8486a43dd732dee10501ecf72f" name="mesh_overlap_mask.dds" link="0"/>
+	</runtimes>
+</asset>

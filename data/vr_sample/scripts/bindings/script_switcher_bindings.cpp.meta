@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>c38a9ebfe6601d1211a79949e125d21441029663</guid>
+	<type>script</type>
+	<hash>9b8b877b</hash>
+	<runtimes>
+		<runtime id="c38a9ebfe6601d1211a79949e125d21441029663" name="script_switcher_bindings.cpp" link="0"/>
+	</runtimes>
+</asset>

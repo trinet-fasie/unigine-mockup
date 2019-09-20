@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>45130945fbfdc3e6f898cbb99e9d01e51d3f4bbd</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="45130945fbfdc3e6f898cbb99e9d01e51d3f4bbd" name="gui_base.basemat" link="0"/>
+	</runtimes>
+</asset>

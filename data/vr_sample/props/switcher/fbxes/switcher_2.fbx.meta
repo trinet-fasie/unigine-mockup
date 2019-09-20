@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>0564bf6857f81ba7425be4da91926e71c1e8951c</guid>
+	<type>fbx</type>
+	<hash>727bb694</hash>
+	<parameters>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+		<parameter type="bool" name="combine_by_lods">0</parameter>
+		<parameter type="bool" name="import_tangent_space">0</parameter>
+		<parameter type="bool" name="import_bones_without_skin">0</parameter>
+		<parameter type="bool" name="merge_static_meshes">0</parameter>
+		<parameter type="float" name="linear_deflection">0.200000003</parameter>
+		<parameter type="bool" name="import_morph_targets">0</parameter>
+		<parameter type="bool" name="skip_empty_nodes">0</parameter>
+		<parameter type="bool" name="need_split">0</parameter>
+		<parameter type="float" name="bound_size">10000</parameter>
+		<parameter type="int" name="index_max_count_lods">1</parameter>
+		<parameter type="string" name="lods"/>
+		<parameter type="string" name="animations"/>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="int" name="workflow">0</parameter>
+		<parameter type="float" name="fps">30</parameter>
+		<parameter type="int" name="up_axis">0</parameter>
+		<parameter type="bool" name="joints_reorientation">1</parameter>
+		<parameter type="bool" name="import_textures">1</parameter>
+		<parameter type="bool" name="import_lights">1</parameter>
+		<parameter type="bool" name="need_triagulate">1</parameter>
+		<parameter type="bool" name="need_repivot">0</parameter>
+		<parameter type="bool" name="merge_similar_materials">0</parameter>
+		<parameter type="bool" name="import_cameras">1</parameter>
+		<parameter type="int" name="front_axis">0</parameter>
+		<parameter type="bool" name="import_animations">1</parameter>
+		<parameter type="int" name="import_materials_mode">0</parameter>
+		<parameter type="string" name="prefix_materials"/>
+		<parameter type="bool" name="import_materials">1</parameter>
+		<parameter type="bool" name="use_instances">1</parameter>
+		<parameter type="bool" name="import_meshes">1</parameter>
+		<parameter type="bool" name="merge_surfaces_by_materials">0</parameter>
+		<parameter type="bool" name="create_transform_bones_for_joints">0</parameter>
+		<parameter type="float" name="angular_deflection">0.699999988</parameter>
+		<parameter type="string" name="material_guids">switcher_2_mat,952cd9ed9fdc34d0f64b616a14980eeff01d815c</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="ee5bdfc2cc329c3906d098449055c6d3289d1e16" name="switcher_2.node" link="1" type="3">
+			<parameters>
+				<parameter type="string" name="id">eb152d0e</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="d68c3e7d1ca8edb836b255b7708337aaaae08301" name="switcher_2_key.mesh" link="2" type="1">
+			<parameters>
+				<parameter type="string" name="id">c6145a9e</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="2921006c83d300db15e0407efed26dc5bd180460" name="switcher_2.mesh" link="2" type="1">
+			<parameters>
+				<parameter type="string" name="id">098d423d</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="0564bf6857f81ba7425be4da91926e71c1e8951c" name="switcher_2.fbx" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,7 @@
+<base_material version="2.8.0.0" name="post_vblur_2d" defines="VBLUR">
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/post/blur_2d.frag"/>
+	
+	<texture name="color" type="procedural"/>
+</base_material>

@@ -1,0 +1,10 @@
+<base_material version="2.8.0.0" name="post_stereo_interlaced" hidden="1">
+	
+	<shader pass="post"
+		defines="INTERLACED"
+		fragment="core/shaders/screen_space/fragment/stereo.frag"/>
+	
+	<texture name="color_0" type="procedural"/>
+	<texture name="color_1" type="procedural"/>
+	
+</base_material>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="editor2_debug_cubemaps" guid="d6d02b255a3a8f52a7111ed199df9f25f57f1818" parent="1a94303f78be8feaaf2c24ad1a25042eff5f6aa0" base_material="render_composite_deferred" hidden="1">
+	<parameter name="intensity">1</parameter>
+</material>

@@ -1,0 +1,68 @@
+<base_material version="2.8.0.0" name="clouds_base" editable="0">
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" receive_shadow="0" cast_world_shadow="0" receive_world_shadow="0"/>
+	<options transparent="2"/>
+	
+	<supported node="object_clouds"/>
+	
+	<state name="self_shadows"																			title="Self Shadows"			tooltip="&lt;p&gt;Enable rendering of shadows cast by the cloud layer on itself.&lt;/p&gt;">1</state>
+	<state name="receive_shadows"																		title="Receive Shadows"			tooltip="&lt;p&gt;Enable rendering of shadows cast on a cloud layer (e.g. shadows from an upper cloud layer).&lt;/p&gt;">0</state>
+	<state name="cast_shadows"																			title="Cast Shadows"			tooltip="&lt;p&gt;Enable rendering of shadows cast by the cloud layer.&lt;/p&gt;">1</state>
+	
+	<texture unit="0" name="clouds_coverage"															title="Clouds Coverage"			tooltip="&lt;p&gt;Clouds coverage texture, 3 channels: R - coverage map, G - stormcloud map, B - height map.&lt;/p&gt;">core/textures/clouds/default_coverage.dds</texture>
+	
+	<texture unit="4" type="current_depth"/>
+	<texture unit="5" type="scattering_sky_lut"/>
+	<texture unit="6" type="reflection_cube"/>
+	
+	<texture unit="14" type="light_image"/>
+	<texture unit="15" type="light_depth"/>
+	
+	<!-- Geometry group -->
+	<group name="Geometry">
+		<parameter name="layer_max_height"		type="slider" min="0.0" max="2000.0" flags="max_expand"		title="Layer Height"			tooltip="&lt;p&gt;Determines the height of the cloud layer, in units.&lt;/p&gt;">700.0</parameter>
+		<parameter name="coverage_size"			type="slider" min="0.0" max="2.0" flags="max_expand"		title="Coverage Size"			tooltip="&lt;p&gt;Determines the size of the coverage texture.&lt;/p&gt;">0.03</parameter>
+		<parameter name="coverage_contrast"		type="slider" min="0.0" max="1.0" flags="max_expand"		title="Coverage Contrast"		tooltip="&lt;p&gt;Determines the contrast of the coverage texture.&lt;/p&gt;&lt;p&gt;This parameter can be used for fine tuning. It also makes it possible to gradually increase cloudiness without changing the coverage texture when simulating weather.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;lower&lt;/em&gt; the value, the more cloudy the sky looks.&lt;/p&gt;&lt;p&gt;For this parameter to work properly, the coverage texture must not contain absolutely black pixels.&lt;/p&gt;">0.4</parameter>
+		<parameter name="coverage_cloudness"	type="slider" min="0.0" max="1.0" flags="max_expand"		title="Coverage Cloudiness"		tooltip="&lt;p&gt;Determines the overall cloud cover.&lt;/p&gt;">1.0</parameter>
+		<parameter name="cloud_bottom_fade"		type="slider" min="0.0" max="1.0" flags="max_expand"		title="Bottom Fade"				tooltip="&lt;p&gt;Determines the form of clouds bottom.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Lower&lt;/em&gt; values make the bottom more flat.&lt;/p&gt;">0.33</parameter>
+		<parameter name="density"				type="slider" min="0.0" max="1.0" flags="max_expand"		title="Clouds Density"			tooltip="&lt;p&gt;Controls density of the clouds which determines visual appearance.&lt;/p&gt;&lt;p&gt;This parameter can be used to simulate cirrus clouds.&lt;/p&gt;&lt;p&gt;Use this parameter only when the desired visual appearance cannot be achieved by adjusting other parameters. &lt;em&gt;Lower&lt;/em&gt; density values can significally reduce performance.&lt;/p&gt;">1.0</parameter>
+	</group>
+
+	<!-- Procedural group -->
+	<group name="Procedural">
+		<parameter name="base_size"					type="slider" min="0.0" max="2.0" flags="max_expand"	title="Noise Size"				tooltip="&lt;p&gt;Determines noise graininess.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Higher&lt;/em&gt; values reduce performance and may bring up the tiling issue.&lt;/p&gt;&lt;p&gt;Recommended range of values is from &lt;b&gt;0.3&lt;/b&gt; to &lt;b&gt;1&lt;/b&gt;&lt;/p&gt;">0.45</parameter>
+		<parameter name="noise_threshold"			type="slider" min="0.0" max="1.0" flags="max_expand"	title="Noise Threshold"			tooltip="&lt;p&gt;Determines the density threshold of cloud formation.&lt;/p&gt;&lt;p&gt;&lt;em&gt;Higher&lt;/em&gt; values make clouds rougher.&lt;/p&gt;&lt;p&gt;This parameter should be used only for fine tuning. Significant changes made to this parameter may result in mismatch of cloud shapes and their shadows.&lt;/p&gt;">0.1</parameter>
+		<parameter name="noise_threshold_extent"	type="slider" min="0.0" max="1.0" flags="max_expand"	title="Noise Threshold Extent"	tooltip="&lt;p&gt;Can be used to adjust appearance of clouds to make clouds softer or rougher for a selected noise threshold.&lt;/p&gt;&lt;p&gt;This parameter should be used only for fine tuning. Significant changes made to this parameter may result in mismatch of cloud shapes and their shadows.&lt;/p&gt;">0.3</parameter>
+		<parameter name="detail_size"				type="slider" min="0.0" max="2.0" flags="max_expand"	title="Detail Noise Size"		tooltip="&lt;p&gt;Determines the size of details cutout from the clouds.&lt;/p&gt;&lt;p&gt;This parameter is analogous to the Noise size parameter. The &lt;em&gt;lower&lt;/em&gt; is the value the larger pieces are cut out.&lt;/p&gt;">3.0</parameter>
+		<parameter name="curl_distortion_scale"		type="slider" min="0.0" max="2.0" flags="max_expand"	title="Detail Distortion Size"	tooltip="&lt;p&gt;Determines the scale of clouds detail distortion according to the corresponding texture.&lt;/p&gt;&lt;p&gt;This parameter is used to control detail turbulence.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; is the value the stronger is the detail turbulence effect.&lt;/p&gt;">300.0</parameter>
+		<parameter name="cloud_distortion"			type="slider" min="0.0" max="2.0" flags="max_expand"	title="Detail Distortion Force"	tooltip="&lt;p&gt;Determines the intensity of clouds detail distortion.&lt;/p&gt;&lt;p&gt;This parameter is used to control detail turbulence.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; is the value the stronger is the detail turbulence effect.&lt;/p&gt;">0.2</parameter>
+		<parameter name="detail_affect"				type="slider" min="0.0" max="2.0" flags="max_expand"	title="Detail Intensity"		tooltip="&lt;p&gt;Determines detail cutout intensity. Details are cut mostly from the bottom of the clouds.&lt;/p&gt;&lt;p&gt;Thunderclouds are dense and do not have detail cutout. &lt;/p&gt;">2.0</parameter>
+	</group>
+
+	<!-- Shading -->
+	<group name="Shading">
+		<parameter name="ambient_intensity_top"		type="slider" min="0.0" max="1.0" flags="max_expand"		title="Ambient Intensity Top"		tooltip="&lt;p&gt;Determines intensity of ambient lighting for clouds (lighting from above).&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; is the value, the more ambient lighting affects clouds.&lt;/p&gt;">1.0</parameter>
+		<parameter name="ambient_intensity_bottom"	type="slider" min="0.0" max="1.0" flags="max_expand"		title="Ambient Intensity Bottom"	tooltip="&lt;p&gt;Determines intensity of ambient lighting for clouds (lighting from below).&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; is the value, the more ambient lighting affects clouds.&lt;/p&gt;">0.25</parameter>
+		<parameter name="sun_intensity"				type="slider" min="0.0" max="1.0" flags="max_expand"		title="Sun Intensity"			tooltip="&lt;p&gt;Determines intensity of sun lighting for clouds (lighting from above).&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; is the value, the more sun lighting affects clouds.&lt;/p&gt;&lt;p&gt;Can be used to adjust the appearance of clouds by means of correction of sunlight intensity.&lt;/p&gt;">0.15</parameter>
+		<parameter name="hgp_brightness"			type="slider" min="0.0" max="1.0" flags="max_expand"		title="Scattering Intensity"	tooltip="&lt;p&gt;Determines the intensity of subsurface scattering for clouds (e.g. highlighted cloud edges when looking at the sun from under a cloud layer).&lt;/p&gt;">1.0</parameter>
+		<parameter name="hgp_pow"					type="slider" min="0.0" max="1.0" flags="max_expand"		title="Scattering Power"		tooltip="&lt;p&gt;Determines the radius of light scattering cone.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;lower&lt;/em&gt; is the value the larger is the radius.&lt;/p&gt;">1.0</parameter>
+		<parameter name="translucence"				type="slider" min="0.0" max="1.0" flags="max_expand"		title="Translucency"			tooltip="&lt;p&gt;Controls the amount of light passing through clouds without changing their density.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; is the value the more light passes through clouds.&lt;/p&gt;">2.5</parameter>
+		<parameter name="haze_gradient"				type="slider" min="0.0" max="20.0" flags="max_expand"		tooltip="&lt;p&gt;Controls the degree of gradual fading of the clouds to the haze depending on haze parameters.&lt;/p&gt;">1.0</parameter>
+		<parameter name="ambient_saturation"		type="slider" min="0.0" max="1.0" flags="max_expand"		tooltip="&lt;p&gt;Controls ambient lighting color saturation.&lt;/p&gt;">0.5</parameter>
+	</group>
+
+	<!-- Other -->
+	<group name="Other">
+		<parameter name="wind_x" shared="0" type="slider" min="0.0" max="1.0" flags="max_expand"		title="Wind Speed (X Axis)"		tooltip="&lt;p&gt;Wind speed along X axis (shifts the coverage texture).&lt;/p&gt;">5.0f</parameter>
+		<parameter name="wind_y" shared="0" type="slider" min="0.0" max="1.0" flags="max_expand"		title="Wind Speed (Y Axis)"		tooltip="&lt;p&gt;Wind speed along Y axis (shifts the coverage texture).&lt;/p&gt;">0.0f</parameter>
+		<parameter name="wind_z" shared="0" type="slider" min="0.0" max="1.0" flags="max_expand"		title="Wind Speed (Z Axis)"		tooltip="&lt;p&gt;Wind speed along Z axis (shifts the noise).&lt;/p&gt;">1.25f</parameter>
+
+		<parameter name="shadow_intensity"		type="slider" min="0.0" max="1.0" flags="max_expand"	title="Shadow Intensity"		tooltip="&lt;p&gt;Determines the intensity of shadows cast by clouds.&lt;/p&gt;&lt;p&gt;This parameter is used for synchronization of visual appearance of clouds with their shadows.&lt;/p&gt;">1.0</parameter>
+		<parameter name="shadow_contrast"		type="slider" min="0.0" max="1.0" flags="max_expand"	title="Shadow Contrast"			tooltip="&lt;p&gt;Determines the contrast of shadows cast by clouds.&lt;/p&gt;">1.0</parameter>
+		<parameter name="shadow_multiplier"		type="slider" min="0.0" max="1.0" flags="max_expand"	title="Shadow Multiplier"		tooltip="&lt;p&gt;Determines darkness of shadows cast by clouds.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;lower&lt;/em&gt; the value, the darker the shadows are.&lt;/p&gt;">1.0</parameter>
+		<parameter name="shadow_subtraction"	type="slider" min="0.0" max="1.0" flags="max_expand"	title="Shadow Subtraction"		tooltip="&lt;ul&gt;&lt;li&gt;The &lt;em&gt;higher&lt;/em&gt; the value, the larger area under clouds is covered by the shadow.&lt;/li&gt;&lt;li&gt;Decreasing the value causes the shadows from clouds to be subtracted from the shadow that covers the area under the clouds.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The parameter can be set to the maximum value, for example, when the shadow cast by the clouds doesn't fully cover the area beneath, however, clouds look dense enough.&lt;/p&gt;">0.0</parameter>
+	
+		<parameter name="weather_field_mask"	type="expression" widget="mask32"						title="FieldWeather Mask"		tooltip="&lt;p&gt;A bitmask that determines interaction with &lt;b&gt;FieldWeather&lt;/b&gt; objects.&lt;/p&gt;&lt;p&gt;Clouds will be affected by a &lt;b&gt;FieldWeather&lt;/b&gt; object only if its field mask matches this mask (one bit at least).&lt;/p&gt;">0xffffffff</parameter>
+	</group>	
+</base_material>

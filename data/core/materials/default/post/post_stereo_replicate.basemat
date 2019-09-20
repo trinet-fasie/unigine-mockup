@@ -1,0 +1,9 @@
+<base_material version="2.8.0.0" name="post_stereo_replicate" hidden="1">
+	
+	<shader pass="post"
+		defines="REPLICATE"
+		fragment="core/shaders/screen_space/fragment/stereo.frag"/>
+	
+	<texture name="color" type="procedural"/>
+	
+</base_material>

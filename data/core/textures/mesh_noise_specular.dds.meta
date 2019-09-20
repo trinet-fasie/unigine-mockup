@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>5d54c8a53df2bce590f4059a16284bcd11d8cda1</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="5d54c8a53df2bce590f4059a16284bcd11d8cda1" name="mesh_noise_specular.dds" link="0"/>
+	</runtimes>
+</asset>

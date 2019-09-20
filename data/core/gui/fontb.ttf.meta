@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>d0bbedb8b6a245e7285b0d9e8e25599ce76a380a</guid>
+	<type>font</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="d0bbedb8b6a245e7285b0d9e8e25599ce76a380a" name="fontb.ttf" link="0"/>
+	</runtimes>
+</asset>

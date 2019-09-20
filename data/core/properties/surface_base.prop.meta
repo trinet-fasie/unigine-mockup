@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>d99ebc8ef5769d70b1e46992309cc3e7d1aa2faa</guid>
+	<type>property</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="d99ebc8ef5769d70b1e46992309cc3e7d1aa2faa" name="surface_base.prop" link="0"/>
+	</runtimes>
+</asset>

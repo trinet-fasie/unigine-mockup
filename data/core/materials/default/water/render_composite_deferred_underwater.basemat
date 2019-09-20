@@ -1,0 +1,39 @@
+<base_material version="2.8.0.0" name="render_composite_deferred_underwater" hidden="1" parameters_prefix="m" defines="SHADOW_TEX_NOISE">
+
+	<state name="simple" defines="name">0</state>
+	<state name="light_world" defines="name">0</state>
+	<state name="lights" defines="name">0</state>
+	<state name="haze" defines="DISABLE_HAZE," internal="1">0</state>
+
+	<state name="refraction_quality" defines="name_items" items="low,medium,high,ultra">3</state>
+
+	<!-- shaders -->
+	<shader pass="post"
+		receive_shadow_defines=",SHADOW"
+		vertex="core/shaders/screen_space/vertex/default.vert"
+		fragment="core/shaders/water/screen_space/fragment/composite_deferred_underwater.frag"/>
+
+	<!-- textures -->
+	<texture unit="0" type="opacity_screen"/>
+	<texture unit="1" type="opacity_depth"/>
+	<texture unit="2" type="current_depth"/>
+
+	<texture unit="3" type="gbuffer_albedo"/>
+	<texture unit="4" type="reflection_cube"/>
+
+	<texture unit="10" name="underwater_shafts" type="procedural"/>
+
+	<texture unit="13" name="noise" filter="point">core/textures/common/noise.dds</texture>
+	<texture unit="14" type="light_image"/>
+	<texture unit="15" type="light_depth"/>
+
+	<texture unit="16" filter="point" type="wbuffer_water"/>
+	<texture unit="17" filter="point" type="wbuffer_constant_id"/>
+	<texture unit="18" filter="point" type="wbuffer_wu_mask"/>
+	<texture unit="19" filter="point" type="wbuffer_ss_environment"/>
+	<texture unit="20" filter="point" type="wbuffer_normal"/>
+	<texture unit="21" filter="point" type="wbuffer_diffuse"/>
+
+	<parameter name="deep" shared="1" type="slider">0.0</parameter>
+
+</base_material>

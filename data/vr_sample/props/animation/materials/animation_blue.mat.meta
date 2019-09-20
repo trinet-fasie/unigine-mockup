@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>921966e0d2966cbf7c0d93124e7a9749d710b814</guid>
+	<type>material</type>
+	<hash>b142c3ee</hash>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="921966e0d2966cbf7c0d93124e7a9749d710b814" name="animation_blue" link="0"/>
+	</runtimes>
+</asset>

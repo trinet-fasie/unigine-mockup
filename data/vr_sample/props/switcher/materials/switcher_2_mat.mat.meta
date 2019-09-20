@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>952cd9ed9fdc34d0f64b616a14980eeff01d815c</guid>
+	<type>material</type>
+	<hash>ce169356</hash>
+	<runtimes>
+		<runtime id="952cd9ed9fdc34d0f64b616a14980eeff01d815c" name="switcher_2_mat" link="0"/>
+	</runtimes>
+</asset>

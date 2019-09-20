@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="table_mat" guid="363d6ce0df6e7a53aa581f180aae229ca09b3654" base_material="mesh_base">
+	<parameter name="albedo_color" use_expression="0">0.5 0.5 0.5 1</parameter>
+</material>

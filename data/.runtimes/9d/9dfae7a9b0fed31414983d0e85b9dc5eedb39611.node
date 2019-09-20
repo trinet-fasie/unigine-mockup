@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="1055706459" name="cylinder">
+		<transform>1 2.646978e-22 -3.8213714e-15 0.0 9.2644229e-23 1 8.7422777e-08 0.0 3.8213714e-15 -8.7422777e-08 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="1666382890" name="cylinder">
+			<mesh_name>guid://a0cfddd0cd029e9b97a12367f46f4edf18c1c599</mesh_name>
+			<surface name="cylinder_mat" material="026e022104385d3be5cc98bd3d16eeca8b4b2f6d"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.2 -1.7484556e-08 -1.0587912e-22 1.0</transform>
+		</node>
+	</node>
+</nodes>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>10d0b32dbdd0faa89e529de79d1a021ac8216ab1</guid>
+	<type>node</type>
+	<hash>4930e001</hash>
+	<runtimes>
+		<runtime id="10d0b32dbdd0faa89e529de79d1a021ac8216ab1" name="switcher.node" link="0"/>
+	</runtimes>
+</asset>

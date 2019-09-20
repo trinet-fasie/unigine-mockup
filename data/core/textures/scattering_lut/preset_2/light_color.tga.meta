@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>05462bf386517bdde2ee432e50c888cd653f1f42</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="05462bf386517bdde2ee432e50c888cd653f1f42" name="light_color.tga" link="0"/>
+	</runtimes>
+</asset>

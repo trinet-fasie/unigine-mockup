@@ -1,0 +1,17 @@
+<base_material version="2.8.0.0" name="reprojection" hidden="1">
+	
+	<state name="stereo_reprojection"			defines="name">0</state>
+	<state name="catmull_resampling"			defines="name">0</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/reprojection.frag"/>
+	
+	<texture name="color_old" pass="post" type="procedural"/>
+	<texture name="velosity" pass="post" type="procedural"/>
+	<texture name="depth" pass="post" type="procedural"/>
+	<texture name="velosity_old" pass="post" type="procedural"/>
+	<texture name="depth_old" pass="post" type="procedural"/>
+	
+	<parameter name="threshold" type="slider">1.0</parameter>
+	
+</base_material>

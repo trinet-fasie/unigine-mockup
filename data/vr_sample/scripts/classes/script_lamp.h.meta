@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>6b186125dffda0405069969f1955f3728aedbc29</guid>
+	<type>script</type>
+	<hash>8e9376cb</hash>
+	<runtimes>
+		<runtime id="6b186125dffda0405069969f1955f3728aedbc29" name="script_lamp.h" link="0"/>
+	</runtimes>
+</asset>

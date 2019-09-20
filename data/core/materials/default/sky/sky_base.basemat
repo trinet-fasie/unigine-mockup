@@ -1,0 +1,55 @@
+<base_material version="2.8.0.0" name="sky_base" editable="0">
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" receive_shadow="0" cast_world_shadow="0" receive_world_shadow="0"/>
+	<options transparent="2"/>
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	
+	<!-- states -->
+	<state name="background"	defines=",BACKGROUND_SINGLE,BACKGROUND_DOUBLE"	items="none,single,double"	tooltip="&lt;p&gt;Background cubemap textures to be used.&lt;/p&gt;">0</state>
+	<state name="clouds"		defines=",CLOUDS"															tooltip="&lt;p&gt;Enable procedural clouds.&lt;/p&gt;">1</state>
+	
+	<!-- sphere ambient shaders -->
+	<shader pass="ambient" node="object_sky"
+		vertex="core/shaders/sky/vertex/sphere.vert"
+		fragment="core/shaders/sky/fragment/sphere.frag"/>
+	
+	<!-- textures -->
+	<group name="Clouds">
+		<texture unit="0" name="mask_0"		clouds="1" tooltip="&lt;p&gt;First mask texture, 1 channel: R - mask.&lt;/p&gt;&lt;p&gt;This texture represents a mask for the 1st upper cloud layer.&lt;/p&gt;">core/textures/sky_base_mask_0.dds</texture>
+		<texture unit="1" name="mask_1"		clouds="1" tooltip="&lt;p&gt;Second mask texture, 1 channel: R - mask.&lt;/p&gt;&lt;p&gt;This texture represents a mask for the 2nd lower cloud layer.&lt;/p&gt;">core/textures/sky_base_mask_1.dds</texture>
+		<texture unit="2" name="clouds_01"	clouds="1" tooltip="&lt;p&gt;First noise texture, 1 channel: R - noise values.&lt;/p&gt;&lt;p&gt;This texture represents noise for the 1st upper cloud layer.&lt;/p&gt;">core/textures/sky_base_clouds_0.dds</texture>
+		<texture unit="3" name="clouds_23"	clouds="1" tooltip="&lt;p&gt;Second noise texture, 1 channel: R - noise values.&lt;/p&gt;&lt;p&gt;This texture represents noise for the 2nd lower cloud layer.&lt;/p&gt;">core/textures/sky_base_clouds_1.dds</texture>
+	</group>
+	<group name="Background">
+		<texture unit="4" name="background_0" background="1,2"	wrap="clamp" tooltip="&lt;p&gt;First sky cubemap background texture, 3 channels: RGB - color information.&lt;/p&gt;">core/textures/sky_base_background.dds</texture>
+		<texture unit="5" name="background_1" background="2"		wrap="clamp" tooltip="&lt;p&gt;Second sky cubemap background texture, 3 channels: RGB - color information.&lt;/p&gt;">core/textures/sky_base_background.dds</texture>
+	</group>
+	
+	<!-- parameters -->
+	<group name="Transform">
+		<vec	name="sphere_transform"					title="Sphere"		tooltip="&lt;p&gt;Transformation of the sky sphere:&lt;/p&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;X, Y - sphere scale along the X and Y axes respectively. Affect the circle of a horizon.&lt;/li&gt;&lt;li&gt;Z - sphere scale along the Z axis. Makes the sky look higher or lower.&lt;/li&gt;&lt;li&gt;W - vertical sphere offset. Positive values move the sphere down, negative - up. Can be used to remove cloud artifacts near the horizon.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;">vec4(4.0f,4.0f,0.5f,0.25f)</vec>
+		<uv		name="mask_0_transform"		clouds="1"	title="Mask 0"		tooltip="&lt;p&gt;Transformation of the first mask texture.&lt;/p&gt;">vec4(0.5,0.5,sin(time*0)*0+time*0.0025*sin(2.0944),cos(time*0)*0+time*0.0025*cos(2.0944))</uv>
+		<uv		name="mask_1_transform"		clouds="1"	title="Mask 1"		tooltip="&lt;p&gt;Transformation of the second mask texture.&lt;/p&gt;">vec4(1,1,sin(time*0.0015)*0.3+time*0.0015*sin(1.39626),cos(time*0.0015)*0.3+time*0.0015*cos(1.39626))</uv>
+		<uv		name="clouds_0_transform"	clouds="1"	title="Clouds 0"	tooltip="&lt;p&gt;First transformation of the first noise texture.&lt;/p&gt;">vec4(0.5,0.5,sin(time*0)*0+time*0.002*sin(2.18166),cos(time*0)*0+time*0.002*cos(2.18166))</uv>
+		<uv		name="clouds_1_transform"	clouds="1"	title="Clouds 1"	tooltip="&lt;p&gt;Second transformation of the first noise texture.&lt;/p&gt;">vec4(2,2,sin(time*0)*0+time*0.004*sin(1.8326),cos(time*0)*0+time*0.004*cos(1.8326))</uv>
+		<uv		name="clouds_2_transform"	clouds="1"	title="Clouds 2"	tooltip="&lt;p&gt;First transformation of the second noise texture.&lt;/p&gt;">vec4(3,3,sin(time*0)*0+time*0.0025*sin(1.22173),cos(time*0)*0+time*0.0025*cos(1.22173))</uv>
+		<uv		name="clouds_3_transform"	clouds="1"	title="Clouds 3"	tooltip="&lt;p&gt;Second transformation of the second noise texture.&lt;/p&gt;">vec4(6,6,sin(time*0)*0+time*0.003*sin(1.74533),cos(time*0)*0+time*0.003*cos(1.74533))</uv>
+	</group>
+	<group name="Clouds">
+		<color name="clouds_color"			clouds="1"											title="Color"			tooltip="">1.0 1.0 1.0 1.0</color>
+		<slider name="clouds_01_scale"		clouds="1"	min="0.0" max="4.0" flags="max_expand"	title="Clouds 01"		tooltip="&lt;p&gt;Color intensity of the first cloud layer.&lt;/p&gt;">0.6</slider>
+		<slider name="clouds_23_scale"		clouds="1"	min="0.0" max="4.0" flags="max_expand"	title="Clouds 23"		tooltip="&lt;p&gt;Color intensity of the second cloud layer.&lt;/p&gt;">0.4</slider>
+		<slider name="clouds_01_threshold"	clouds="1"	min="0.0" max="2.0" flags="max_expand"	title="Threshold 01"	tooltip="&lt;p&gt;Coefficient modulating the strength of masking for the first mask.&lt;/p&gt;">1.4</slider>
+		<slider name="clouds_23_threshold"	clouds="1"	min="0.0" max="2.0" flags="max_expand"	title="Threshold 23"	tooltip="&lt;p&gt;Coefficient modulating the strength of masking for the second mask.&lt;/p&gt;">1.6</slider>
+		<slider name="sphere_scattering"	clouds="1"	min="0.0" max="2.0" flags="max_expand"	title="Scattering"		tooltip="&lt;p&gt;Coefficient controlling the influence of atmospheric scattering on the sky sphere clouds.&lt;/p&gt;">0.5</slider>
+	</group>
+	<group name="Background">
+		<color	name="background_color"		background="1,2"											title="Color"			tooltip="">1.0 1.0 1.0 1.0</color>
+		<slider	name="background_0_scale"	background="1,2"	min="0.0" max="2.0" flags="max_expand"	title="Background 0 Scale"	tooltip="&lt;p&gt;Color multiplier for the first background cubemap texture.&lt;/p&gt;">1.0</slider>
+		<slider	name="background_0_blur"	background="1,2"	min="0.0" max="2.0" flags="max_expand"	title="Background 0 Blur"	tooltip="">0.0</slider>
+		<slider	name="background_1_scale"	background="2"		min="0.0" max="2.0" flags="max_expand"	title="Background 1 Scale"	tooltip="&lt;p&gt;Color multiplier for the second background cubemap texture.&lt;/p&gt;">1.0</slider>
+		<slider	name="background_1_blur"	background="2"		min="0.0" max="2.0" flags="max_expand"	title="Background 1 Blur"	tooltip="">0.0</slider>
+	</group>
+	
+</base_material>

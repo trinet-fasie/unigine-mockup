@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="decal_water" base_material="decal_base" manual="1">
+	<state name="water_decal">1</state>
+</material>

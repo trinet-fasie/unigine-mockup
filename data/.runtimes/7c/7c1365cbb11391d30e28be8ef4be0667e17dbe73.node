@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="472212465" name="oculus_touch_right">
+		<transform>1 2.646978e-22 -3.8213714e-15 0.0 9.2644229e-23 1 8.7422777e-08 0.0 3.8213714e-15 -8.7422777e-08 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="545625193" name="oculus_touch_body_right">
+			<mesh_name>guid://f302fc06b256a4ffd40031b07f7551d8888a2283</mesh_name>
+			<surface name="oculus_touch_mat1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			<node type="ObjectMeshStatic" id="328260467" name="oculus_touch_right_grip">
+				<mesh_name>guid://e80796d07f0d1351958b21f95734c3938ccf04df</mesh_name>
+				<surface name="oculus_touch_mat1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.0058118664 0.018310172 0.0054246993 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="189874588" name="oculus_touch_right_button_menu">
+				<mesh_name>guid://5ec573e14e1f179a811de8ed476762e9d7a96736</mesh_name>
+				<surface name="oculus_touch_mat1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0.0036895168 -0.0064403624 -0.00062670896 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="353445709" name="oculus_touch_right_button_b">
+				<mesh_name>guid://00876ca2b56116b94c3843a197de38f551c434b0</mesh_name>
+				<surface name="oculus_touch_mat1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.017309589 0.013366391 -0.00063343794 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1469585441" name="oculus_touch_right_button_a">
+				<mesh_name>guid://bcf4310265bd3a15ab2cc2941bc3fef022de3d4b</mesh_name>
+				<surface name="oculus_touch_mat1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.011102024 -0.00017556008 -0.00051017938 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1850524138" name="oculus_touch_right_trigger">
+				<mesh_name>guid://1d075f4be321794125549c5a794be2798efcb3b3</mesh_name>
+				<surface name="oculus_touch_mat1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.006314816 0.02838617 -0.0066174809 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1432572082" name="oculus_touch_right_thumbstick">
+				<mesh_name>guid://5e2ca47d1bf8b68e8372f3b7e3070057b7332f99</mesh_name>
+				<surface name="oculus_touch_mat1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0.0015480515 0.012500987 -0.0073024458 1.0</transform>
+			</node>
+		</node>
+	</node>
+</nodes>

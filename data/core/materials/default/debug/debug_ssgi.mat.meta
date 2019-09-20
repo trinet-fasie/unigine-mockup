@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>3719cceb1da21303c8310c26c7126c2777ae3ded</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="3719cceb1da21303c8310c26c7126c2777ae3ded" name="debug_ssgi.mat" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,20 @@
+<base_material version="2.8.0.0" name="render_dof_mask" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/dof/mask.frag"/>
+	
+	<!-- textures -->
+	<texture type="opacity_depth"/>
+	<texture type="gbuffer_material_mask"/>
+	
+	<!-- parameters -->
+	<parameter name="focal_distance" type="slider">1.0</parameter>
+	
+	<parameter name="far_distance" type="slider">1.0</parameter>
+	<parameter name="far_focal_offset" type="slider">1.0</parameter>
+	
+	<parameter name="near_distance" type="slider">1.0</parameter>
+	<parameter name="near_focal_offset" type="slider">1.0</parameter>
+	
+</base_material>

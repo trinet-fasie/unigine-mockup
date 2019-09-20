@@ -1,0 +1,53 @@
+<base_material version="2.8.0.0" name="volume_shaft_base" editable="0">
+	
+	<!-- blending -->
+	<blend src="one" dest="one"/>
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" cast_world_shadow="0" receive_shadow="0"/>
+	<options transparent="2"/>
+	
+	<!-- states -->
+	<state name="height" type="toggle" defines="name"					tooltip="&lt;p&gt;Enable reduction of intensity of light shafts depending on height.&lt;/p&gt;"/>
+	<state name="camera_position_based" type="toggle" defines="name"	tooltip="&lt;p&gt;Enable rendering of light shafts relative to current camera position.&lt;/p&gt;"/>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_volume_box"
+		vertex="core/shaders/volume/vertex/shaft/box_light_world.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="visualizer_solid" node="object_volume_box"
+		vertex="core/shaders/volume/vertex/shaft/box_light_world.vert"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- light world shaders -->
+	<shader pass="light_world" node="object_volume_box"
+		defines="WORLD,SHADOW"
+		vertex="core/shaders/volume/vertex/shaft/box_light_world.vert"
+		fragment="core/shaders/volume/fragment/shaft/box_light_world.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="gbuffer_normal"/>
+	<texture unit="1" type="opacity_depth"/>
+	<texture unit="2" name="noise"	filter="point"		tooltip="Noise texture.">core/textures/common/noise.dds</texture>
+	<texture unit="14" type="light_image"/>
+	<texture unit="15" type="light_depth"/>
+	
+	<!-- parameters -->
+	<parameter name="diffuse_color" type="color" title="Diffuse" group="Base"							tooltip="Diffuse color multiplier.">1.0 1.0 1.0 1.0</parameter>
+	<group name="Density">
+		<parameter name="volume_power" type="slider" min="0.0" max="2.0" flags="max_expand"					title="Power"			tooltip="&lt;p&gt;Determines the sharpness of volumetric bounds.&lt;/p&gt;&lt;p&gt;By the minimum value of &lt;b&gt;1&lt;/b&gt; the volumetric bounds are smoooth.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the sharper are the bounds.&lt;/p&gt;">1.0</parameter>
+		<parameter name="volume_density" type="slider" min="0.0" max="2.0" flags="max_expand"				title="Multiplier"		tooltip="&lt;p&gt;Determines the density scale of the environment.&lt;/p&gt;">0.1</parameter>
+		<parameter name="height_falloff" height="1" type="slider" min="-3.0" max="0.0" flags="max_expand"	title="Height Falloff"	tooltip="&lt;p&gt;Determines the reduction of intensity of light rays depending on height.&lt;/p&gt;">0.1</parameter>
+		<parameter name="volume_radius" camera_position_based="1" type="slider" min="0.0" max="1000.0"		title="Radius"			tooltip="&lt;p&gt;Determines the visibility distance of the rays, measured from the camera position, in meters.&lt;/p&gt;">100.0</parameter>
+	</group>
+	<parameter name="rays_jitter" type="slider" min="0.0" max="1.0"		tooltip="&lt;p&gt;Determines smoothness of light rays.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the smoother are the rays.&lt;/p&gt;">1.0</parameter>
+	<parameter name="step_jitter" type="slider" min="0.0" max="1.0"		tooltip="&lt;p&gt;Determines smoothness of light rays.&lt;/p&gt;&lt;p&gt;Can be used to remove banding effect and make the rays look smoother.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the smoother are the rays.&lt;/p&gt;">0.0</parameter>
+	<parameter name="bias" type="slider" min="0.0" max="1.0"			tooltip="&lt;p&gt;This parameter shifts shadow in the light direction to remove banding effect in case of insufficient shadow resolution.&lt;/p&gt;">0.5</parameter>
+	<parameter name="samples" type="slider" min="0.0" max="256.0"		tooltip="&lt;p&gt;Determines the number of depth samples used.&lt;/p&gt;&lt;p&gt;The more samples, the higher is the quality.&lt;/p&gt;">64.0</parameter>
+	
+	<parameter name="view_intensity" type="slider" min="0.0" max="1.0"	tooltip="&lt;p&gt;Determines the intensity of rays when view direction is the same as the direction of the light rays (looking away from the light source).&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the more pronounced the rays look.&lt;/p&gt;">0.5</parameter>
+	<parameter name="view_exponent" type="slider" min="0.0" max="1.0"	tooltip="&lt;p&gt;Determines the rate of change of the intensity of rays when view direction is the same as the direction of the light rays (looking away from the light source).&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the smoother is the change of intensity.&lt;/p&gt;">1.0</parameter>
+	
+</base_material>

@@ -1,0 +1,24 @@
+<base_material version="2.8.0.0" name="render_motion_blur" hidden="1" parameters_prefix="m">
+	
+	<state name="neat_silhouettes" defines="name">0</state>
+	<state name="use_noise" defines="name">0</state>
+	<state name="num_steps"	defines="name" type="int">8</state>
+	<state name="camera_velocity" defines="name">1</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/motion_blur.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="screen_color"/>
+	<texture unit="1" type="gbuffer_material_mask"/>
+	<texture unit="2" type="gbuffer_velocity"/>
+	<texture unit="3" name="noise" filter="point">core/textures/common/noise.dds</texture>
+	<texture unit="4" type="opacity_depth"/>
+	
+	<!-- parameters -->
+	<parameter name="velocity"			type="slider">1.0</parameter>
+	<parameter name="max_velocity"		type="slider">1.0</parameter>
+	<parameter name="noise_intensity"	type="slider">0.5</parameter>
+	
+</base_material>

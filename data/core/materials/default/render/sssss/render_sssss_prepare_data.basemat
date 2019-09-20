@@ -1,0 +1,14 @@
+<base_material version="2.8.0.0" name="render_sssss_prepare_data" hidden="1">
+	
+	<state name="diffuse" defines="name">1</state>
+	<state name="environment" defines="name">0</state>
+	<state name="resolution" defines="name" type="int"/>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/sssss/prepare_data.frag"/>
+	
+	<texture name="color" type="procedural"/>
+	<texture type="linear_depth"/>
+	<texture type="gbuffer_material_mask"/>
+	
+</base_material>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>c4cfebc00545163555252f0ee901c72ea839da46</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="c4cfebc00545163555252f0ee901c72ea839da46" name="syncker_sphere.dds" link="0"/>
+	</runtimes>
+</asset>

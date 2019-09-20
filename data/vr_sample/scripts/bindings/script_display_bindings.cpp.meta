@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>2cd933a018a8527f9c40bdd280dc43091634f0d4</guid>
+	<type>script</type>
+	<hash>ce327a3b</hash>
+	<runtimes>
+		<runtime id="2cd933a018a8527f9c40bdd280dc43091634f0d4" name="script_display_bindings.cpp" link="0"/>
+	</runtimes>
+</asset>

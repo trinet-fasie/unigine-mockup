@@ -1,0 +1,34 @@
+<base_material version="2.8.0.0" name="render_composite" hidden="1">
+	
+	<!-- states -->
+	<state name="lens"			defines="name">0</state>
+	<state name="shadow_shafts"	defines="name">0</state>
+	<state name="lut"			defines="name">0</state>
+	<state name="dirt"			defines="name">0</state>
+	<state name="bloom"			defines="name">0</state>
+	<state name="sun_shafts"	defines="name">0</state>
+	<state name="cross"			defines="name">0</state>
+	<state name="filmic"		defines="name">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/screen_space/vertex/composite.vert"
+		fragment="core/shaders/screen_space/fragment/composite.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="screen_color"/>
+	<texture unit="1" name="dirt"				dirt="1"			type="procedural"/>
+	<texture unit="2" name="bloom"				bloom="1"			type="procedural"/>
+	<texture unit="3" name="sun_shafts"			sun_shafts="1"		type="procedural"/>
+	<texture unit="4" name="cross"				cross="1"			type="procedural"/>
+	<texture unit="5" name="lens"				lens="1"			type="procedural"/>
+	<texture unit="6" name="shadow_shafts"		shadow_shafts="1"	type="procedural"/>
+	<texture unit="7" name="lut"				lut="1"				type="procedural"/>
+	<texture unit="8" name="dithering"								filter="point">core/textures/render_composite_dithering.dds</texture>
+	
+	<!-- parameters -->
+	<float4 name="filmic_curve"	filmic="1"	>1.0 1.0 1.0 1.0</float4>
+	<float4 name="filmic_white"	filmic="1"	>1.0 1.0 1.0 1.0</float4>
+	<slider name="saturation_recovery"		>1.0</slider>
+	<slider name="dirt_scale"				>1.0</slider>
+</base_material>

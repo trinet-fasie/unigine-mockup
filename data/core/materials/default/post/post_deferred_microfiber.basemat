@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="post_deferred_microfiber" defines="A_CHANNEL_SELECT" hidden="1">
+		
+	<state name="use_taa">1</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/deferred_extraction.frag"/>
+	
+	<texture type="opacity_depth"/>
+	<texture type="gbuffer_shading"/>
+	
+</base_material>

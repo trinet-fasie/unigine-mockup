@@ -1,0 +1,33 @@
+<base_material version="2.8.0.0" name="render_scattering_lut" hidden="1">
+	
+	<state name="world_light_sun" defines=",WORLD_LIGHT_SUN">1</state>
+	<state name="world_light_moon" defines=",WORLD_LIGHT_MOON">1</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/screen_space/environment/scattering_lut.vert"
+		fragment="core/shaders/screen_space/environment/scattering_lut.frag"/>
+	
+	<!-- textures -->
+	<texture name="base_lut_0" type="procedural"/>
+	<texture name="mie_lut_0" type="procedural"/>
+	<texture name="light_color_lut_0" type="procedural"/>
+	
+	<texture name="base_lut_1" type="procedural"/>
+	<texture name="mie_lut_1" type="procedural"/>
+	<texture name="light_color_lut_1" type="procedural"/>
+	
+	<texture name="base_lut_2" type="procedural"/>
+	<texture name="mie_lut_2" type="procedural"/>
+	<texture name="light_color_lut_2" type="procedural"/>
+	
+	<!-- parameters -->
+	<slider name="preset_intensity_0">1.0</slider>
+	<slider name="preset_intensity_1">1.0</slider>
+	<slider name="preset_intensity_2">1.0</slider>
+	
+	<float4 name="color_ground_0" >1.0 1.0 1.0 1.0</float4>
+	<float4 name="color_ground_1" >1.0 1.0 1.0 1.0</float4>
+	<float4 name="color_ground_2" >1.0 1.0 1.0 1.0</float4>
+	
+</base_material>

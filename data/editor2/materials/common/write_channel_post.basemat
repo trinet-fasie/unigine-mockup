@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="write_channel_post" hidden="1">
+	<state name="in_channel" type="switch" defines="name_items" items="r,g,b,a">0</state>
+	<state name="out_channel" type="switch" defines="name_items" items="r,g,b,a">0</state>
+	<shader pass="post"
+		fragment="editor2/shaders/common/write_channel_post.frag"/>
+</base_material>

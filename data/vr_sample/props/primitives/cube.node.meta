@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>dcb71446f6831245b2be0a5af70be111cd441ae1</guid>
+	<type>node</type>
+	<hash>6e1a11a1</hash>
+	<runtimes>
+		<runtime id="dcb71446f6831245b2be0a5af70be111cd441ae1" name="cube.node" link="0"/>
+	</runtimes>
+</asset>

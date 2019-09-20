@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>64088eb77a7ca2c899108a09c3ad6b1cd941fe0d</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="64088eb77a7ca2c899108a09c3ad6b1cd941fe0d" name="post_filter_reflection_vignette.dds" link="0"/>
+	</runtimes>
+</asset>

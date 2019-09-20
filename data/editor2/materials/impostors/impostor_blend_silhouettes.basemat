@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="impostor_blend_silhouettes" hidden="1">
+	<shader pass="post"
+		fragment="editor2/shaders/impostors/impostor_blend_silhouettes.frag"/>
+</base_material>

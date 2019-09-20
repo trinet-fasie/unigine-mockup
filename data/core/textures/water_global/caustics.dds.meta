@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>ac1a3a438bd1e86b966d072a9f16e2703460be21</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="ac1a3a438bd1e86b966d072a9f16e2703460be21" name="caustics.dds" link="0"/>
+	</runtimes>
+</asset>

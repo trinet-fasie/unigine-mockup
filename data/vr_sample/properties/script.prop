@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.8.0.0" name="script" parent_name="vr_object" manual="1">
+	<parameter name="script" title="Script" type="file">0</parameter>
+</property>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>6e38bfe422358566a4ee37b3a7ac491b3a811d73</guid>
+	<type>material</type>
+	<hash>8868346c</hash>
+	<runtimes>
+		<runtime id="6e38bfe422358566a4ee37b3a7ac491b3a811d73" name="sphere_mat" link="0"/>
+	</runtimes>
+</asset>

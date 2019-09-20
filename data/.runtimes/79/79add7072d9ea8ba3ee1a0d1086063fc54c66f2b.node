@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="657176155" name="cube_0">
+		<transform>1 2.646978e-22 -3.8213714e-15 0.0 9.2644229e-23 1 8.7422777e-08 0.0 3.8213714e-15 -8.7422777e-08 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="511775886" name="cube">
+			<mesh_name>guid://58c81a99122243245d70b4337bef6bf677a172dd</mesh_name>
+			<surface name="cube_mat" material="a3233ead6b89e4e5b4c0e50119aa753520ec0fda"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

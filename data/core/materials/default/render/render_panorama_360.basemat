@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="render_panorama_360" hidden="1">
+
+	<state name="mode" defines="CURVED,LINEAR,FISHEYE">0</state>
+	
+	<shader pass="post"
+		vertex="core/shaders/panorama/panorama_360.vert"
+		fragment="core/shaders/panorama/panorama_360.frag"/>
+	
+	<texture name="cube_texture" type="procedural"/>
+	
+</base_material>

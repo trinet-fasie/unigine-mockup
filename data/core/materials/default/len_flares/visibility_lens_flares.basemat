@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="visibility_lens_flares" hidden="1">
+	
+	<shader pass="ambient"
+		vertex="core/shaders/lens_flares/vertex/visibility.vert"
+		fragment="core/shaders/lens_flares/fragment/visibility.frag"/>
+	
+</base_material>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>c081a2687fb27f85b14f2e1f45c995fa77ffb0f6</guid>
+	<type>fbx</type>
+	<hash>0a567ded</hash>
+	<parameters>
+		<parameter type="bool" name="merge_static_meshes">0</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+		<parameter type="bool" name="import_meshes">1</parameter>
+		<parameter type="bool" name="import_materials">1</parameter>
+		<parameter type="bool" name="import_materials_mode">0</parameter>
+		<parameter type="bool" name="import_textures">1</parameter>
+		<parameter type="bool" name="import_animations">1</parameter>
+		<parameter type="bool" name="import_joints">0</parameter>
+		<parameter type="bool" name="import_lights">1</parameter>
+		<parameter type="bool" name="import_cameras">1</parameter>
+		<parameter type="bool" name="import_tangent_space">0</parameter>
+		<parameter type="bool" name="import_morph_targets">0</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="float" name="fps">60</parameter>
+		<parameter type="int" name="workflow">0</parameter>
+		<parameter type="bool" name="combine_by_lods">0</parameter>
+		<parameter type="int" name="index_max_count_lods">1</parameter>
+		<parameter type="string" name="lods">_lod_0,-1e+9,_lod_1,3,_lod_2,9</parameter>
+		<parameter type="string" name="materials_imported">table_mat</parameter>
+		<parameter type="string" name="material_guids">table_mat,363d6ce0df6e7a53aa581f180aae229ca09b3654</parameter>
+		<parameter type="bool" name="joints_reorientation">1</parameter>
+		<parameter type="int" name="front_axis">0</parameter>
+		<parameter type="bool" name="merge_surfaces_by_materials">0</parameter>
+		<parameter type="bool" name="use_instances">1</parameter>
+		<parameter type="bool" name="merge_similar_materials">0</parameter>
+		<parameter type="bool" name="import_bones_without_skin">0</parameter>
+		<parameter type="bool" name="create_transform_bones_for_joints">0</parameter>
+		<parameter type="string" name="prefix_materials"/>
+		<parameter type="int" name="up_axis">0</parameter>
+		<parameter type="bool" name="need_split">0</parameter>
+		<parameter type="bool" name="need_repivot">0</parameter>
+		<parameter type="bool" name="need_triagulate">1</parameter>
+		<parameter type="bool" name="skip_empty_nodes">0</parameter>
+		<parameter type="float" name="bound_size">10000</parameter>
+		<parameter type="float" name="linear_deflection">0.200000003</parameter>
+		<parameter type="float" name="angular_deflection">0.699999988</parameter>
+		<parameter type="string" name="animations"/>
+	</parameters>
+	<runtimes>
+		<runtime id="e76af6908ab99a1908d5c0b92558342fab8b8738" name="table.node" link="1" type="3">
+			<parameters>
+				<parameter type="string" name="id">1e1dc7c3</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="f76549bad4c05c9c201a43c4fca6c9b3ef82521b" name="table.mesh" link="2" type="1">
+			<parameters>
+				<parameter type="string" name="id">dba522bd</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="1fd5d2c686eee14523784fb8a4ed5a14e1d03bf0" name="drawer.mesh" link="2" type="1">
+			<parameters>
+				<parameter type="string" name="id">3e7497b</parameter>
+			</parameters>
+		</runtime>
+		<runtime id="c081a2687fb27f85b14f2e1f45c995fa77ffb0f6" name="table.fbx" link="0"/>
+	</runtimes>
+</asset>

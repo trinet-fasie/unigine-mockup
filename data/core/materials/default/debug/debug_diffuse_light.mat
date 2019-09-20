@@ -1,0 +1,7 @@
+<material version="2.8.0.0" name="debug_diffuse_light" base_material="render_composite_deferred" parent_name="debug_materials" editable="0" manual="1">
+	<parameter name="exposure">1</parameter>
+	<parameter name="ssao_visible">1</parameter>
+	<parameter name="ssgi_visible">1</parameter>
+	<parameter name="environment_ambient_visible">1</parameter>
+	<parameter name="lights_diffuse_visible">1</parameter>
+</material>

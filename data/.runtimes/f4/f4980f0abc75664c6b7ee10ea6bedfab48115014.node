@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="2141368997" name="sphere">
+		<transform>1 2.646978e-22 -3.8213714e-15 0.0 9.2644229e-23 1 8.7422777e-08 0.0 3.8213714e-15 -8.7422777e-08 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="1239142008" name="sphere">
+			<mesh_name>guid://23bd74da9bb6f8a81d9d99e1aeedb5c9a747458a</mesh_name>
+			<surface name="sphere_mat" material="6e38bfe422358566a4ee37b3a7ac491b3a811d73"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0.2 1.7484556e-08 1.0587912e-22 1.0</transform>
+		</node>
+	</node>
+</nodes>

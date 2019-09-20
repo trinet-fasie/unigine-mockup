@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>8a2c5575a9df884ab60275ad406e7600e49597e2</guid>
+	<type>mesh</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="8a2c5575a9df884ab60275ad406e7600e49597e2" name="material_ball.mesh" link="0"/>
+	</runtimes>
+</asset>

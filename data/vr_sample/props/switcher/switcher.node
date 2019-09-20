@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="NodeDummy" id="2124967230" name="switcher">
+		<transform>0.99999994 2.8421709e-014 0 0.0 5.6843419e-014 0.99999994 0 0.0 0 0 0.99999994 0.0 2.9802322e-008 0 -4.4819899e-009 1.0</transform>
+		<node type="ObjectMeshStatic" id="1617420604" name="switcher_2">
+			<mesh_name>guid://2921006c83d300db15e0407efed26dc5bd180460</mesh_name>
+			<surface name="switcher_2_mat" physics_friction="1" physics_restitution="1" material="952cd9ed9fdc34d0f64b616a14980eeff01d815c"/>
+			<properties>
+				<property parent="60e5d2c8e421b4a67909e20938d5d9d8935a2fe2" guid="c7a1d852fbd99b89ead56f5412d512a3e898d7a6">
+					<parameter name="use_physics">0</parameter>
+					<parameter name="use_sounds">0</parameter>
+				</property>
+			</properties>
+			<transform>0.0021836758 -3.2063585e-017 -1.9999988 0.0 3.1767391e-014 2.0000002 2.6224144e-018 0.0 1.999999 -3.1767378e-014 0.002183676 0.0 0.068560123 0.00015233457 0.037383795 1.0</transform>
+			<node type="ObjectMeshStatic" id="317616317" name="switcher_2_key">
+				<mesh_name>guid://d68c3e7d1ca8edb836b255b7708337aaaae08301</mesh_name>
+				<surface name="switcher_2_mat" physics_friction="1" physics_restitution="1" material="08ed723372f911f61142e0ddb8016c98c09e0717"/>
+				<properties>
+					<property parent="cb5346a081dcf654061b7f897ea14d9b43140712" guid="01540acdd8062dc82384f6871798423a91376c51">
+						<parameter name="script">guid://c38a9ebfe6601d1211a79949e125d21441029663</parameter>
+					</property>
+				</properties>
+				<transform>0.99999994 -8.2718061e-025 -1.1641532e-010 0.0 -9.3057819e-025 0.99999994 -2.6244052e-022 0.0 0 -2.6307252e-022 0.99999994 0.0 -0.019410988 1.3500452e-005 0.00013777614 1.0</transform>
+			</node>
+		</node>
+	</node>
+</nodes>

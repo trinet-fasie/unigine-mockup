@@ -1,0 +1,64 @@
+<base_material version="2.8.0.0" name="render_light" hidden="1">
+	
+	<state name="show_cascades"			defines="name">0</state>
+	<state name="simple"				defines="name">0</state>
+	<state name="instances"				defines="name">0</state>
+	<state name="shadow_screen_space"	defines="name">0</state>
+	<state name="water_light"			defines="name">0</state>
+	<state name="underwater_modulate"	defines="name">0</state>
+	<state name="interleaved"			defines="name">0</state>
+	<state name="interleaved_samples"	defines="name_items" items="1x2,2x2"/>
+	<state name="lerp_cascades"			defines=",USE_LERP_CASCADES">0</state>
+	
+	<state name="shadow_filter_noise"	defines="name">0</state>
+	<state name="shadow_penumbra_noise"	defines="name">0</state>
+	<state name="shadow_penumbra_mode"	items="none,low,medium,high,ultra"	defines="name_items">0</state>
+	<state name="shadow_filter_mode"	items="none,low,medium,high,ultra"	defines="name_items">0</state>
+	
+	<state name="has_clouds_shadows"			defines="name">0</state>
+	<state name="has_clouds_dynamic_coverage"	defines="name" type="toggle">0</state>
+	<state name="clouds_num_layers"				defines="name" type="int">1</state>
+	
+	<state name="shape" items="point,sphere,capsule,rectangle"	defines="name_items">0</state>
+	
+	<!-- shaders -->
+	<shader pass="light_world"
+		defines="WORLD"
+		receive_shadow_defines=",SHADOW"
+		fragment="core/shaders/screen_space/fragment/light/deferred_light.frag"/>
+	
+	<!-- shaders -->
+	<shader pass="light_proj"
+		defines="PROJ"
+		receive_shadow_defines=",SHADOW"
+		fragment="core/shaders/screen_space/fragment/light/deferred_light.frag"/>
+	
+	<!-- shaders -->
+	<shader pass="light_omni"
+		defines="OMNI"
+		receive_shadow_defines=",SHADOW"
+		fragment="core/shaders/screen_space/fragment/light/deferred_light.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="current_depth"/>
+	
+	<texture unit="1" water_light="0" type="gbuffer_normal"/>
+	<texture unit="2" water_light="0" type="gbuffer_shading"/>
+	<texture unit="3" water_light="0" type="gbuffer_albedo"/>
+	<texture unit="4" water_light="0" type="screen_color_old_reprojection"/>
+	<texture unit="5" water_light="0" type="linear_depth"/>
+	
+	<texture unit="1" water_light="1" type="wbuffer_normal"/>
+	<texture unit="4" water_light="1" type="wbuffer_water"/>
+	
+	<texture unit="8" has_clouds_shadows="1" type="clouds_static_coverage"/>
+	<texture unit="9" has_clouds_shadows="1" type="clouds_dynamic_coverage"/>
+	
+	<texture unit="13" name="noise" filter="point">core/textures/common/noise.dds</texture>
+	<texture unit="14" type="light_image"/>
+	<texture unit="15" type="light_depth"/>
+	
+	<texture unit="22" underwater_modulate="1" type="gbuffer_velocity"			filter="point"/>
+	<texture unit="23" underwater_modulate="1" type="wbuffer_ss_environment"	filter="point"/>
+	
+</base_material>

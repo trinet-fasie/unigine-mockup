@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>34175fbd86edd102ab7fa17f701053b9a36c8ed6</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="34175fbd86edd102ab7fa17f701053b9a36c8ed6" name="volume_base_cloud_density.dds" link="0"/>
+	</runtimes>
+</asset>

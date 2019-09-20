@@ -1,0 +1,165 @@
+<base_material version="2.8.0.0" name="water_mesh_base" parameters_prefix="m" editable="0">
+
+	<!-- options -->
+	<options cast_shadow="0" cast_world_shadow="0"/>
+	<options two_sided="0"/>
+	<options transparent="3"/>
+	<options cast_shadow="0" cast_world_shadow="0"/>
+
+	<!-- states -->
+	<state name="waves" defines="name" internal="1">0</state>
+
+
+	<state name="deferred" title="Deferred Buffers" group="Default" tooltip="&lt;p&gt;Enable deferred buffers rendering.&lt;/p&gt;">1</state>
+	
+	<group name="Options">
+		<state name="field_spacer"				defines="name"				title="FieldSpacer Interaction"	tooltip="&lt;p&gt;Enable interaction with &lt;b&gt;FieldSpacer&lt;/b&gt; objects.&lt;/p&gt;" group="Options">0</state>
+		<state name="additional_normals"		defines="name"				title="Additional Details"		tooltip="&lt;p&gt;Use additional normal details.&lt;/p&gt;">1</state>
+		<state name="caustics"					defines="name"				title="Caustics"				tooltip="&lt;p&gt;Enable water caustics.&lt;/p&gt;&lt;p&gt;Adds projection of light rays refracted by the water surface on underwater surfaces for more plausible simulation.&lt;/p&gt;">1</state>
+		<state name="caustics_distortion"	caustics="1" defines="name"		title="Caustics Distortion"		tooltip="">1</state>
+		<state name="planar_reflection"										title="Planar Reflection"		tooltip="&lt;p&gt;Enable dynamic reflection for water surface.&lt;/p&gt;">0</state>
+	</group>
+	
+	<group name="Post Processing">
+		<state name="material_dof"			deferred="1"	title="DOF"			tooltip="&lt;p&gt;Enable the Depth Of Field effect for the water material.&lt;/p&gt;">1</state>
+		<state name="material_motion_blur"	deferred="1"	title="Motion Blur"	tooltip="&lt;p&gt;Enable the Motion Blur effect for the water material.&lt;/p&gt;">1</state>
+		<state name="material_sun_shafts"	deferred="1"	title="Sun Shafts"	tooltip="&lt;p&gt;Enable the Sun Shafts effect for the water material.&lt;/p&gt;">1</state>
+	</group>
+
+	<!--planar reflection-->
+	<state name="reflection_size" planar_reflection="1" items="128,256,512,1024,2048,4096,quart_height,half_height,height" title="Map Size" group="Planar Reflection" tooltip="&lt;p&gt;Size of reflection map,in pixels.&lt;/p&gt;">7</state>
+	<state name="reflection_two_sided" internal="1" planar_reflection="1">0</state>
+	<state name="reflection_show_pivot" planar_reflection="1" title="Show Pivot" group="Planar Reflection" tooltip="&lt;p&gt;Show the reflection pivot point.&lt;/p&gt;">1</state>
+
+	<!-- surface wireframe shaders -->
+	<shader pass="wireframe" node="object_water_mesh"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/water/mesh/vertex/deferred.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+
+	<!-- deferred shaders -->
+	<shader pass="deferred" node="object_water_mesh"
+		defines="TRANSPARENT"
+		planar_reflection_defines=",REFLECTION_2D"
+		deferred="1"
+		vertex="core/shaders/water/mesh/vertex/deferred.vert"
+		fragment="core/shaders/water/mesh/fragment/deferred.frag"/>
+
+	<texture unit="0" pass="wireframe,deferred" name="foam" anisotropy="1" shader="fragment" group="Base" title="Foam" tooltip="&lt;p&gt;Water foam texture, 3 channels: RGB - color.&lt;/p&gt;">core/textures/water_global/foam_d.dds</texture>
+	<texture unit="2" pass="deferred" type="opacity_depth"/>
+	<texture unit="4" pass="wireframe,deferred" name="water_normal_detail_texture" anisotropy="1" shader="fragment" title="Normal Detail" group="Base" tooltip="&lt;p&gt;Normal detail texture, 2 channels: RG - normal components.&lt;/p&gt;&lt;p&gt;This texture is used to create ripples on the water surface.&lt;/p&gt;">core/textures/water_global/water_detail_n.dds</texture>
+	<texture unit="6" pass="deferred" wrap="clamp" name="water_depth_lut" title="Depth LUT" group="Base" tooltip="&lt;p&gt;Lookup texture for depth, 3 channels: RGB - color.&lt;/p&gt;&lt;p&gt;This texture is used to determine how the water changes its color from the surface down to the depth (left to right).&lt;/p&gt;">core/textures/water_global/water_depth_lut.tga</texture>
+
+	<texture unit="8" pass="deferred" wrap="repeat" name="caustic_texture" title="Caustic" group="Base" tooltip="&lt;p&gt;Water caustic texture, 3D, 1 channel: R - caustic pattern.&lt;/p&gt;Determines the pattern of light rays refracted by the water surface.&lt;p&gt;&lt;/p&gt;">core/textures/water_global/caustics.dds</texture>
+
+	<texture unit="15" type="reflection_2d" planar_reflection="1" pass="post,deferred"/>
+
+	<parameter name="waves_radius" type="slider" min="0.0" max="1000.0"		title="Waves Radius"		tooltip="&lt;p&gt;Waves Radius.&lt;/p&gt;">100.0</parameter>
+	<group name="Waves Animation">
+		<parameter name="detail0_uv_transform" shared="1" type="expression" widget="uv"												title="Detail 0 UV Transform"	tooltip="&lt;p&gt;UV transform for the first sample of the normal detail texture:&lt;/p&gt;&lt;p&gt;(X,Y) - scale, (Z,W) - wind force and direction for U and V axes.&lt;/p&gt;">vec4(100.0f,100.0f,0.5f,0.0f)</parameter>
+		<parameter name="detail0_intensity" shared="1" type="slider" min="0.0" max="2.0" flags="max_expand"							title="Detail 0 Intensity"		tooltip="&lt;p&gt;Intensity of the first sample of the normal detail texture.&lt;/p&gt;">0.8f</parameter>
+		<parameter name="detail1_uv_transform" shared="1" type="expression" widget="uv"												title="Detail 1 UV Transform"	tooltip="&lt;p&gt;UV transform for the second sample of the normal detail texture:&lt;/p&gt;&lt;p&gt;(X,Y) - scale, (Z,W) - wind force and direction for U and V axes.&lt;/p&gt;">vec4(150.0f,150.0f,-0.5f,0.0f)</parameter>
+		<parameter name="detail1_intensity" shared="1" type="slider" min="0.0" max="2.0" flags="max_expand"							title="Detail 1 Intensity"		tooltip="&lt;p&gt;Intensity of the second sample of the normal detail texture.&lt;/p&gt;">0.8f</parameter>
+
+		<parameter name="detail2_uv_transform" additional_normals="1" shared="1" type="expression" widget="uv"						title="Detail 2 UV Transform"	tooltip="&lt;p&gt;UV transform for the third sample of the normal detail texture:&lt;/p&gt;&lt;p&gt;(X,Y) - scale, (Z,W) - wind force and direction for U and V axes.&lt;/p&gt;">vec4(200.0f,200.0f,2.0f,0.0f)</parameter>
+		<parameter name="detail2_intensity" additional_normals="1" shared="1" type="slider" min="0.0" max="2.0" flags="max_expand"	title="Detail 2 Intensity"		tooltip="&lt;p&gt;Intensity of the third sample of the normal detail texture.&lt;/p&gt;">1.0f</parameter>
+		<parameter name="detail3_uv_transform" additional_normals="1" shared="1" type="expression" widget="uv"						title="Detail 3 UV Transform"	tooltip="&lt;p&gt;UV transform for the fourth sample of the normal detail texture:&lt;/p&gt;&lt;p&gt;(X,Y) - scale, (Z,W) - wind force and direction for U and V axes.&lt;/p&gt;">vec4(250.0f,250.0f,2.0f,-2.0f)</parameter>
+		<parameter name="detail3_intensity" additional_normals="1" shared="1" type="slider" min="0.0" max="2.0" flags="max_expand"	title="Detail 3 Intensity"		tooltip="&lt;p&gt;Intensity of the fourth sample of the normal detail texture.&lt;/p&gt;">0.6f</parameter>
+		<parameter name="detail4_uv_transform" additional_normals="1" shared="1" type="expression" widget="uv"						title="Detail 4 UV Transform"	tooltip="&lt;p&gt;UV transform for the fifth sample of the normal detail texture:&lt;/p&gt;&lt;p&gt;(X,Y) - scale, (Z,W) - wind force and direction for U and V axes.&lt;/p&gt;">vec4(300.0f,300.0f,2.0f,2.0f)</parameter>
+		<parameter name="detail4_intensity" additional_normals="1" shared="1" type="slider" min="0.0" max="2.0" flags="max_expand"	title="Detail 4 Intensity"		tooltip="&lt;p&gt;Intensity of the fifth sample of the normal detail texture.&lt;/p&gt;">0.6f</parameter>
+	</group>
+
+	<!-- foam -->
+	<group name="Foam">
+		<parameter name="foam0_uv_size" shared="1" type="slider" min="0.01" max="32" flags="max_expand"			title="Patch 0 UV Size"			tooltip="&lt;p&gt;Size of the first foam texture patch.&lt;/p&gt;">1.0f</parameter>
+		<parameter name="foam0_uv_speed" shared="1" type="slider" min="0.01" max="32" flags="max_expand"		title="Patch 0 UV Speed"		tooltip="&lt;p&gt;Speed of the first foam texture patch.&lt;/p&gt;">0.01f</parameter>
+		<parameter name="foam1_uv_size" shared="1" type="slider" min="0.01" max="32" flags="max_expand"			title="Patch 1 UV Size"			tooltip="&lt;p&gt;Size of the second foam texture patch.&lt;/p&gt;">0.2f</parameter>
+		<parameter name="foam1_uv_speed" shared="1" type="slider" min="0.01" max="32" flags="max_expand"		title="Patch 1 UV Speed"		tooltip="&lt;p&gt;Speed of the second foam texture patch.&lt;/p&gt;">0.01f</parameter>
+
+		<parameter name="coast_foam_intensity" shared="0" type="slider" min="0.0" max="1.0" flags="max_expand"	title="Shoreline Intensity"		tooltip="&lt;p&gt;Foam intensity near shores or different objects in the water.&lt;/p&gt;">1.0</parameter>
+	</group>
+
+	<!-- subsurface -->
+	<group name="Subsurface Scattering">
+		<parameter name="subsurface_color" shared="0" type="color"															title="Color"					tooltip="&lt;p&gt;Water subsurface scattering color.&lt;/p&gt;">0 0.913726 1 1</parameter>
+		<parameter name="ambient_subsurface_intensity" shared="0" type="slider" min="0.0" max="1.0" flags="max_expand"		title="Ambient Intensity"		tooltip="&lt;p&gt;Subsurface scattering intensity for ambient lighting.&lt;/p&gt;">0.2</parameter>
+		<parameter name="wave_subsurface_intensity" shared="0" type="slider" min="0.0" max="1.0" flags="max_expand"			title="Intensity Trough Waves"	tooltip="&lt;p&gt;Intensity of light rays passing through the waves.&lt;/p&gt;">0.3</parameter>
+		<parameter name="wave_foam_subsurface_intensity" shared="0" type="slider" min="0.0" max="1.0" flags="max_expand"	title="Intensity Around Foam"	tooltip="&lt;p&gt;Subsurface scattering intensity near the foam areas.&lt;/p&gt;">0.0</parameter>
+		<parameter name="diffuse_subsurface_intensity" shared="0" type="slider" min="0.0" max="32.0" flags="max_expand"		title="Diffuse Intensity"		tooltip="&lt;p&gt;Subsurface scattering intensity for diffuse lighting.&lt;/p&gt;">1.0</parameter>
+	</group>
+	<group name="Underwater">
+		<parameter name="underwater_fog_transparency" shared="1" type="slider" min="0.0" max="10.0" flags="max_expand"			title="Fog Transparency"			tooltip="&lt;p&gt;Transparency of the underwater fog.&lt;/p&gt;">5.0</parameter>
+		<parameter name="underwater_fog_depth" shared="1" type="slider" min="0.0" max="1000.0" flags="max_expand"				title="Fog Lighting Depth"			tooltip="&lt;p&gt;Distance from the water surface (in units), up to which the light will affect the underwater color.&lt;/p&gt;">200.0</parameter>
+		<parameter name="underwater_fog_offset" shared="1" type="slider" min="-10.0" max="10.0" flags="max_expand"				title="Lighting Offset"				tooltip="&lt;p&gt;Height offset for lighting.&lt;/p&gt;">0.0</parameter>
+		<parameter name="underwater_fog_color" shared="0" type="color"															title="Fog Color"					tooltip="&lt;p&gt;Defines the fog color. Sun and Environment lighting will affect this parameter to create the final underwater fog color.&lt;/p&gt;">0.2 0.2 0.2 1</parameter>
+		<parameter name="underwater_fog_environment_influence" shared="0" type="slider" min="0.0" max="16.0" flags="max_expand"	title="Fog Environment Lighting"	tooltip="&lt;p&gt;Degree of impact of the environment lighting on the final underwater color.&lt;/p&gt;">1.0</parameter>
+		<parameter name="underwater_fog_sun_influence" shared="0" type="slider" min="0.0" max="16.0" flags="max_expand"			title="Fog Sun Lighting"			tooltip="&lt;p&gt;Degree of impact of the sun lighting on the final underwater color.&lt;/p&gt;">0.5</parameter>
+		<parameter name="underwater_shaft_intensity" shared="0"	type="slider" max="10.0" flags="max_expand"	title="Shafts Intensity"			tooltip="&lt;p&gt;Intensity of the underwater sun shafts.&lt;/p&gt;">1.75</parameter>
+	</group>
+
+	<!-- planar reflection -->
+	<group name="Planar Reflection">
+		<parameter name="reflection_viewport_mask" planar_reflection="1" type="mask32"				title="Viewport Mask"	tooltip="&lt;p&gt;Viewport mask of the reflection camera.&lt;/p&gt;&lt;p&gt;A surface will have its reflection rendered if its viewport mask and its material viewport mask match this mask (one bit, at least).&lt;/p&gt;">0x01</parameter>
+		<parameter name="reflection_distance" planar_reflection="1" type="expression"					title="Distance"		tooltip="&lt;p&gt;Reflection rendering distance, in units.&lt;/p&gt;">-1.0f</parameter>
+		<parameter name="reflection_pivot_rotation"	planar_reflection="1"	type="expression"			title="Pivot Rotation"	tooltip="&lt;p&gt;Rotation of the reflection pivot point.&lt;/p&gt;&lt;p&gt;Can be used to correct reflection in case if the transformation of reflective surface was changed.&lt;/p&gt;">vec3(0.0f,0.0f,0.0f)</parameter>
+		<parameter name="reflection_pivot_offset" planar_reflection="1" type="expression"				title="Pivot Offset"	tooltip="&lt;p&gt;Position of the reflection pivot point.&lt;/p&gt;">vec3(0.0f,0.0f,0.0f)</parameter>
+	</group>
+	<parameter name="material_mask" shared="0" deferred="1" type="expression" group="Default" widget="mask24"	tooltip="&lt;p&gt;Material bitmask.&lt;/p&gt;&lt;p&gt;The decal will be projected onto the water surface if the material mask of the decal material matches this mask (one bit, at least).&lt;/p&gt;">0xffffffff</parameter>
+
+	<!-- other -->
+	<group name="Other">
+		<parameter name="reflection_roughness"				shared="0"	type="slider"	min="0.0" max="1.0"		flags="max_expand"	title="Reflection Roughness"			tooltip="&lt;p&gt;Environment reflection roughness of the water surface.&lt;/p&gt;&lt;p&gt;This parameter helps to tweak the reflections on water surface relative to the environment.&lt;/p&gt;">0.75</parameter>
+		<parameter name="reflection_occlusion"				shared="0"	type="slider"							flags="max_expand"	title="Reflection Occlusion"			tooltip="&lt;p&gt;Occlusion for negative normals.&lt;/p&gt;">0.0</parameter>
+		<parameter name="reflection_occlusion_slope"		shared="0"	type="slider"							flags="max_expand"	title="Reflection Occlusion Slope"		tooltip="&lt;p&gt;Slope of negative normals.&lt;/p&gt;">0.0</parameter>	
+		<parameter name="refraction_scale"					shared="0"	type="slider"	min="0.0" max="3.0"		flags="max_expand"	title="Refraction Scale"				tooltip="&lt;p&gt;Determines the scale of the water refraction.&lt;/p&gt;">1.5</parameter>
+		<parameter name="diffuse_distortion"				shared="0"	type="slider"	min="0.0" max="1.0"		flags="max_expand"	title="Diffuse Distortion"				tooltip="&lt;p&gt;Diffuse Distortion.&lt;/p&gt;">0.2</parameter>
+		<parameter name="soft_intersection"					shared="0"	type="slider"	min="0.1" max="10.0"	flags="max_expand"	title="Soft Intersection"				tooltip="&lt;p&gt;Soft intersection of water with the shoreline and surfaces of objects.&lt;/p&gt;">1.0</parameter>
+	</group>
+
+	<!-- caustic -->
+	<group name="Caustics">
+		<parameter name="caustic_uv_transform" shared="1" type="expression" widget="uv"			title="UV Transform"		tooltip="&lt;p&gt;UV transform for the caustics texture.&lt;/p&gt;">vec4(0.05f,0.05f,0.0f,0.0f)</parameter>
+		<parameter name="caustic_fade" shared="1" type="slider" min="0.0" max="20.0"			title="Distance Fade"		tooltip="&lt;p&gt;Fading of light shapes depending on the distance from the water surface.&lt;/p&gt;">20.0f</parameter>
+		<parameter name="caustic_animation_speed" shared="1" type="slider" min="0.0" max="2.0"	title="Animation Speed"		tooltip="&lt;p&gt;Speed of movement of the light patterns.&lt;/p&gt;">0.3f</parameter>
+		<parameter name="caustic_brightness" shared="1" type="slider" min="0.0" max="2.0"		title="Brightness"			tooltip="&lt;p&gt;Brightness of the light shapes.&lt;/p&gt;">1.0f</parameter>
+	</group>
+
+	<!-- constant data transfer -->
+	<parameter name="chunk0" type="combiner" deferred_unit="0" shared="0"
+		subsurface_color="XYZ"
+		ambient_subsurface_intensity="W"
+	/>
+
+	<parameter name="chunk1" type="combiner" deferred_unit="4" shared="0"
+		wave_subsurface_intensity="X"
+		wave_foam_subsurface_intensity="Y"
+		diffuse_subsurface_intensity="Z"
+		coast_foam_intensity="W"
+	/>
+
+	<parameter name="chunk2" type="combiner" deferred_unit="8" shared="0"
+		reflection_roughness="X"
+		refraction_scale="Y"
+		underwater_fog_environment_influence="Z"
+		underwater_fog_sun_influence="W"
+	/>
+
+	<parameter name="chunk3" type="combiner" deferred_unit="12" shared="0"
+		underwater_fog_color="XYZ"
+		diffuse_distortion="W"
+	/>
+
+	<parameter name="chunk4" type="combiner" deferred_unit="16" shared="0"
+		soft_intersection="X"
+		underwater_fog_depth="Y"
+		underwater_fog_transparency="Z"
+		underwater_shaft_intensity="W"
+	/>
+	
+	<parameter name="chunk5" type="combiner" deferred_unit="20" shared="0"
+		reflection_occlusion="X"
+		reflection_occlusion_slope="Y"
+	/>
+	
+</base_material>

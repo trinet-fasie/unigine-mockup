@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>0c5c7dca62e0f075bc7497f81bdfe9aec6b2ee1b</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="0c5c7dca62e0f075bc7497f81bdfe9aec6b2ee1b" name="render_hdr_bokeh_iris.dds" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="buildings_preset_0_roof" guid="1e76b69c308e2c369059f4288ac5f4c0a65b5ae4" parent="24f9547d55024a80280af16e6bc3c65dc3035ff4" base_material="mesh_base" editable="0">
+	<state name="detail">1</state>
+	<state name="detail_blend">1</state>
+	<state name="detail_mapping">2</state>
+	<state name="detail_mask_mapping">1</state>
+	<texture name="albedo">guid://8c0b4e6ac34641b7d50ab4b9e3bb6615bc37ba51</texture>
+	<texture name="shading">guid://d983788c941772c5901b50b086a133504411be43</texture>
+	<texture name="detail_albedo">guid://e4d299078df70a69aaadd12d2f969ba2c5250f8f</texture>
+	<parameter name="albedo_color">0.70588237 0.70588237 0.70588237 1</parameter>
+	<parameter name="specular">0.349999994</parameter>
+	<parameter name="color"/>
+	<parameter name="shading"/>
+	<parameter name="detail_albedo_color">0.874509871 0.874509871 0.874509871 1</parameter>
+	<parameter name="detail_color"/>
+	<parameter name="detail_shading"/>
+	<parameter name="detail_albedo_color_visible">0.600000024</parameter>
+	<parameter name="detail_roughness_visible">0.100000001</parameter>
+	<parameter name="detail_color_visible"/>
+	<parameter name="detail_shading_visible"/>
+	<parameter name="noise_3d_scale">0.100000001</parameter>
+	<parameter name="noise_3d_transform">vec3(0.06f,0.06f,0.06f)</parameter>
+</material>

@@ -1,0 +1,10 @@
+<base_material version="2.8.0.0" name="render_surround_border" hidden="1">
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/surround.frag"/>
+	
+	<texture name="color" pass="post" type="procedural"/>
+	
+	<parameter name="border" type="slider" min="0.0" max="256.0" flags="max_expand">0.0</parameter>
+	
+</base_material>

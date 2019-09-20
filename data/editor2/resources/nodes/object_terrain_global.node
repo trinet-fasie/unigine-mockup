@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="ObjectTerrainGlobal">
+		<lods_height/>
+		<lods_albedo/>
+		<lods_normal/>
+		<lods_detail_masks/>
+		<surface name="terrain_surface" material="9b95475cf08896bb853da91e60729e6925427623"/>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

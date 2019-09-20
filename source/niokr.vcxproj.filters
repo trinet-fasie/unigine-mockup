@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AppSystemLogic.cpp" />
+    <ClCompile Include="AppEditorLogic.cpp" />
+    <ClCompile Include="AppWorldLogic.cpp" />
+    <ClCompile Include="vr_sample.cpp" />
+    <ClCompile Include="ComponentSystem/ComponentSystem.cpp">
+      <Filter>ComponentSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/SoundManager.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Triggers.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Utils.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Players/VRPlayer.cpp">
+      <Filter>Framework\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Objects/ObjHandle.cpp">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Objects/ObjMovable.cpp">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Objects/ObjSwitch.cpp">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Players/VRPlayerOculus.cpp">
+      <Filter>Framework\Components\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Players/VRPlayerPC.cpp">
+      <Filter>Framework\Components\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/VRPlayerSpawner.cpp">
+      <Filter>Framework\Components\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Players/VRPlayerVive.cpp">
+      <Filter>Framework\Components\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Players/VRPlayerVR.cpp">
+      <Filter>Framework\Components\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Players/AppViveProxy.cpp">
+      <Filter>Framework\Components\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Players/AppOculusProxy.cpp">
+      <Filter>Framework\Components\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework/Components/Objects/ObjScript.cpp">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppSystemLogic.h" />
+    <ClInclude Include="AppEditorLogic.h" />
+    <ClInclude Include="AppWorldLogic.h" />
+    <ClInclude Include="ComponentSystem/ComponentSystem.h">
+      <Filter>ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/SoundManager.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Triggers.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Utils.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/VRInteractable.h">
+      <Filter>Framework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Players/VRPlayer.h">
+      <Filter>Framework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Objects/ObjHandle.h">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Objects/ObjMovable.h">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Objects/ObjSwitch.h">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Players/VRPlayerOculus.h">
+      <Filter>Framework\Components\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Players/VRPlayerPC.h">
+      <Filter>Framework\Components\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/VRPlayerSpawner.h">
+      <Filter>Framework\Components\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Players/VRPlayerVive.h">
+      <Filter>Framework\Components\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Players/VRPlayerVR.h">
+      <Filter>Framework\Components\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Players/AppViveProxy.h">
+      <Filter>Framework\Components\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Players/AppOculusProxy.h">
+      <Filter>Framework\Components\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework/Components/Objects/ObjScript.h">
+      <Filter>Framework\Components\Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{4749d40f-616e-41c9-994b-51f6bf4af8e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentSystem">
+      <UniqueIdentifier>{7c5b9a51-7877-4223-80cc-ff93566629fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Components">
+      <UniqueIdentifier>{2cd0b701-27b8-4119-b5a3-ad60bccf6f54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Components\Objects">
+      <UniqueIdentifier>{70774207-1f1f-4474-8288-977a7b202aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Components\Players">
+      <UniqueIdentifier>{2372c172-2920-47a0-a6f5-ced52c857b71}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

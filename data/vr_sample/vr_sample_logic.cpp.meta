@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>7bae6a9a6bcdb931c373e0dc4a65068be7beaa6e</guid>
+	<type>script</type>
+	<hash>f4586e53</hash>
+	<runtimes>
+		<runtime id="7bae6a9a6bcdb931c373e0dc4a65068be7beaa6e" name="vr_sample_logic.cpp" link="0"/>
+	</runtimes>
+</asset>

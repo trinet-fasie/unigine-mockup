@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>4ad9b94d61fe5819fd6436ee3490736745d3be0e</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="4ad9b94d61fe5819fd6436ee3490736745d3be0e" name="grain.dds" link="0"/>
+	</runtimes>
+</asset>

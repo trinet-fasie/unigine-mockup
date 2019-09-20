@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>3bf769b30bc907886fcd08b475da0665d7b6873f</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="3bf769b30bc907886fcd08b475da0665d7b6873f" name="debug_ssao.mat" link="0"/>
+	</runtimes>
+</asset>

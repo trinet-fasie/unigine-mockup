@@ -1,0 +1,91 @@
+<base_material version="2.8.0.0" name="terrain_base" parameters_prefix="m" editable="0">
+
+	<options transparent="1"/>
+
+	<!-- states -->
+	<state name="dynamic" defines="name" internal="1"/>
+
+	<state name="auxiliary" group="Options" 	tooltip="&lt;p&gt;Enable auxiliary rendering pass for the terrain material.&lt;/p&gt;&lt;p&gt;Can be used for custom post-effects, such as thermal vision, etc.&lt;/p&gt;">0</state>
+
+	<state name="ao_map"					title="Ambient Occlusion"	group="Options"	tooltip="&lt;p&gt;Enable the Ambient Occlusion effect.&lt;/p&gt;&lt;p&gt;This effect is used to modulate global environment illumination using baked shadows from environment probe light sources.&lt;/p&gt;">0</state>
+	<state name="invert_ao_map"	ao_map="1"	title="Invert Occlusion"	group="Options"	tooltip="&lt;p&gt;Invert Ambient Occlusion map influence on albedo.&lt;/p&gt;"				>0</state>
+
+	<state name="subtract_materials"	defines="name" pass_defines="deferred"			tooltip="&lt;p&gt;Subtracts invisible materials inside every layer and draw only visible ones.&lt;/p&gt;&lt;p&gt;Helps to increase performance on terrains with plenty of blended materials.&lt;/p&gt;&lt;p&gt;May cause performance drop on terrains with small amount of materials..&lt;/p&gt;">0</state>
+	<state name="subtract_layers"		defines="name" pass_defines="deferred"			tooltip="&lt;p&gt;Subtracts invisible parts of layers and draw only visible parts of their materials.&lt;/p&gt;&lt;p&gt;May cause some graphical artifacts in sorting order of detail materials, but provides a big performance boost.&lt;/p&gt;">0</state>
+
+	<state name="material_detail"		defines="name" pass_defines="deferred"			tooltip="&lt;p&gt;Enable detail terrain materials.&lt;/p&gt;">1</state>
+	<state name="material_roughness"	defines="name" pass_defines="deferred"			tooltip="&lt;p&gt;Enable roughness calculation for terrain materials.&lt;/p&gt;">1</state>
+	<state name="material_normal"		defines="name" pass_defines="deferred"			tooltip="&lt;p&gt;Enable calculation of normals for terrain materials.&lt;/p&gt;">1</state>
+
+	<state name="terrain"		internal="1" items="patch,surface,coarse">0</state>
+
+	<state name="num_materials"	internal="1" defines="name" pass_defines="deferred" type="int"/>
+	<state name="num_layers"	internal="1" defines="name" pass_defines="deferred" type="int"/>
+	<state name="geodetic"		internal="1" defines="name">0</state>
+
+	<state name="material_ssao"		title="Material SSAO"		group="Post Processing"				tooltip="&lt;p&gt;Enable the Screen Space Ambient Occlusion effect for the terrain material.&lt;/p&gt;">1</state>
+	<state name="material_ssr"		title="Material SSR"		group="Post Processing"				tooltip="&lt;p&gt;Enable the Screen Space Reflections effect for the terrain material.&lt;/p&gt;">1</state>
+	<state name="material_sssss"	title="Material SSSSS"		group="Post Processing"				tooltip="&lt;p&gt;Enable the Subsurface Scattering effect for the terrain material.&lt;/p&gt;">0</state>
+
+	<state name="material_dof"			title="Material DOF"			group="Post Processing"	tooltip="&lt;p&gt;Enable the Depth Of Field effect for the terrain material.&lt;/p&gt;">1</state>
+	<state name="material_motion_blur"	title="Material Motion Blur"	group="Post Processing"	tooltip="&lt;p&gt;Enable the Motion Blur effect for the terrain material.&lt;/p&gt;">1</state>
+	<state name="material_sun_shafts"	title="Material Sun Shafts"	group="Post Processing"		tooltip="&lt;p&gt;Enable the Sun Shafts effect for the terrain material.&lt;/p&gt;">1</state>
+
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_terrain"
+		defines="BASE_WIREFRAME"
+		terrain_defines="PATCH,SURFACE,COARSE"
+		vertex="core/shaders/terrain/vertex/default.vert"
+		geometry="core/shaders/terrain/geometry/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+
+	<shader pass="visualizer_solid" node="object_terrain"
+		defines="BASE_VISUALIZER_SOLID"
+		terrain_defines="PATCH,SURFACE,COARSE"
+		vertex="core/shaders/terrain/vertex/default.vert"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+
+	<!-- auxiliary shaders -->
+	<shader pass="auxiliary" node="object_terrain"
+		defines="BASE_AUXILIARY"
+		terrain_defines="PATCH,SURFACE,COARSE"
+		auxiliary="1"
+		vertex="core/shaders/terrain/vertex/auxiliary.vert"
+		fragment="core/shaders/terrain/fragment/auxiliary.frag"/>
+
+	<!-- deferred shaders -->
+	<shader pass="deferred" node="object_terrain"
+		terrain_defines="PATCH,SURFACE,COARSE"
+		ao_map_defines=",OCCLUSION"
+		invert_ao_map_defines=",INVERT_OCCLUSION"
+		vertex="core/shaders/terrain/vertex/deferred.vert"
+		fragment="core/shaders/terrain/fragment/deferred.frag"/>
+
+	<!-- shadow shaders -->
+	<shader pass="shadow" node="object_terrain"
+		defines="BASE_SHADOW"
+		terrain_defines="PATCH,SURFACE,COARSE"
+		vertex="core/shaders/terrain/vertex/default.vert"
+		fragment="core/shaders/terrain/fragment/depth.frag"/>
+
+	<shader pass="depth_pre_pass" node="object_terrain"
+		terrain_defines="PATCH,SURFACE,COARSE"
+		vertex="core/shaders/terrain/vertex/default.vert"
+		fragment="core/shaders/terrain/fragment/depth.frag"/>
+
+	<!-- textures -->
+	<texture unit="7"	name="ao_map"	ao_map="1" anisotropy="1"	title="Ambient Occlusion"	tooltip="&lt;p&gt;Ambient occlusion texture, 1 channel: R - AO map.&lt;/p&gt;&lt;p&gt;This texture is used to modulate global environment illumination and contains baked shadows from environment probe light sources.&lt;/p&gt;">core/textures/common/red.dds</texture>
+	<texture unit="14"	name="auxiliary"			pass="auxiliary"	auxiliary="1" anisotropy="1"	 group="Options"	tooltip="&lt;p&gt;Auxiliary texture, 4 channels.&lt;/p&gt;&lt;p&gt;This texture can be used for custom effects, such as thermal vision, etc.&lt;/p&gt;">core/textures/common/white.dds</texture>
+
+	<!-- parameters -->
+	<parameter name="material_mask"	shared="0"	type="expression"				group="Default" widget="mask24"	tooltip="&lt;p&gt;Material bitmask.&lt;/p&gt;&lt;p&gt;The decal will be projected onto the terrain surface if the material mask of the decal material matches this mask (one bit, at least).&lt;/p&gt;">0xffffffff</parameter>
+	<parameter name="albedo_color"				type="color"	title="Albedo"	group="Base"					tooltip="Albedo color multiplier for the terrain albedo texture.">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="roughness"					type="slider"					group="Base"					tooltip="Roughness multiplier.">1.0</parameter>
+	<parameter name="microfiber"				type="slider"					group="Base"					tooltip="Microfiber multiplier.">1.0</parameter>
+	<parameter name="normal_scale"				type="slider" max="2.0" flags="max_expand" title="Normal Intensity" group="Base" tooltip="Intensity of the terrain normal texture.">1.0</parameter>
+
+	<parameter name="auxiliary_color" auxiliary="1" type="color"	tooltip="&lt;p&gt;Color multiplier for the terrain auxiliary texture.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+
+	<parameter name="occlusion_on_albedo" ao_map="1" type="slider" min="0.0" max="1.0"	tooltip="&lt;p&gt;Occlusion influence on the terrain albedo texture.&lt;/p&gt;">0.0</parameter>
+
+</base_material>

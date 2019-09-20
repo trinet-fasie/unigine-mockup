@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>88b6b1efef721f00cf9398c8b5f08c6b4fbfad34</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="88b6b1efef721f00cf9398c8b5f08c6b4fbfad34" name="particles_base_normal.dds" link="0"/>
+	</runtimes>
+</asset>

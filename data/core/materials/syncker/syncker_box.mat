@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="syncker_box" base_material="mesh_base" manual="1" hidden="1">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options shadow_mask="0x0" transparent="2" depth_mask="0" depth_test="0" two_sided="1" cast_shadow="0" cast_world_shadow="0" overlap="1"/>
+	<state name="emission">1</state>
+	<state name="material_dof">0</state>
+	<state name="material_motion_blur">0</state>
+	<state name="material_sun_shafts">0</state>
+	<state name="ambient">0</state>
+	<state name="light_omni">0</state>
+	<state name="light_proj">0</state>
+	<state name="light_world">0</state>
+	<parameter name="material_mask">0x00000000</parameter>
+	<parameter name="uv_transform">vec4(-1.0f,1.0f,0.0f,0.0f)</parameter>
+	<texture name="emission">core/textures/syncker/syncker_box.dds</texture>
+</material>

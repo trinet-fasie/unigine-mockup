@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="editor2_debug_ssgi" guid="3d131a5d04723b0fabb387faf11898c939cf1e47" parent="3719cceb1da21303c8310c26c7126c2777ae3ded" base_material="render_composite_deferred" hidden="1">
+	<parameter name="intensity">1</parameter>
+</material>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" editable="0" name="particles_emission" guid="3c7c894c55e2343bd37e1c5efe51d825de52ab40" base_material="particles_base">
+	<state name="ambient">0</state>
+	<state name="light_world">0</state>
+	<parameter name="emission_scale">1</parameter>
+</material>

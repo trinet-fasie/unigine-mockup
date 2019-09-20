@@ -1,0 +1,13 @@
+<base_material version="2.8.0.0" name="render_fxaa" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/screen_space/fxaa/fxaa.vert"
+		fragment="core/shaders/screen_space/fxaa/fxaa.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" pass="post" type="procedural"/>
+	
+	<!-- parameters -->
+	<parameter name="sample_offset" type="slider" min="0.0" max="1.0">0.0</parameter>
+</base_material>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="animation_blue" guid="921966e0d2966cbf7c0d93124e7a9749d710b814" base_material="mesh_base">
+	<texture name="albedo">guid://9a220d661b20d0a9fbc094263305fc7da2c72918</texture>
+</material>

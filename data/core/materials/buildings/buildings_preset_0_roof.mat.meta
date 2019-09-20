@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>1e76b69c308e2c369059f4288ac5f4c0a65b5ae4</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="1e76b69c308e2c369059f4288ac5f4c0a65b5ae4" name="buildings_preset_0_roof.mat" link="0"/>
+	</runtimes>
+</asset>

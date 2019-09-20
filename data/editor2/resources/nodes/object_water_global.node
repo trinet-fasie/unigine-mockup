@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="ObjectWaterGlobal" collider="0">
+		<surface name="water_surface" material="6dc5ebdbd396c71a211e9af9124aeef621909430"/>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

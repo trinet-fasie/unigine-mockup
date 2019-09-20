@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>68fba4d7e23b94cd5c7613eea5fbe41d8e4fbd39</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="68fba4d7e23b94cd5c7613eea5fbe41d8e4fbd39" name="debug_metalness.mat" link="0"/>
+	</runtimes>
+</asset>

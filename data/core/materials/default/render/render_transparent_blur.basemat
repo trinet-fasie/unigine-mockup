@@ -1,0 +1,12 @@
+<base_material version="2.8.0.0" name="render_transparent_blur" hidden="1">
+	
+	<state name="horizontal" defines="VERTICAL,HORIZONTAL">0</state>
+	<state name="resolution" defines="QUARTER,HALF,FULL">0</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/transparent_blur.frag"/>
+	
+	<texture name="color" type="procedural"/>
+	<texture type="transparent_blur"/>
+	
+</base_material>

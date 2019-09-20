@@ -1,0 +1,34 @@
+<base_material version="2.8.0.0" name="render_taa" hidden="1">
+	<state name="filter_width" type="switch" items="width">0</state>
+	<state name="filter_height" type="switch" items="height">0</state>
+
+	<state name="fix_flicker"					defines="name">0</state>
+	<state name="frames_by_color"				defines="name">0</state>
+	<state name="frames_by_velocity"			defines="name">0</state>
+	<state name="diagonal_neighbors"			defines="name">0</state>
+	<state name="catmull_resampling"			defines="name">0</state>
+	<state name="antialiasing_in_motion"		defines="name">0</state>
+	<state name="array_textures"				defines="name">0</state>
+	<state name="color_clamping_by_velocity"	defines="name">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/taa.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	<texture name="color_old" type="procedural"/>
+	<texture type="opacity_depth"/>
+	<texture type="gbuffer_velocity"/>
+	
+	<!-- parameters -->
+	<parameter name="preserve_details" type="slider">0.0</parameter>
+	<parameter name="frame_count" type="slider">0.0</parameter>
+	<parameter name="frames_velocity_threshold" type="slider">0.0</parameter>
+	<parameter name="max_frames_by_velocity" type="slider">0.0</parameter>
+	<parameter name="min_frames_by_velocity" type="slider">0.0</parameter>
+	<int name="tex_array_index">-1</int>
+	<parameter color_clamping_by_velocity="1" name="color_clamping_intensity" type="slider">0.0</parameter>
+	<parameter color_clamping_by_velocity="1" name="color_clamping_velocity_threshold" type="slider">0.0</parameter>
+	
+</base_material>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>7772866c0f5acedb65d9b67e79816bc57f2eea60</guid>
+	<type>material</type>
+	<hash>be366e1b</hash>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="7772866c0f5acedb65d9b67e79816bc57f2eea60" name="big_cube_material" link="0"/>
+	</runtimes>
+</asset>

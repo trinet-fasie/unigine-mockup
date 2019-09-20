@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>61e01d83382275c211edaef7c4cf21548d7cdc38</guid>
+	<type>texture</type>
+	<hash>62491716</hash>
+	<parameters>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="string" name="width">auto</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="preset_name">emission</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="f2e5e336966d2649dfe98661117426f8c3b0543b" name="vive_pad_e.dds" link="1"/>
+		<runtime id="61e01d83382275c211edaef7c4cf21548d7cdc38" name="vive_pad_e.jpg" link="0"/>
+	</runtimes>
+</asset>

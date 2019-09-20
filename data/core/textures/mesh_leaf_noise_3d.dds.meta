@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>5b97aaa5136da1a325c40150b006061b47432544</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="5b97aaa5136da1a325c40150b006061b47432544" name="mesh_leaf_noise_3d.dds" link="0"/>
+	</runtimes>
+</asset>

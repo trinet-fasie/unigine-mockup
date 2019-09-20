@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>019cae791bd4d3eacc4d373b0f1dbc4b82e7a7fa</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="019cae791bd4d3eacc4d373b0f1dbc4b82e7a7fa" name="post_hblur_cube.basemat" link="0"/>
+	</runtimes>
+</asset>

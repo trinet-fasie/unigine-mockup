@@ -1,0 +1,32 @@
+<base_material version="2.8.0.0" name="sky_environment" hidden="1">
+	
+	<!-- states -->
+	<state name="underwater_modulate"	defines="name">0</state>
+	<state name="bent_normal"			defines="name">0</state>
+	<state name="water_reflection"		defines="name">0</state>
+	<state name="geodetic"				defines="name">0</state>
+	<state name="interleaved"			defines="name">0</state>
+	<state name="disable_haze" 			defines="name">0</state>
+	<state name="interleaved_samples"	defines="name_items" items="1x2,2x2"/>
+	<state name="correct_roughness"		defines="name"/>
+	
+	<!-- shaders -->
+	<shader pass="post" fragment="core/shaders/screen_space/environment/sky_environment.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="reflection_cube"/>
+	
+	<texture unit="1" type="bent_normal"		bent_normal="1"/>
+	
+	<texture unit="2" type="current_depth"		filter="point"/>
+	
+	<texture unit="3" type="gbuffer_normal"		water_reflection="0"/>
+	<texture unit="3" type="wbuffer_normal"		water_reflection="1" />
+	
+	<texture unit="4" type="gbuffer_velocity"		filter="point" underwater_modulate="1"/>
+	<texture unit="5" type="wbuffer_ss_environment"	filter="point" underwater_modulate="1"/>
+	
+	<texture unit="6" type="wbuffer_water"			water_reflection="1"/>
+	<texture unit="7" type="wbuffer_constant_id"	water_reflection="1"/>
+	<texture unit="8" type="gbuffer_shading"/>
+</base_material>

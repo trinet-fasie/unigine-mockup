@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>9be27530881b367facb81a52cbc2766b149c2d85</guid>
+	<type>node</type>
+	<hash>8a46b652</hash>
+	<runtimes>
+		<runtime id="9be27530881b367facb81a52cbc2766b149c2d85" name="button.node" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="779344373" name="vive_basestation">
+		<transform>1 2.646978e-22 -3.8213714e-15 0.0 9.2644229e-23 1 8.7422777e-08 0.0 3.8213714e-15 -8.7422777e-08 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="1046380517" name="vive_basestation">
+			<mesh_name>guid://88c91db29393455f00fbf8f6b3b78dc3995fd0b6</mesh_name>
+			<surface name="vive_basestation_mat" material="442137272a1bb38b7b01b3bf0d4af460437ef7bd"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

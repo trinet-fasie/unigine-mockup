@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>5205fd0ad443ec2f36bb4a217cb0e82ca53cae7f</guid>
+	<type>node</type>
+	<hash>eff7b7f7</hash>
+	<runtimes>
+		<runtime id="5205fd0ad443ec2f36bb4a217cb0e82ca53cae7f" name="table.node" link="0"/>
+	</runtimes>
+</asset>

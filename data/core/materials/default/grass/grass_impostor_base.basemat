@@ -1,0 +1,137 @@
+<base_material version="2.8.0.0" name="grass_impostor_base" editable="0">
+		
+	<!-- options -->
+	<options transparent="1"/>
+	
+	<!-- states -->
+	<group name="Options">
+		<state name="auxiliary"											tooltip="&lt;p&gt;Enable auxiliary rendering pass for the grass impostor material.&lt;/p&gt;&lt;p&gt;Can be used for custom post-effects.&lt;/p&gt;">0</state>
+		<state name="noise"				defines=",NOISE"				tooltip="&lt;p&gt;Enable spatial color noise for the grass impostor material.&lt;/p&gt;&lt;p&gt;Can be used to add irregularity to the color of the grass or to set the grass color.&lt;/p&gt;">0</state>
+		<state name="ambient_occlusion"	defines=",OCCLUSION"			tooltip="&lt;p&gt;Enable ambient occlusion for the grass impostor material.&lt;/p&gt;&lt;p&gt;Sets shading arising from the ground to the top of the grass blades.&lt;/p&gt;">0</state>
+		<state name="ao_map"			defines="name"	title="AO Map"	tooltip="&lt;p&gt;Enable the Ambient Occlusion effect.&lt;/p&gt;&lt;p&gt;This effect is used to modulate global environment illumination using baked shadows from environment probe light sources.&lt;/p&gt;">1</state>
+		<state name="normal_map"		defines="name"					tooltip="&lt;p&gt;Enable normal map for the grass impostor material.&lt;/p&gt;&lt;p&gt;This texture is used to fake a relief on a surface instead of using more polygons.&lt;/p&gt;">1</state>
+		<state name="shading_map"		defines="name"					tooltip="&lt;p&gt;Enable shading map for the grass impostor material.&lt;/p&gt;">1</state>
+		<state name="microfiber_map"	defines="name"	shading_map="1"	tooltip="&lt;p&gt;Use A-channel of the &lt;b&gt;Shading Texture&lt;/b&gt; as a microfiber map.&lt;/p&gt;">1</state>
+		<state name="specular_map"		defines="name"	shading_map="1"	tooltip="&lt;p&gt;Use B-channel of the &lt;b&gt;Shading Texture&lt;/b&gt; as a specular reflection intensity map.&lt;/p&gt;">1</state>
+		<state name="translucent_map"	defines="name"					tooltip="&lt;p&gt;Enable the translucency effect.&lt;/p&gt;&lt;p&gt;This effect is used to create translucent materials, that allow light to pass through.&lt;/p&gt;">1</state>
+		<state name="depth_map"			defines="name"					tooltip="">0</state>
+		
+		<state name="screen_aligned"						defines="name"																	tooltip="&lt;p&gt;Set billboards parallel to the screen plane.&lt;/p&gt;&lt;p&gt;If not axes-locked, the billboads will be oriented towards the screen plane.&lt;/p&gt;">0</state>
+		<state name="lerp"									defines=",LERP"																	tooltip="&lt;p&gt;Enable smooth linear interpolation of sprites when the camera rotates around the object.&lt;/p&gt;&lt;p&gt;This state should be enabled, if the grabbed impostor texture stores low number of frames (i.e. &lt;i&gt;Phi&lt;/i&gt; and &lt;i&gt;Theta&lt;/i&gt; values are small).&lt;/p&gt;">0</state>
+		<state name="up_direction"							defines=",UP_DIRECTION">0</state>
+		<state name="animation"								defines=",ANIMATION,FIELD_ANIMATION"	items="none,animation,field_animation"	tooltip="&lt;p&gt;Enable procedural wind animation for grass.&lt;/p&gt;&lt;p&gt;Can be used for simulating plants swinging in the wind.&lt;/p&gt;&lt;p&gt;There are three modes available:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Disabled&lt;/b&gt; — no animation, the grass is static.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Default&lt;/b&gt; — standard grass animation is enabled.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Field&lt;/b&gt; — standard animation is enabled and grass is also influenced by &lt;b&gt;FieldAnimation&lt;/b&gt; objects.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;">0</state>
+		<state name="jitter_transparency"	transparent="1"	defines="name"/>
+		<state name="mip_bias"								defines="name"/>
+		<state name="visibility_mask"						defines="name"/>
+	</group>
+	
+	<group name="Post Processing">
+		<state name="material_ssao"			title="SSAO"		tooltip="&lt;p&gt;Enable the Screen Space Ambient Occlusion effect for the grass impostor material.&lt;/p&gt;">1</state>
+		<state name="material_ssr"			title="SSR"			tooltip="&lt;p&gt;Enable the Screen Space Reflections effect for the grass impostor material.&lt;/p&gt;">1</state>
+		<state name="material_sssss"		title="SSSSS"		tooltip="&lt;p&gt;Enable the Subsurface Scattering effect for the grass impostor material.&lt;/p&gt;">0</state>
+		
+		<state name="material_dof"			title="DOF"			tooltip="&lt;p&gt;Enable the Depth Of Field effect for the grass impostor material.&lt;/p&gt;">1</state>
+		<state name="material_motion_blur"	title="Motion Blur"	tooltip="&lt;p&gt;Enable the Motion Blur effect for the grass impostor material.&lt;/p&gt;">1</state>
+		<state name="material_sun_shafts"	title="Sun Shafts"	tooltip="&lt;p&gt;Enable the Sun Shafts effect for the grass impostor material.&lt;/p&gt;">1</state>
+	</group>
+	
+	<!-- textures -->
+	<group name="Base">
+		<texture unit="0" anisotropy="1" wrap="repeat" name="albedo"	shader="all"									tooltip="&lt;p&gt;Albedo color texture, 4 channels: RGB - color, A - opacity&lt;/p&gt;">core/textures/common/white.dds</texture>
+		<texture unit="1" anisotropy="1" wrap="repeat" name="shading"	pass="deferred"	shading_map="1"					tooltip="&lt;p&gt;Shading texture, 4 channels: R - metalness map, G - roughness map, B - specular reflection intensity for non-metals, A - microfiber map&lt;/p&gt;">core/textures/common/white.dds</texture>
+		<texture unit="2" anisotropy="1" wrap="repeat" name="normal"	pass="deferred"	normal_map="1"	format="signed"	tooltip="&lt;p&gt;Normal texture, 2 channels: RG - normal map.&lt;/p&gt;&lt;p&gt;This texture is used to fake a relief on a surface instead of using more polygons.&lt;/p&gt;">core/textures/common/normal.dds</texture>
+	</group>
+	
+	<group name="Options">
+		<texture unit="3" anisotropy="1"	wrap="repeat" name="ambient_occlusion"	pass="deferred"		ao_map="1"			tooltip="&lt;p&gt;Ambient occlusion texture, 1 channel: R - AO map.&lt;/p&gt;&lt;p&gt;This texture is used to modulate global environment illumination and contains baked shadows from environment probe light sources.&lt;/p&gt;">core/textures/common/red.dds</texture>
+		<texture unit="4" anisotropy="1"	wrap="repeat" name="translucent"		pass="deferred"		translucent_map="1"	tooltip="&lt;p&gt;Translucency texture, 1 channel: R - translucency color.&lt;/p&gt;&lt;p&gt;This texture is used to specify parts of the object, that allow light to pass through.&lt;/p&gt;">core/textures/common/red.dds</texture>
+		<texture unit="5" anisotropy="1"	wrap="repeat" name="auxiliary"			pass="auxiliary"	auxiliary="1"		tooltip="&lt;p&gt;Auxiliary texture, 4 channels.&lt;/p&gt;&lt;p&gt;This texture can be used for custom effects.&lt;/p&gt;">core/textures/common/white.dds</texture>
+		<texture unit="9" 					wrap="repeat" name="depth"									depth_map="1"		tooltip="">core/textures/common/black.dds</texture>
+	</group>
+	
+	<group name="Options">
+		<texture unit="6"	name="noise"			pass="deferred"	noise="1"			tooltip="&lt;p&gt;Spatial color noise texture, 3 channels: RGB - color.&lt;/p&gt;&lt;p&gt;Can be used to add more realism due to color variation. Blended in the overlay mode.&lt;/p&gt;">core/textures/grass/noise.dds</texture>
+		<texture unit="7"	name="visibility_mask"	shader="all"	visibility_mask="1"	tooltip="&lt;p&gt;Visibility mask texture, 1 channel: R - visibility value.">core/textures/common/white.dds</texture>
+	</group>
+	<texture unit="8"	name="internal_noise" filter="point" hidden="1">core/textures/common/noise.dds</texture>
+	
+	<!-- parameters -->
+	<expression name="material_mask" shared="0" group="Default" widget="mask24"	tooltip="&lt;p&gt;Material bitmask.&lt;/p&gt;&lt;p&gt;The decal will be projected onto the grass if the material mask of the decal material matches this mask (one bit, at least).&lt;/p&gt;">0xffffffff</expression>
+	
+	<group name="Transform">
+		<slider		name="phi"			shared="0"	flags="max_expand"	min="1.0"	max="64.0"	tooltip="">8.0</slider>
+		<slider		name="theta"		shared="0"	flags="max_expand"	min="1.0"	max="16.0"	tooltip="">4.0</slider>
+		<slider		name="size"			shared="0"	flags="max_expand"	min="0.0"	max="30.0"	tooltip="">1.0</slider>
+		<slider		name="aspect"		shared="0"	flags="max_expand"	min="0.25"	max="4.0"	tooltip="">1.0</slider>
+		<expression	name="pivot_offset"	shared="0"												tooltip="">vec3(0.0f,0.0f,0.0f)</expression>
+		
+		<combiner name="impostor_transform" phi="X" theta="Y"/>
+	</group>
+	
+	<group name="Base">
+		<color	name="albedo_color"	title="Albedo"		tooltip="Albedo color multiplier">1.0 1.0 1.0 1.0</color>
+		<slider	name="metalness"						tooltip="Metalness multiplier">1.0</slider>
+		<slider	name="roughness"						tooltip="Roughness multiplier">1.0</slider>
+		<slider	name="specular"		title="Specular"	tooltip="Specular multiplier">1.0</slider>
+		<slider	name="microfiber"						tooltip="Microfiber multiplier">1.0</slider>
+		<slider	name="translucent"	title="Translucent"	tooltip="Translucency multiplier.">1.0</slider>
+		
+		<slider		name="alpha_scale"			flags="max_expand"				max="10.0"	title="Alpha Intensity"			tooltip="&lt;p&gt;Alpha channel multiplier.&lt;/p&gt;&lt;p&gt;Can be used to scale the value of the alpha channel of the albedo texture.&lt;/p&gt;">1.0</slider>
+		<slider		name="shadow_offset"		flags="max_expand"	min="-5.0"	max="5.0"	title="Shadow offset"			tooltip="Shadow offset multiplier">0.0</slider>
+		<slider		name="mip_bias"				mip_bias="1"		min="-8.0"	max="8.0"	title="Mip Bias"				tooltip="">2.0</slider>
+		<slider		name="orientation_normals"	flags="max_expand"				max="2.0"									tooltip="">1.0</slider>
+	</group>
+	
+	<group name="Animation">
+		<slider name="animation_stem_noise"	 animation="1,2" flags="max_expand" shared="0" 		title="Stem Noise"	tooltip="&lt;p&gt;Determines the scale of a spatial noise that diversifies the direction of movement of the grass.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the more random is the movement of grass blades.&lt;/p&gt;">1.0</slider>
+		<slider name="animation_stem_offset" animation="1,2" flags="max_expand" shared="0" 		title="Stem Offset"	tooltip="&lt;p&gt;Animation offset amplitude height scale.&lt;/p&gt;">0.5</slider>
+		<slider name="animation_stem_radius" animation="1,2" flags="max_expand" shared="0" 		title="Stem Radius"	tooltip="&lt;p&gt;Animation rotation amplitude scale.&lt;/p&gt;">0.5</slider>
+		<slider name="animation_stem_scale"	 animation="1,2" flags="max_expand" shared="0" max="2.0"	title="Stem Scale"	tooltip="&lt;p&gt;Animation time scale.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the faster the grass blades move.&lt;/p&gt;">1.0</slider>
+	</group>
+	
+	<group name="Noise">
+		<expression	name="noise_transform"	noise="1"						title="Transform"	tooltip="&lt;p&gt;Spatial noise texture coordinates transformation.&lt;/p&gt;">vec4(0.1f,0.1f,0.0f,0.0f)</expression>
+		<slider		name="noise_scale"		noise="1" min="0.0" max="1.0"	title="Scale"		tooltip="&lt;p&gt;Intensity of the spatial noise texture.&lt;/p&gt;">0.5</slider>
+	</group>
+	
+	<group name="Ambient Occlusion">
+		<slider name="occlusion_visibility"	ambient_occlusion="1" flags="max_expand"				title="Visibility"			tooltip="&lt;p&gt;Determines the AO influence on the grass.&lt;/p&gt;">1.0</slider>
+		<slider name="occlusion_multiplier"	ambient_occlusion="1" flags="max_expand"	max="2.0"	title="Multiplier"			tooltip="&lt;p&gt;Intensity of shading arising from the ground to the top of the grass blades.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; the value the less shaded the grass is.&lt;/p&gt;">1.0</slider>
+		<slider name="occlusion_pow"		ambient_occlusion="1" flags="max_expand"	max="2.0"	title="Power"				tooltip="&lt;p&gt;Determines the rate of AO appearance on the grass.&lt;/p&gt;">1.0</slider>
+		<slider name="occlusion_on_diffuse"	ambient_occlusion="1" flags="max_expand"				title="Impact On Diffuse"	tooltip="&lt;p&gt;Determines how ambient occlusion affects the grass diffuse texture.&lt;/p&gt;">0.0</slider>
+	</group>
+	<group name="Options">
+		<color	name="auxiliary_color"				auxiliary="1"												tooltip="&lt;p&gt;Color multiplier for the auxiliary texture.&lt;/p&gt;">1.0 1.0 1.0 1.0</color>
+		<slider	name="visibility_mask_threshold"	visibility_mask="1"	min="0.0" max="1.0" flags="max_expand"	tooltip="&lt;p&gt;Determines the threshold of the visibility mask texture.&lt;/p&gt;">0.1</slider>
+	</group>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_grass"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/grass/impostor/vertex/default.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- deferred shaders -->
+	<shader pass="deferred" node="object_grass"
+		vertex="core/shaders/grass/impostor/vertex/deferred.vert"
+		fragment="core/shaders/grass/impostor/fragment/deferred.frag"/>
+	
+	<!-- shadow shaders -->
+	<shader pass="shadow" node="object_grass"
+		defines="BASE_SHADOW"
+		vertex="core/shaders/grass/impostor/vertex/depth.vert"
+		fragment="core/shaders/grass/impostor/fragment/depth.frag"/>
+	
+	<!-- depth_pre_pass shaders -->
+	<shader pass="depth_pre_pass" node="object_grass"
+		vertex="core/shaders/grass/impostor/vertex/depth.vert"
+		fragment="core/shaders/grass/impostor/fragment/depth.frag"/>
+	
+	<!-- auxiliary shaders -->
+	<shader pass="auxiliary" node="object_grass"
+		auxiliary="1"
+		vertex="core/shaders/grass/impostor/vertex/auxiliary.vert"
+		fragment="core/shaders/grass/impostor/fragment/auxiliary.frag"/>
+	
+</base_material>

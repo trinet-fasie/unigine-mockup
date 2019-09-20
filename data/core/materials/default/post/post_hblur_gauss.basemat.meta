@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>236b32791639fc2703ea23d793de728bce335242</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="236b32791639fc2703ea23d793de728bce335242" name="post_hblur_gauss.basemat" link="0"/>
+	</runtimes>
+</asset>

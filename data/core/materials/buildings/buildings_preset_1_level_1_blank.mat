@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="buildings_preset_1_level_1_blank" guid="3b157231bfa01b480316781412374da25c2bcc0e" parent="95d0c1ab9b6ceedb1c083497b0cca9cf206bc8f2" base_material="mesh_base" editable="0">
+	<texture name="albedo">guid://15ac98fe768235314d23277fd9b642e5c377115b</texture>
+	<parameter name="noise_3d_scale">0.100000001</parameter>
+</material>

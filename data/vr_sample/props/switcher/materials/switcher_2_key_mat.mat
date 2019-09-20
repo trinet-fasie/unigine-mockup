@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="switcher_2_key_mat" guid="08ed723372f911f61142e0ddb8016c98c09e0717" base_material="mesh_base">
+	<state name="emission">1</state>
+	<texture name="albedo">guid://0101f484d974f6b363f44bc2114db0190a093ccc</texture>
+	<texture name="shading">guid://431160ed03fa5b45cecaa7a3393124eafcba9963</texture>
+	<texture name="normal">guid://4d62a935fa90ae900cba5dd080b86412b2ce6775</texture>
+	<texture name="emission">guid://5ac01b88686a29b0744abdfe6ded7b623d30f5dc</texture>
+	<parameter name="albedo_color" use_expression="0">1 0 0.0156862754 1</parameter>
+</material>

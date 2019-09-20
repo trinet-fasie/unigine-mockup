@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>6a5a428a19015061e0ffae4c8e49153ba75d895e</guid>
+	<type>script</type>
+	<hash>4ea6b7af</hash>
+	<runtimes>
+		<runtime id="6a5a428a19015061e0ffae4c8e49153ba75d895e" name="script_button_bindings.cpp" link="0"/>
+	</runtimes>
+</asset>

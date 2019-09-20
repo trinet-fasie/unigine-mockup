@@ -1,0 +1,37 @@
+<base_material version="2.8.0.0" name="render_light_env_probe" hidden="1">
+	
+	<state name="dynamic"				defines="name">0</state>
+	<state name="box_projection"		defines="name">0</state>
+	<state name="local_space"			defines="name">0</state>
+	<state name="sky_cutout"			defines="name">0</state>
+	<state name="box_gi"				defines="name">0</state>
+	<state name="water_probe"			defines="name">0</state>
+	<state name="bent_normal"			defines="name">0</state>
+	<state name="use_ambient"			defines="name">0</state>
+	<state name="cutout_by_shadow"		defines="name">0</state>
+	<state name="interleaved"			defines="name">0</state>
+	<state name="sun_light_color"		defines="name">0</state>
+	<state name="interleaved_samples"	defines="name_items" items="1x2,2x2"/>
+	
+	<!-- shaders -->
+	<shader pass="light_environment_probe"
+		defines="PROBE"
+		fragment="core/shaders/screen_space/fragment/light/deferred_probe.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="current_depth"/>
+	
+	<texture unit="1" type="gbuffer_normal"	water_probe="0" />
+	<texture unit="1" type="wbuffer_normal"	water_probe="1" />
+	
+	<texture unit="2" type="light_image"/>
+	
+	<texture unit="3" type="wbuffer_water"			water_probe="1" />
+	<texture unit="4" type="wbuffer_constant_id"	water_probe="1" />
+	
+	<texture unit="5" water_probe="0" bent_normal="1" type="bent_normal"/>
+	
+	<texture unit="6" name="cube_depth" cutout_by_shadow="1"/>
+	<texture unit="8" type="gbuffer_shading"/>
+	
+</base_material>

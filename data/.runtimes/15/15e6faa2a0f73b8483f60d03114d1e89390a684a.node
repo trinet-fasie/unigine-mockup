@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="NodeDummy" id="730154676" name="button">
+		<transform>1 2.646978e-22 -3.8213714e-15 0.0 9.2644229e-23 1 8.7422777e-08 0.0 3.8213714e-15 -8.7422777e-08 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="744485597" name="button_base">
+			<mesh_name>guid://75350f762ade2aabfd454ca852a021f48e149f10</mesh_name>
+			<surface name="button_mat" material="4442d5d804bb54c79cca899424a4107e7c0b640d"/>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			<node type="ObjectMeshStatic" id="1393325725" name="button">
+				<mesh_name>guid://2ccc6e371864baba27a45acd8f5512e81a318290</mesh_name>
+				<surface name="button_mat" material="4442d5d804bb54c79cca899424a4107e7c0b640d"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -2.0765287e-16 2.3752718e-09 0.054339882 1.0</transform>
+			</node>
+		</node>
+	</node>
+</nodes>

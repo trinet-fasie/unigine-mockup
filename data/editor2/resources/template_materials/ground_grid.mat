@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" editable="0" name="ground_grid" guid="c4844edfa25aceb2d8c85e694c7a94b47b7c3883" base_material="mesh_base">
+	<state name="material_sun_shafts">0</state>
+	<texture name="diffuse">guid://edf5dbe16c25c3185d9ce7b15e99469442484856</texture>
+	<texture name="albedo">guid://edf5dbe16c25c3185d9ce7b15e99469442484856</texture>
+	<parameter name="diffuse_color" use_expression="0">0.807843029 0.807843029 0.807843029 1</parameter>
+	<parameter name="uv_transform" use_expression="1">vec4(500.0f,500.0f,0.0f,0.0f)</parameter>
+</material>

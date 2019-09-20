@@ -1,0 +1,8 @@
+<base_material version="2.8.0.0" name="convert_specular_to_metalness" hidden="1">
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/convert_specular_to_metalness.frag"/>
+	
+	<texture name="diffuse" type="procedural"/>
+	<texture name="specular" type="procedural"/>
+	
+</base_material>

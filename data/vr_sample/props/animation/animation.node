@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="ObjectMeshSkinned" id="685545204" name="animation">
+		<mesh_name>guid://0369029980be0b249509dc333ca673f6f61cdadd</mesh_name>
+		<surface name="agent_body_lod0" material="921966e0d2966cbf7c0d93124e7a9749d710b814"/>
+		<surface name="agent_eye_lod0" material="1511c00821a0e3c74acace7a00ea0b91aa164fbc"/>
+		<surface name="agent_head_lod0" material="1511c00821a0e3c74acace7a00ea0b91aa164fbc"/>
+		<surface name="agent_holster_lod0" material="a456d1219863b80cae0013fb0de8f91e18738de5"/>
+		<properties>
+			<property parent="cb5346a081dcf654061b7f897ea14d9b43140712" guid="0c33d8a0ab00b37fba63aad218104c09606f65d4">
+				<parameter name="script">guid://0d5ead148a27b563c9639b66535e7b8d2e3a6788</parameter>
+			</property>
+			<property parent="cca3d547599a6afd0188042f80c9b4e97e59c0f3" guid="e78edf24b61ca03388b267f669f03edd7a433298">
+				<parameter name="animations">
+					<value index="0">guid://316f0f637fdf2d6615d0e58dfe45c988a28e5f47</value>
+					<value index="1">guid://2e3bf6d594a05a307b32a7cf1014f2e21e5754d9</value>
+					<value index="2">guid://8cc13a81162751ec071e245b28560dfef02edd45</value>
+					<value index="3">guid://858f13fafa129311b2a2313cbd255b6ba73439ce</value>
+				</parameter>
+			</property>
+			<property parent="60e5d2c8e421b4a67909e20938d5d9d8935a2fe2" guid="ca50f9f92f75db04fe12aa933bb32ed63c17983d">
+				<parameter name="use_physics">0</parameter>
+				<parameter name="use_sounds">0</parameter>
+			</property>
+		</properties>
+		<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

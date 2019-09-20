@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>0ce19725e18473a45d009693783c5b47e4ada85a</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="0ce19725e18473a45d009693783c5b47e4ada85a" name="terrain_base_specular.dds" link="0"/>
+	</runtimes>
+</asset>

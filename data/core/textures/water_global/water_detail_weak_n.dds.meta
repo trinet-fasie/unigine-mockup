@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>2ff69e549c1d5f93de6de3a7528f8b008a418dac</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="2ff69e549c1d5f93de6de3a7528f8b008a418dac" name="water_detail_weak_n.dds" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,45 @@
+<base_material version="2.8.0.0" name="volume_fog_base" editable="0">
+	
+	<!-- blending -->
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" cast_world_shadow="0" receive_shadow="0" receive_world_shadow="0"/>
+	<options transparent="2"/>
+	
+	<!-- states -->
+	<state name="height" type="toggle">0</state>
+	<state name="use_sky_color" defines="name" type="toggle">0</state>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_volume_box"
+		vertex="core/shaders/volume/vertex/fog/box_ambient.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	<shader pass="wireframe" node="object_volume_sphere"
+		vertex="core/shaders/volume/vertex/fog/sphere_ambient.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- ambient shaders -->
+	<shader pass="ambient" node="object_volume_box"
+		height_defines=",HEIGHT"
+		vertex="core/shaders/volume/vertex/fog/box_ambient.vert"
+		fragment="core/shaders/volume/fragment/fog/box_ambient.frag"/>
+	<shader pass="ambient" node="object_volume_sphere"
+		height_defines=",HEIGHT"
+		vertex="core/shaders/volume/vertex/fog/sphere_ambient.vert"
+		fragment="core/shaders/volume/fragment/fog/sphere_ambient.frag"/>
+		
+	<!-- textures -->
+	<texture unit="14" type="reflection_cube"/>
+	<texture unit="15" type="opacity_depth"/>
+	
+	<!-- parameters -->
+	<parameter name="diffuse_color" type="color"				title="Diffuse" group="Base"									tooltip="&lt;p&gt;Diffuse color multiplier.&lt;/p&gt;&lt;p&gt;Determines the color of the fog.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+	<group name="Density">
+		<parameter name="volume_power" type="slider"				title="Power"			min="0.0" max="2.0" flags="max_expand"			tooltip="&lt;p&gt;Distance power.&lt;/p&gt;&lt;p&gt;Specifies the distribution of fog density inside the volume from the edges to the center.&lt;/p&gt;">1.0</parameter>
+		<parameter name="volume_density" type="slider"				title="Multiplier"		min="0.0" max="1.0" flags="max_expand"			tooltip="&lt;p&gt;Fog density multiplier.&lt;/p&gt;&lt;p&gt;This value affects visibility of objects inside the fog volume.&lt;/p&gt;">0.1</parameter>
+		<parameter name="height_falloff" height="1" type="slider"	title="Height Falloff"	min="-3.0" max="0.0" flags="max_expand"	tooltip="&lt;p&gt;Determines the reduction of fog density depending on height from the bottom to the top of the volume.&lt;/p&gt;">0.1</parameter>
+	</group>
+</base_material>

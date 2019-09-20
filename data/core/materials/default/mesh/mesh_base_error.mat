@@ -1,0 +1,19 @@
+<material version="2.8.0.0" name="mesh_base_error" base_material="mesh_base" manual="1" hidden="1">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options two_sided="1"/>
+	<options overlap="1"/>
+	<options transparent="2"/>
+	
+	<parameter name="albedo_color">1 0 0 1</parameter>
+	<state name="emission">1</state>
+	<state name="deferred">1</state>
+	<parameter name="emission_color">1 0 0 1</parameter>
+	
+	<state name="material_ssao"					>0</state>
+	<state name="material_ssr"					>0</state>
+	<state name="material_sssss"				>0</state>
+	<state name="material_dof"					>0</state>
+	<state name="material_motion_blur"			>0</state>
+	<state name="material_sun_shafts"			>0</state>
+	<state name="material_shoreline_wetness"	>0</state>
+</material>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>22e2c5e3dc3ed6c444a0aa2848d34c7fc1609395</guid>
+	<type>texture</type>
+	<hash>4aaf8fce</hash>
+	<parameters>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="image_format">ATI2</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="int" name="width">0</parameter>
+		<parameter type="int" name="height">0</parameter>
+		<parameter type="bool" name="srgb_correction">0</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="preset_name">normal map (rg)</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="8fd3aead8985f8f2e5029d1dc2c36c07cb115b5c" name="button_n.dds" link="1"/>
+		<runtime id="22e2c5e3dc3ed6c444a0aa2848d34c7fc1609395" name="button_n.png" link="0"/>
+	</runtimes>
+</asset>

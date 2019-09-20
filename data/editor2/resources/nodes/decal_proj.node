@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="DecalProj" material="d626ba7f36683890e57d35177133036d85ee9053">
+		<radius>1</radius>
+		<fov>60</fov>
+		<aspect>1</aspect>
+		<znear>0.001</znear>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

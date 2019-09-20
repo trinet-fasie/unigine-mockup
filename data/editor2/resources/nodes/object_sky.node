@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="ObjectSky" collider="0">
+		<surface name="sphere" material="8a62967f7fc99c1d8b76398a5cb395fd662d9eac"/>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

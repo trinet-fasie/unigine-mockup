@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>f39015d9c1296fd3f8c256ddf3eca732c3a63a05</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="f39015d9c1296fd3f8c256ddf3eca732c3a63a05" name="sky_base_noise.dds" link="0"/>
+	</runtimes>
+</asset>

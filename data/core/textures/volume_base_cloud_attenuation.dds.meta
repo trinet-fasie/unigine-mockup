@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>ea515587c4fe8099a29d8c3fa333da5f7678de31</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="ea515587c4fe8099a29d8c3fa333da5f7678de31" name="volume_base_cloud_attenuation.dds" link="0"/>
+	</runtimes>
+</asset>

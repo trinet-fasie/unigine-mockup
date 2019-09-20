@@ -1,0 +1,14 @@
+<base_material version="2.8.0.0" name="render_camera_velocity" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		defines="BASE_DEFERRED"
+		fragment="core/shaders/screen_space/fragment/camera_velocity.frag"/>
+	
+	<texture type="current_depth"/>
+	
+	<float4 name="old_imodelview_x">1.0 1.0 1.0 1.0</float4>
+	<float4 name="old_imodelview_y">1.0 1.0 1.0 1.0</float4>
+	<float4 name="old_imodelview_z">1.0 1.0 1.0 1.0</float4>
+	
+</base_material>

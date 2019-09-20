@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>e18c7779a1a10dfff801405103dfc9c6939be634</guid>
+	<type>script</type>
+	<hash>99552304</hash>
+	<runtimes>
+		<runtime id="e18c7779a1a10dfff801405103dfc9c6939be634" name="vr_sample.cpp" link="0"/>
+	</runtimes>
+</asset>

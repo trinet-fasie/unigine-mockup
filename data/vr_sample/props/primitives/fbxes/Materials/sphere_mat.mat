@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="sphere_mat" guid="6e38bfe422358566a4ee37b3a7ac491b3a811d73" base_material="mesh_base">
+	<parameter name="albedo_color" use_expression="0">0.5 0.5 0.5 1</parameter>
+</material>

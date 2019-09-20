@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="NodeDummy" id="163695839" name="group">
+		<properties>
+			<property/>
+		</properties>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 1.4901161e-008 5.9604645e-008 1.0</transform>
+		<node type="ObjectMeshStatic" id="1835946423" name="button">
+			<mesh_name>guid://75350f762ade2aabfd454ca852a021f48e149f10</mesh_name>
+			<surface name="button_mat" physics_friction="1" physics_restitution="1" material="152c435e75d6ef60e1df8cbe24f612c42b50be6e"/>
+			<properties>
+				<property parent="60e5d2c8e421b4a67909e20938d5d9d8935a2fe2" guid="65908f04f525ce93ec0402d618aa5c3d5fcaf078">
+					<parameter name="use_physics">0</parameter>
+					<parameter name="use_sounds">0</parameter>
+				</property>
+			</properties>
+			<transform>0.99999976 -1.132488e-006 0 0.0 1.132488e-006 0.99999976 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			<node type="ObjectMeshStatic" id="955749321" name="button">
+				<mesh_name>guid://2ccc6e371864baba27a45acd8f5512e81a318290</mesh_name>
+				<surface name="button_mat" physics_friction="1" physics_restitution="1" material="152c435e75d6ef60e1df8cbe24f612c42b50be6e"/>
+				<properties>
+					<property parent="cb5346a081dcf654061b7f897ea14d9b43140712" guid="93ff2e01ead1af6cd685e3dbba67c77e887e48c5">
+						<parameter name="script">guid://6a5a428a19015061e0ffae4c8e49153ba75d895e</parameter>
+					</property>
+				</properties>
+				<transform>1 -1.1368684e-013 0 0.0 1.1368684e-013 1 0 0.0 0 0 1 0.0 0 -1.4901161e-008 0.054339945 1.0</transform>
+			</node>
+		</node>
+	</node>
+</nodes>

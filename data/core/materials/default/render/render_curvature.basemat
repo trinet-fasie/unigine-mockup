@@ -1,0 +1,21 @@
+<base_material version="2.8.0.0" name="render_curvature" hidden="1">
+	
+	<state name="quality" items="quality_0,quality_1,quality_2,quality_3" defines="items">2</state>
+	<state name="increase_accuracy" defines=",INCREASE_ACCURACY">0</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/curvature.frag"/>
+	
+	<texture type="gbuffer_normal"/>
+	<texture name="noise" filter="point">core/textures/common/noise.dds</texture>
+	<texture name="depth_resized" type="procedural"/>
+	
+	<parameter name="radius" type="slider" >1.0</parameter>
+	<parameter name="intensity" type="slider" >1.0</parameter>
+	<parameter name="threshold" type="slider" >0.5</parameter>
+	<parameter name="angle_bias" type="slider" >0.5</parameter>
+	<parameter name="perspective" type="slider" >0.0</parameter>
+	<parameter name="cavity_exponent" type="slider" >1.0</parameter>
+	<parameter name="convexity_exponent" type="slider" >1.0</parameter>
+	
+</base_material>

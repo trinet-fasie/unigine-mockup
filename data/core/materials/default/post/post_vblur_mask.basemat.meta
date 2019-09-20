@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>2c9ca6a119601def5f5f321d4523ee8e7c9e3f70</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="2c9ca6a119601def5f5f321d4523ee8e7c9e3f70" name="post_vblur_mask.basemat" link="0"/>
+	</runtimes>
+</asset>

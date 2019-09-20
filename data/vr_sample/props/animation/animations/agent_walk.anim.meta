@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>858f13fafa129311b2a2313cbd255b6ba73439ce</guid>
+	<type>animation</type>
+	<hash>0b24b956</hash>
+	<runtimes>
+		<runtime id="858f13fafa129311b2a2313cbd255b6ba73439ce" name="agent_walk.anim" link="0"/>
+	</runtimes>
+</asset>

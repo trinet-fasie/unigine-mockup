@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>05e6da1ec1856006a1d9780257395cfae98aeb1b</guid>
+	<type>texture</type>
+	<hash>c341d9b</hash>
+	<parameters>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="string" name="width">auto</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="preset_name">albedo (rgb)</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="a9431c9977021ee09e7e73d45c571446d48e5b39" name="vive_basestation_alb.dds" link="1"/>
+		<runtime id="05e6da1ec1856006a1d9780257395cfae98aeb1b" name="vive_basestation_alb.jpg" link="0"/>
+	</runtimes>
+</asset>

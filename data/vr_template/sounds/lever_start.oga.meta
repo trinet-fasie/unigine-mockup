@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>78519dd38ebd310ddb5975c36652cbba6745e83e</guid>
+	<type>sound</type>
+	<hash>5746715d</hash>
+	<runtimes>
+		<runtime id="78519dd38ebd310ddb5975c36652cbba6745e83e" name="lever_start.oga" link="0"/>
+	</runtimes>
+</asset>

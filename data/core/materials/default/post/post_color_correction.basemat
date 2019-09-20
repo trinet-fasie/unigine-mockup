@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="post_color_correction">
+		
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/color_correction.frag"/>
+	
+	<texture name="color" type="procedural"/>
+	
+	<parameter name="chromatic_aberration_intensity" type="slider" min="0.0" max="1.0" flags="max_expand">0.5</parameter>
+	<parameter name="noise_intensity" type="slider" min="0.0" max="1.0" flags="max_expand">0.5</parameter>
+	
+</base_material>

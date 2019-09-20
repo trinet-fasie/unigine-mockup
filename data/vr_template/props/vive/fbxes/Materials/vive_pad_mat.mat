@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="vive_pad_mat" guid="c55214d67ea918e8f00afdf37a659622f48edec2" base_material="mesh_base">
+	<parameter name="albedo_color" use_expression="0">0.5 0.5 0.5 1</parameter>
+</material>

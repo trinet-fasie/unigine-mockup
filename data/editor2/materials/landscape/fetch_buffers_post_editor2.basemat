@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="fetch_buffers_post_editor2" hidden="1">
+	<shader pass="post" fragment="editor2/shaders/landscape/fetch_buffers_post.frag"/>
+</base_material>

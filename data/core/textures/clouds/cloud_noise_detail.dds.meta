@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>61b0b59df82cb279bd434ebf41e02e1eaed10c19</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="61b0b59df82cb279bd434ebf41e02e1eaed10c19" name="cloud_noise_detail.dds" link="0"/>
+	</runtimes>
+</asset>

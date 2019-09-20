@@ -1,0 +1,18 @@
+<base_material version="2.8.0.0" name="render_clouds_intersection" parameters_prefix="m" hidden="1">
+	
+	<state name="has_clouds_dynamic_coverage"	defines="name" type="toggle">0</state>
+	<state name="clouds_num_layers"		defines="name" type="int">1</state>
+	<state name="geodetic" defines="name" type="toggle">0</state>
+	<state name="disable_haze" defines="name" type="toggle">0</state>
+
+	<shader pass="post"
+		compute="core/shaders/clouds/compute/intersection.comp"/>
+	
+	<texture unit="0" shader="all" filter="linear" name="clouds_noise">core/textures/clouds/cloud_noise.dds</texture>
+	<texture unit="1" shader="all" filter="linear" name="clouds_noise_detail">core/textures/clouds/cloud_noise_detail.dds</texture>
+	<texture unit="2" shader="all" name="curl_noise">core/textures/clouds/curl_noise.dds</texture>
+	
+	<texture unit="3" shader="all" type="clouds_static_coverage"/>
+	<texture unit="4" shader="all" type="clouds_dynamic_coverage"/>
+	
+</base_material>

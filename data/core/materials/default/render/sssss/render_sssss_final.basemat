@@ -1,0 +1,17 @@
+<base_material version="2.8.0.0" name="render_sssss_final" hidden="1">
+	
+	<state name="diffuse" defines="name">1</state>
+	<state name="environment" defines="name">0</state>
+
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/sssss/final.frag"/>
+	
+	<texture name="color" type="procedural"/>
+	<texture type="linear_depth"/>
+	<texture type="gbuffer_material_mask"/>
+	<texture type="gbuffer_shading"/>
+	
+	<slider name="radius">1.0</slider>
+	<color name="color">1.0 0.0 0.0 1.0</color>
+	
+</base_material>

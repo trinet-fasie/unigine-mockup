@@ -1,0 +1,35 @@
+<base_material version="2.8.0.0" name="render_environment" hidden="1">
+	
+	<state name="sky">1</state>
+	<state name="blend_mode" defines="name_items" items="alpha,additive,multiply,overlay">0</state>
+	<state name="disable_haze" defines="name">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		defines="SKY"
+		sky="1"
+		vertex="core/shaders/screen_space/environment/environment.vert"
+		fragment="core/shaders/screen_space/environment/environment.frag"/>
+	
+	<shader pass="post"
+		sky="0"
+		vertex="core/shaders/screen_space/environment/environment.vert"
+		geometry="core/shaders/screen_space/environment/environment.geom"
+		fragment="core/shaders/screen_space/environment/environment.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="scattering_sky_lut"/>
+	<texture unit="1" name="environment_0" type="procedural"/>
+	<texture unit="2" name="environment_1" type="procedural"/>
+	<texture unit="3" name="environment_2" type="procedural"/>
+	<texture unit="4" type="current_depth" sky="1"/>
+	<texture unit="5" name="sun_color_0" type="procedural"/>
+	<texture unit="6" name="moon_color_0" type="procedural"/>
+	<texture unit="7" name="sun_color_1" type="procedural"/>
+	<texture unit="8" name="moon_color_1" type="procedural"/>
+	<texture unit="9" name="sun_color_2" type="procedural"/>
+	<texture unit="10" name="moon_color_2" type="procedural"/>
+	<texture unit="11" name="sun_texture" type="procedural"/>
+	<texture unit="12" name="moon_texture" type="procedural"/>
+	
+</base_material>

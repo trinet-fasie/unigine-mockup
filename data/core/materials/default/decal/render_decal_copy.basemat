@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="render_decal_copy" hidden="1">
+
+	<shader pass="post"
+		fragment="core/shaders/decal/copy.frag"/>
+
+	<!-- textures -->
+	<texture type="decal_depth"/>
+	<texture type="decal_normal"/>
+	<texture type="decal_shading"/>
+	<texture type="gbuffer_material_mask"/>
+</base_material>

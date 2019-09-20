@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>8230661da494b0c1e2c7ac49ce3a4fd5bbaa36ee</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="8230661da494b0c1e2c7ac49ce3a4fd5bbaa36ee" name="text_base.basemat" link="0"/>
+	</runtimes>
+</asset>

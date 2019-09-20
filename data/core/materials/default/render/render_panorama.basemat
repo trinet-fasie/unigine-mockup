@@ -1,0 +1,20 @@
+<base_material version="2.8.0.0" name="render_panorama" hidden="1">
+	
+	<state name="mode" defines="CURVED,LINEAR,FISHEYE">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/panorama/panorama.vert"
+		fragment="core/shaders/panorama/panorama.frag"/>
+	
+	<!-- textures -->
+	<texture name="screen_0" type="procedural"/>
+	<texture name="screen_1" type="procedural"/>
+	<texture name="screen_2" type="procedural"/>
+	<texture name="screen_3" type="procedural"/>
+	
+	<!-- parameters -->
+	<parameter name="scale" type="slider" shared="1">1.0</parameter>
+	<parameter name="iaspect" type="slider" shared="1">1.0</parameter>
+	
+</base_material>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="editor2_debug_diffuse_light" guid="5d5fb0e40b1f96e16df312106f27ee0d21265699" parent="e809893aa2a0b06b183949e6e30b5a86c4f850c0" base_material="render_composite_deferred" hidden="1">
+	<parameter name="albedo_visible">1</parameter>
+	<parameter name="metalness_visible">1</parameter>
+	<parameter name="ssgi_visible">0</parameter>
+	<parameter name="environment_ambient_visible">0</parameter>
+</material>

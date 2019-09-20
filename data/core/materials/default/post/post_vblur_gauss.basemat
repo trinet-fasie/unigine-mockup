@@ -1,0 +1,9 @@
+<base_material version="2.8.0.0" name="post_vblur_gauss" defines="VBLUR">
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/post/blur_gauss.frag"/>
+	
+	<texture name="color" type="procedural"/>
+	
+	<parameter name="radius" type="slider" min="1.0" max="16.0" flags="max_expand">4.0</parameter>
+</base_material>

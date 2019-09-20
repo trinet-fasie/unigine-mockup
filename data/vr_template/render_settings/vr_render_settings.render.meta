@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>0872005480f8249e54dbdc5950298c5b955e45cb</guid>
+	<type>render_settings</type>
+	<hash>ce564b</hash>
+	<runtimes>
+		<runtime id="0872005480f8249e54dbdc5950298c5b955e45cb" name="vr_render_settings.render" link="0"/>
+	</runtimes>
+</asset>

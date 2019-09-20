@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="render_bloom_hblur" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		defines="HBLUR"
+		vertex="core/shaders/screen_space/vertex/bloom_blur.vert"
+		fragment="core/shaders/screen_space/fragment/bloom_blur.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+</base_material>

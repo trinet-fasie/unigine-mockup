@@ -1,0 +1,48 @@
+<base_material version="2.8.0.0" name="billboards_cloud_base" editable="0">
+	<!-- blending -->
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	
+	<!-- options -->
+	<options transparent="2" depth_mask="0" cast_shadow="0" cast_world_shadow="0" receive_shadow="0" receive_world_shadow="0"/>
+	
+	<!-- states -->
+	<group name="Options">
+		<state name="axis_x" type="toggle"				title="Lock X Axis"			tooltip="&lt;p&gt;Lock billboards along the X axis.&lt;/p&gt;">0</state>
+		<state name="axis_z" type="toggle"				title="Lock Z Axis"			tooltip="&lt;p&gt;Lock billboards along the Z axis.&lt;/p&gt;">0</state>
+		<state name="screen" type="toggle"				title="Screen Aligned"		tooltip="&lt;p&gt;Set billboards parallel to the screen plane.&lt;/p&gt;&lt;p&gt;If not axes-locked, the billboads will be oriented towards the screen plane.&lt;/p&gt;">0</state>
+		<state name="volume" type="toggle"				title="Soft Interaction"	tooltip="&lt;p&gt;Enable soft depth interaction of billboads with objects.&lt;/p&gt;&lt;p&gt;This option can be used to avoid visual artefacts in the areas, where billboards and objects overlap.&lt;/p&gt;">0</state>
+	</group>
+	
+	<!-- textures -->
+	<texture name="diffuse" anisotropy="1" group="Base" title="Diffuse"				tooltip="&lt;p&gt;Diffuse color texture, 4 channels: RGB - color, A - transparency information.&lt;/p&gt;">core/textures/common/white.dds</texture>
+	<texture unit="15" type="opacity_depth" volume="1" />
+	
+	<!-- parameters -->
+	<parameter name="cloud_0_color" type="color"											title="Color 0"		tooltip="Color of the cloud">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="cloud_1_color" type="color"											title="Color 1"		tooltip="Color of the cloud shadow">0.0 0.0 0.0 1.0</parameter>
+	<parameter name="cloud_01_scale" type="slider" min="0.0" max="4.0" flags="max_expand"	title="Multiplier"	tooltip="Cloud color intensity multiplier">1.0</parameter>
+	<parameter name="cloud_distance" type="slider" min="0.1" max="100.0"					title="Distance"	tooltip="&lt;p&gt;Distance to the near clipping plane, in units.&lt;/p&gt;&lt;p&gt;The clouds will be rendered starting from this distance.&lt;/p&gt;">10.0</parameter>
+	<parameter name="base_transform" type="expression" group="Base"							title="UV Transform" tooltip="&lt;p&gt;Base texture coordinates transformation: X,Y - scale, Z,W - offset.&lt;/p&gt;" widget="uv">vec4(1.0f,1.0f,0.0f,0.0f)</parameter>
+	<parameter name="volume_scale" volume="1" type="slider" min="0.0" max="128.0" flags="max_expand"	title="Soft Interaction"	tooltip="&lt;p&gt;Soft interaction scale.&lt;/p&gt;&lt;p&gt;The &lt;em&gt;higher&lt;/em&gt; is the value, the softer and more transparent the clouds will be.&lt;/p&gt;">64.0</parameter>
+	<parameter name="billboard_scale" type="slider"	max="4.0" flags="max_expand"						title="Billboard Scale"	tooltip="Billboard geometry scale">1.0</parameter>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_billboards"
+		defines="BASE_WIREFRAME"
+		axis_x_defines=",AXIS_X"
+		axis_z_defines=",AXIS_Z"
+		screen_defines=",SCREEN"
+		vertex="core/shaders/billboards/base/vertex/default.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- ambient shaders -->
+	<shader pass="ambient" node="object_billboards"
+		defines="CLOUD_AMBIENT"
+		axis_x_defines=",AXIS_X"
+		axis_z_defines=",AXIS_Z"
+		screen_defines=",SCREEN"
+		volume_defines=",VOLUME"
+		vertex="core/shaders/billboards/base/vertex/transparent/ambient_cloud.vert"
+		fragment="core/shaders/billboards/base/fragment/transparent/ambient_cloud.frag"/>
+</base_material>

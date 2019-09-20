@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>7f881940897e7e9f6361d580766b1acbf205ca86</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="7f881940897e7e9f6361d580766b1acbf205ca86" name="noise_2d.dds" link="0"/>
+	</runtimes>
+</asset>

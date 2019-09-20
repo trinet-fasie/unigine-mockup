@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="cylinder_mat" guid="026e022104385d3be5cc98bd3d16eeca8b4b2f6d" base_material="mesh_base">
+	<parameter name="albedo_color" use_expression="0">0.5 0.5 0.5 1</parameter>
+</material>

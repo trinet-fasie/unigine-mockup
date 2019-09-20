@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="teleport_ray" guid="3105dcdd9a8231cf0db5af084675244dd66a3a3b" base_material="mesh_base">
+	<blend src="one" dest="one"/>
+	<options transparent="2"/>
+	<state name="emission">1</state>
+	<texture name="emission">guid://b72d1f9d899b1390853700f0dcefe4b5d7b47488</texture>
+	<parameter name="albedo_color" use_expression="0">0 0 0 1</parameter>
+	<parameter name="specular" use_expression="0">0</parameter>
+</material>

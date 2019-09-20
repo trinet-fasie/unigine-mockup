@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>9b95475cf08896bb853da91e60729e6925427623</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="9b95475cf08896bb853da91e60729e6925427623" name="terrain_global_base.basemat" link="0"/>
+	</runtimes>
+</asset>

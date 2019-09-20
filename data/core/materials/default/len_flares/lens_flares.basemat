@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="lens_flares" hidden="1">
+	
+	<state name="border_alpha" defines="name" >0</state>
+	<state name="dirt" defines="name" >0</state>
+	
+	<shader pass="ambient"
+		vertex="core/shaders/lens_flares/vertex/flares.vert"
+		fragment="core/shaders/lens_flares/fragment/flares.frag"/>
+		
+	<shader pass="wireframe"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/lens_flares/vertex/flares.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>		
+		
+	<parameter name="exposure" type="slider">1.0</parameter>
+	<parameter name="dirt_scale" type="slider">0.0</parameter>
+	
+</base_material>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="buildings_preset_0_basement" guid="afd4ba0f443eec40ef93c5ed4a1c1cf70e6b4df6" parent="24f9547d55024a80280af16e6bc3c65dc3035ff4" base_material="mesh_base">
+	<texture name="albedo">guid://5f5d9f2b1839b7c2abacd82f80f1710029c92dd1</texture>
+</material>

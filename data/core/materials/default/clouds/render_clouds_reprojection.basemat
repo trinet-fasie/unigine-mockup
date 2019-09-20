@@ -1,0 +1,4 @@
+<base_material version="2.8.0.0" name="render_clouds_reprojection" parameters_prefix="m" hidden="1">
+		<shader pass="post"
+			compute="core/shaders/clouds/compute/reprojection.comp"/>
+	</base_material>

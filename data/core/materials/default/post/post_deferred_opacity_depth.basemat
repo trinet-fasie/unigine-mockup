@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="post_deferred_opacity_depth" defines="DEPTH_SELECT,NO_DISCARD" hidden="1">
+		
+	<state name="use_taa">1</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/deferred_extraction.frag"/>
+	
+	<texture type="current_depth"/>
+	<texture type="opacity_depth"/>
+	
+</base_material>

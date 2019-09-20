@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>1a94303f78be8feaaf2c24ad1a25042eff5f6aa0</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="1a94303f78be8feaaf2c24ad1a25042eff5f6aa0" name="debug_cubemaps.mat" link="0"/>
+	</runtimes>
+</asset>

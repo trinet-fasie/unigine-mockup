@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>87583a831f7e80204529569d5913e8455ce98996</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="87583a831f7e80204529569d5913e8455ce98996" name="debug_roughness.mat" link="0"/>
+	</runtimes>
+</asset>

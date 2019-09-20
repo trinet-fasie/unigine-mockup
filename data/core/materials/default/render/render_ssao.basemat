@@ -1,0 +1,19 @@
+<base_material version="2.8.0.0" name="render_ssao" hidden="1">
+	
+	<state name="quality" defines="QUALITY_0,QUALITY_1,QUALITY_2,QUALITY_3">1</state>
+	<state name="noise" defines=",NOISE">1</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/ssao.frag"/>
+	
+	<!-- textures -->
+	<texture type="current_depth"/>
+	<texture type="gbuffer_normal"/>
+	<texture name="noise" filter="point">core/textures/common/noise.dds</texture>
+	
+	<!-- parameters -->
+	<parameter name="radius" type="slider" >1.0</parameter>
+	<parameter name="intensity" type="slider" >1.0</parameter>
+	<parameter name="threshold" type="slider" >0.5</parameter>
+</base_material>

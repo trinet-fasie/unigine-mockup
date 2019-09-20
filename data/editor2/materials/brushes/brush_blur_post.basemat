@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="brush_blur_post" hidden="1">
+	<state name="blur_mode" type="switch" defines="name_items" items="horizontal,vertical">0</state>
+	<shader pass="post"
+		vertex="editor2/shaders/brushes/brush_project_post.vert"
+		fragment="editor2/shaders/brushes/brush_blur_post.frag"/>
+</base_material>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="LightEnvironmentProbe">
+		<attenuation_distance>4 4 4</attenuation_distance>
+		<is_dynamic>0</is_dynamic>
+		<is_local_space>1</is_local_space>
+		<is_sky_cutout>0</is_sky_cutout>
+		<is_box_projection>0</is_box_projection>
+		<is_box_gi>0.5</is_box_gi>
+		<box_gloss_corners>1</box_gloss_corners>
+		<box_size>1 1 1</box_size>
+		<use_sun_color>0</use_sun_color>
+		<render_faces_per_frame>1</render_faces_per_frame>
+		<resolution>-1</resolution>
+		<supersampling>2</supersampling>
+		<reflection_viewport_mask>-1</reflection_viewport_mask>
+		<zfar>1000</zfar>
+		<znear>0.001</znear>
+		<reflection_intensity>1</reflection_intensity>
+		<reflection_color>1 1 1 1</reflection_color>
+		<ambient_enabled>0</ambient_enabled>
+		<ambient_color>1 1 1 1</ambient_color>
+		<ambient_contrast>1</ambient_contrast>
+		<texture>guid://7a524e344adcf1c64aac9ba8feb410ab624d0ef9</texture>
+		<attenuation_power>1</attenuation_power>
+		<shadow_bias>1</shadow_bias>
+		<mode>1</mode>
+		<shadow_screen_space>0</shadow_screen_space>
+		<shadow_screen_space_num_rays>8</shadow_screen_space_num_rays>
+		<shadow_screen_space_num_steps>8</shadow_screen_space_num_steps>
+		<shadow_screen_space_noise_ray>1</shadow_screen_space_noise_ray>
+		<shadow_screen_space_noise_step>0.5</shadow_screen_space_noise_step>
+		<shadow_screen_space_step_size>0.5</shadow_screen_space_step_size>
+		<shadow_screen_space_threshold>1</shadow_screen_space_threshold>
+		<shadow_screen_space_softness>0.4</shadow_screen_space_softness>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

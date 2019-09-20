@@ -1,0 +1,59 @@
+<base_material version="2.8.0.0" name="render_composite_deferred_overwater" hidden="1" defines="SHADOW_TEX_NOISE">
+
+	<state name="simple" defines="name">0</state>
+	<state name="light_world" defines="name">0</state>
+	<state name="lights" defines="name">0</state>
+
+	<state name="water_ssr_increased_accuracy" defines="name">0</state>
+	<state name="water_ssr" defines="name">0</state>
+	<state name="water_ssr_quality" defines="name_items" items="low,medium,high,ultra">3</state>
+
+	<state name="refraction_quality" defines="name_items" items="low,medium,high,ultra">3</state>
+
+	<state name="has_clouds_shadows"			defines="name">0</state>
+	<state name="has_clouds_dynamic_coverage"	defines="name" type="toggle">0</state>
+	<state name="clouds_num_layers"				defines="name" type="int">1</state>
+	
+	<state name="shadow_filter_noise"	defines="name">0</state>
+	<state name="shadow_penumbra_noise"	defines="name">0</state>
+	<state name="shadow_filter_mode"	defines="name_items"	items="none,low,medium,high,ultra">0</state>
+	<state name="shadow_penumbra_mode"	defines="name_items"	items="none,low,medium,high,ultra">0</state>
+	
+	<state name="lerp_cascades"			defines=",USE_LERP_CASCADES">0</state>
+	
+	<state name="haze"					defines="DISABLE_HAZE,"		internal="1">0</state>
+
+	<!-- shaders -->
+	<shader pass="post"
+		receive_shadow_defines=",SHADOW"
+		vertex="core/shaders/screen_space/vertex/default.vert"
+		fragment="core/shaders/water/screen_space/fragment/composite_deferred_overwater.frag"/>
+
+	<!-- textures -->
+	<texture unit="0" type="opacity_screen"/>
+	<texture unit="1" type="opacity_depth"/>
+	<texture unit="2" type="current_depth"/>
+
+	<texture unit="3" type="gbuffer_albedo"/>
+
+	<texture unit="4" type="reflection_cube"/>
+	<texture unit="5" type="scattering_sky_lut"/>
+
+	<texture unit="6" type="lights"/>
+
+	<texture unit="9" has_clouds_shadows="1" type="clouds_static_coverage"/>
+	<texture unit="10" has_clouds_shadows="1" type="clouds_dynamic_coverage"/>
+
+	<texture unit="13" name="noise" filter="point">core/textures/common/noise.dds</texture>
+	<texture unit="14" filter="point" type="light_image"/>
+	<texture unit="15" type="light_depth"/>
+
+	<texture unit="16" filter="point" type="wbuffer_water"/>
+	<texture unit="17" filter="point" type="wbuffer_constant_id"/>
+	<texture unit="18" filter="point" type="wbuffer_wu_mask"/>
+	<texture unit="19" filter="point" type="wbuffer_ss_environment"/>
+	<texture unit="20" filter="point" type="wbuffer_normal"/>
+	<texture unit="21" filter="point" type="wbuffer_diffuse"/>
+	<texture unit="22" filter="point" type="wbuffer_planar_reflection"/>
+
+</base_material>

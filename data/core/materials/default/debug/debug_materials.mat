@@ -1,0 +1,6 @@
+<material version="2.8.0.0" name="debug_materials" base_material="render_composite_deferred" editable="0" manual="1">
+	<options receive_shadow="1"/>
+	<state name="debug"			>1</state>
+	<state name="srgb"			>1</state>
+	<state name="auto_exposure"	>1</state>
+</material>

@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="render_adaptation_color_scale" hidden="1">
+	
+	<state name="auto_exposure" defines="name">0</state>
+	<state name="auto_white_balance" defines="name">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/adaptation_color/fragment/scale.frag"/>
+	
+	<texture name="color" type="procedural"/>
+</base_material>

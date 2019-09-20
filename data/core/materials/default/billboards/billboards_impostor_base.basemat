@@ -1,0 +1,97 @@
+<base_material version="2.8.0.0" name="billboards_impostor_base" editable="0">
+	
+	<!-- states -->
+	<state name="alpha_fade" internal="1" type="toggle">0</state>
+	
+	<state name="deferred" group="Default"											title="Deferred Buffers" 	tooltip="&lt;p&gt;Enable deferred buffers rendering for the material.&lt;/p&gt;">1</state>
+	<state name="lerp"		defines=",LERP"		group="Default"		tooltip="&lt;p&gt;Enable smooth linear interpolation of sprites when the camera rotates around the object.&lt;/p&gt;&lt;p&gt;This state should be enabled, if the grabbed impostor texture stores low number of frames (i.e. &lt;i&gt;Phi&lt;/i&gt; and &lt;i&gt;Theta&lt;/i&gt; values are small).&lt;/p&gt;">0</state>
+	
+	<group name="Options">
+		<state name="ao_map"			defines="name"	title="AO Map"		tooltip="&lt;p&gt;Enable the Ambient Occlusion effect.&lt;/p&gt;&lt;p&gt;This effect is used to modulate global environment illumination using baked shadows from environment probe light sources.&lt;/p&gt;">1</state>
+		<state name="shading_map"		defines="name"						tooltip="&lt;p&gt;Enable shading map for the billboards impostor material.&lt;/p&gt;">1</state>
+		<state name="specular_map"		defines="name"	shading_map="1"		tooltip="&lt;p&gt;Use B-channel of the &lt;b&gt;Shading Texture&lt;/b&gt; as a specular reflection intensity map.&lt;/p&gt;">1</state>
+		<state name="microfiber_map"	defines="name"	shading_map="1"		tooltip="&lt;p&gt;Use A-channel of the &lt;b&gt;Shading Texture&lt;/b&gt; as a microfiber map.&lt;/p&gt;">1</state>
+		<state name="translucent_map"	defines="name"						tooltip="&lt;p&gt;Enable the translucency effect.&lt;/p&gt;&lt;p&gt;This effect is used to create translucent materials, that allow light to pass through.&lt;/p&gt;">1</state>
+		<state name="depth_map"			defines="name"						tooltip="">0</state>
+	</group>
+	
+	<group name="Post Processing">
+		<state name="material_ssao"			deferred="1"	title="SSAO"			tooltip="&lt;p&gt;Enable the Screen Space Ambient Occlusion effect.&lt;/p&gt;">1</state>
+		<state name="material_ssr"			deferred="1"	title="SSR"				tooltip="&lt;p&gt;Enable the Screen Space Reflections effect.&lt;/p&gt;">1</state>
+		<state name="material_sssss"		deferred="1"	title="SSSSS"			tooltip="&lt;p&gt;Enable the Subsurface Scattering effect.&lt;/p&gt;">0</state>
+		
+		<state name="material_dof"			deferred="1"	title="DOF"				tooltip="&lt;p&gt;Enable Depth Of Field effect.&lt;/p&gt;">1</state>
+		<state name="material_motion_blur"	deferred="1"	title="Motion Blur"		tooltip="&lt;p&gt;Enable the Motion Blur effect.&lt;/p&gt;">1</state>
+		<state name="material_sun_shafts"	deferred="1"	title="Sun Shafts"		tooltip="&lt;p&gt;Enable the Sun Shafts effect.&lt;/p&gt;">1</state>
+	</group>
+	
+	<!-- textures -->
+	<group name="Base">
+		<texture unit="0"	name="albedo"	shader="all"	anisotropy="1"	wrap="repeat"									tooltip="&lt;p&gt;Albedo color texture, 4 channels: RGB - color, A - opacity&lt;/p&gt;">core/textures/common/white.dds</texture>
+		<texture unit="1"	name="shading"	pass="deferred"	anisotropy="1"	wrap="repeat"	shading_map="1"					tooltip="&lt;p&gt;Shading texture, 4 channels: R - metalness map, G - roughness map, B - specular reflection intensity for non-metals, A - microfiber map&lt;/p&gt;">core/textures/common/white.dds</texture>
+		<texture unit="2"	name="normal"	pass="deferred"	anisotropy="1"	wrap="repeat"					format="signed"	tooltip="&lt;p&gt;Normal texture, 2 channels: RG - normal map.&lt;/p&gt;&lt;p&gt;This texture is used to fake a relief on a surface instead of using more polygons.&lt;/p&gt;">core/textures/common/normal.dds</texture>
+	</group>
+	
+	<group name="Options">
+		<texture unit="3"	name="ambient_occlusion"	pass="deferred"		ao_map="1"			anisotropy="1"	wrap="repeat"	tooltip="&lt;p&gt;Ambient occlusion texture, 1 channel: R - AO map.&lt;/p&gt;&lt;p&gt;This texture is used to modulate global environment illumination and contains baked shadows from environment probe light sources.&lt;/p&gt;">core/textures/common/red.dds</texture>
+		<texture unit="4"	name="translucent"			pass="deferred"		translucent_map="1"	anisotropy="1"	wrap="repeat"	tooltip="&lt;p&gt;Translucency texture, 1 channel: R - translucency color.&lt;/p&gt;&lt;p&gt;This texture is used to specify parts of the object, that allow light to pass through.&lt;/p&gt;">core/textures/common/red.dds</texture>
+		<texture unit="9"	name="depth"									depth_map="1"						wrap="repeat"	tooltip="">core/textures/common/black.dds</texture>
+	</group>
+	
+	<!-- parameters -->
+	<float4 name="bound_offset" shared="0" internal="1">0.0 0.0 1.0 0.0</float4>
+	
+	<parameter name="material_mask" deferred="1" shared="0" type="expression" group="Default" widget="mask24"	title="Material Mask"	tooltip="&lt;p&gt;Material bitmask.&lt;/p&gt;&lt;p&gt;The decal will be projected onto a surface having this material assigned, if the material mask of the decal material matches this mask (one bit at least).&lt;/p&gt;">0xffffffff</parameter>
+	
+	<group name="Transform">
+		<slider		name="phi"			shared="0"	flags="max_expand"	min="1.0"	max="64.0"	tooltip="">8.0</slider>
+		<slider		name="theta"		shared="0"	flags="max_expand"	min="1.0"	max="16.0"	tooltip="">4.0</slider>
+		<slider		name="size"			shared="0"	flags="max_expand"	min="0.0"	max="30.0"	tooltip="">1.0</slider>
+		<slider		name="aspect"		shared="0"	flags="max_expand"	min="0.25"	max="4.0"	tooltip="">1.0</slider>
+		<expression	name="pivot_offset"	shared="0"												tooltip="">vec3(0.0f,0.0f,0.0f)</expression>
+		
+		<combiner name="impostor_transform" phi="X" theta="Y"/>
+	</group>
+	
+	<group name="Base">
+		<parameter name="albedo_color"		type="color"	title="Albedo"			tooltip="Albedo color multiplier">1.0 1.0 1.0 1.0</parameter>
+		<parameter name="metalness"			type="slider"							tooltip="Metalness multiplier">1.0</parameter>
+		<parameter name="roughness"			type="slider"							tooltip="Roughness multiplier">1.0</parameter>
+		<parameter name="specular"			type="slider"	title="Specular"		tooltip="Specular multiplier">1.0</parameter>
+		<parameter name="microfiber"		type="slider"							tooltip="Microfiber multiplier">1.0</parameter>
+		<parameter name="translucent"		type="slider"	title="Translucent"		tooltip="Translucency multiplier.">1.0</parameter>
+		
+		<parameter name="shadow_offset"			type="slider"	min="-5.0"		max="5.0"	flags="max_expand"	title="Shadow offset"			tooltip="Shadow offset multiplier">0.0</parameter>
+		<parameter name="normal_scale"			type="slider"					max="2.0"	flags="max_expand"	title="Normal Intensity"		tooltip="&lt;p&gt;Intensity of the normal texture&lt;/p&gt;">1.0</parameter>
+	</group>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_billboards"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/billboards/impostor/vertex/default.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- deferred shaders -->
+	<shader pass="deferred" node="object_billboards"
+		alpha_fade_defines=",ALPHA_FADE"
+		deferred="1"
+		vertex="core/shaders/billboards/impostor/vertex/deferred.vert"
+		fragment="core/shaders/billboards/impostor/fragment/deferred.frag"/>
+	
+	<!-- depth_pre_pass shaders -->
+	<shader pass="depth_pre_pass" node="object_billboards"
+		defines="BASE_ALPHA_TEST"
+		alpha_fade_defines=",ALPHA_FADE"
+		deferred="1"
+		vertex="core/shaders/billboards/impostor/vertex/depth.vert"
+		fragment="core/shaders/billboards/impostor/fragment/depth.frag"/>
+	
+	<!-- shadow shaders -->
+	<shader pass="shadow" node="object_billboards"
+		defines="BASE_SHADOW"
+		alpha_fade_defines=",ALPHA_FADE"
+		vertex="core/shaders/billboards/impostor/vertex/depth.vert"
+		fragment="core/shaders/billboards/impostor/fragment/depth.frag"/>
+	
+</base_material>

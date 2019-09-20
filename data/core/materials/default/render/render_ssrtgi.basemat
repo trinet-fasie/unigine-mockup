@@ -1,0 +1,47 @@
+<base_material version="2.8.0.0" name="render_ssrtgi" hidden="1">
+	
+	<state name="ao"					defines="name"/>
+	<state name="gi"					defines="name"/>
+	<state name="bent_normal"			defines="name"/>
+	
+	<state name="num_steps"				defines="name" type="int"/>
+	<state name="num_rays"				defines="name" type="int"/>
+	
+	<state name="fast_tracing"			defines="name"/>
+	<state name="increased_accuracy"	defines="name"/>
+	
+	<state name="resolution"			defines="name" type="int"/>
+	<state name="depth_resolution"		defines="name" type="int"/>
+	<state name="color_resolution"		defines="name" type="int"/>
+	
+	<state name="ao_out_num"			defines="name" type="int"/>
+	<state name="gi_out_num"			defines="name" type="int"/>
+	<state name="bent_normal_out_num"	defines="name" type="int"/>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/ssrtgi.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="linear_depth"/>
+	<texture unit="1" type="gbuffer_normal"/>
+	<texture unit="2" type="screen_color_old_reprojection"/>
+	<texture unit="3" name="noise"	filter="point">core/textures/common/noise.dds</texture>
+	
+	<!-- parameters -->
+	<parameter name="step_size"		type="slider" >1.0</parameter>
+	<parameter name="noise_ray"		type="slider" >1.0</parameter>
+	<parameter name="noise_step"	type="slider" >1.0</parameter>
+	
+	<parameter name="ao_intensity"	type="slider" >1.0</parameter>
+	<parameter name="ao_threshold"	type="slider" >1.0</parameter>
+	
+	<parameter name="gi_intensity"	type="slider" >1.0</parameter>
+	<parameter name="gi_threshold"	type="slider" >1.0</parameter>
+	
+	<parameter name="bent_normal_threshold" type="slider" >1.0</parameter>
+
+	<parameter name="view_bias"	type="slider" >0.001f</parameter>
+	<parameter name="normal_bias"	type="slider" >0.003f</parameter>
+	
+</base_material>

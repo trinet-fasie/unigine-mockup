@@ -1,0 +1,9 @@
+<base_material version="2.8.0.0" name="post_deferred_velocity" defines="AMPLIFY,NO_DISCARD" hidden="1">
+		
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/deferred_extraction.frag"/>
+	
+	<texture type="opacity_depth"/>
+	<texture type="gbuffer_velocity"/>
+	
+</base_material>

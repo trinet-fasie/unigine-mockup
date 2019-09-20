@@ -1,0 +1,13 @@
+<base_material version="2.8.0.0" name="render_interleaved_reconstruction" hidden="1">
+
+	<state name="catmull_resampling"	defines="name">0</state>
+	<state name="color_clamping"		defines="name" type="int">0</state>
+	<state name="interleaved_samples"	defines="name_items" items="1x2,2x2"/>
+
+	<state name="array_textures"			defines="name">0</state>
+	<int name="tex_array_index">-1</int>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/interleaved_reconstruction.frag"/>
+		
+</base_material>

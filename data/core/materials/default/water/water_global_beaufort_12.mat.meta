@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>0898dfc5fa38ee10677e41f06e473ecea33c2243</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="0898dfc5fa38ee10677e41f06e473ecea33c2243" name="water_global_beaufort_12.mat" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,14 @@
+<base_material version="2.8.0.0" name="render_adaptation_color" hidden="1">
+	
+	<state name="auto_exposure" defines="name">0</state>
+	<state name="auto_white_balance" defines="name">0</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/adaptation_color/fragment/adaptation_color.frag"/>
+	
+	<texture name="auto_exposure" type="procedural"/>
+	<texture name="auto_white_balance" type="procedural"/>
+	
+	<parameter name="white_balance_intensity" type="slider">1.0</parameter>
+	
+</base_material>

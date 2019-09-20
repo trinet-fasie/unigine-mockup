@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="ObjectMeshStatic" id="1838463974" name="cone">
+		<mesh_name>guid://d408a0075022e63d2c1c8db13399109efc6d6ee5</mesh_name>
+		<surface name="cone_mat" material="afc043b92b3d17629ccf6ed32f0a396d5a08b34d"/>
+		<body type="BodyRigid" id="1965287429">
+			<shape type="ShapeCylinder" id="1877635951" transform="1 0 0 0 0 1 0 0 0 0 1 0 5.96046448e-008 -1.3038516e-008 -0.045874685 1">
+				<radius>0.0471743159</radius>
+				<height>0.00574545935</height>
+			</shape>
+			<shape type="ShapeCylinder" id="280705246" transform="1 0 0 0 0 1 0 0 0 0 1 0 5.96046448e-008 -1.3038516e-008 -0.00113997608 1">
+				<radius>0.00405767048</radius>
+				<height>0.092948854</height>
+			</shape>
+			<shape type="ShapeSphere" id="425402970" transform="1 0 0 0 0 1 0 0 0 0 1 0 5.96046448e-008 -1.3038516e-008 0.0418363586 1">
+				<radius>0.00571592804</radius>
+			</shape>
+			<shape type="ShapeSphere" id="1458729381" transform="1 0 0 0 0 1 0 0 0 0 1 0 5.96046448e-008 -1.3038516e-008 -0.0186669994 1">
+				<radius>0.0286115874</radius>
+			</shape>
+		</body>
+		<properties>
+			<property parent="60e5d2c8e421b4a67909e20938d5d9d8935a2fe2" guid="59f40bd4dea155180d66d1627d8210bab6ae7e65"/>
+		</properties>
+		<transform>0.99752337 -0.070329368 -0.0010938748 0.0 0.07032764 0.99752289 -0.0015488095 0.0 0.0012000917 0.0014680438 0.99999833 0.0 0.0010711551 -0.00030770153 -0.012143254 1.0</transform>
+	</node>
+</nodes>

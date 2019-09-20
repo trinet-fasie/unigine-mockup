@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>344a64d6bce61c7c5ea7fc380220dd2d53f5d8e3</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="344a64d6bce61c7c5ea7fc380220dd2d53f5d8e3" name="post_filter_rgb2yuv.basemat" link="0"/>
+	</runtimes>
+</asset>

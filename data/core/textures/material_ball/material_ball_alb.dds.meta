@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>0d463d68ab92b767480cd86cea043eb36d851de5</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="0d463d68ab92b767480cd86cea043eb36d851de5" name="material_ball_alb.dds" link="0"/>
+	</runtimes>
+</asset>

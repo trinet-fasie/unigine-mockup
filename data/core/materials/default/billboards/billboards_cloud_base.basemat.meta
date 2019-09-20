@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>2a16c9913fb835943445d0b3e2cccc7fdc9b8d7a</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="2a16c9913fb835943445d0b3e2cccc7fdc9b8d7a" name="billboards_cloud_base.basemat" link="0"/>
+	</runtimes>
+</asset>

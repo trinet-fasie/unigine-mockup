@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>78592c1ce78ec682e89f5558ff40fcf7a8deae68</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="78592c1ce78ec682e89f5558ff40fcf7a8deae68" name="sky_base_mask.png" link="0"/>
+	</runtimes>
+</asset>

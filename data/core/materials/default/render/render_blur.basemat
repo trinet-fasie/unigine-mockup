@@ -1,0 +1,22 @@
+<!--
+/* Blur material (general)
+ * TODO: other distributions for blur
+ * TODO: support for depth / normal
+ * TODO: replace other blur materials by this
+ */
+-->
+<base_material version="2.8.0.0" name="render_blur" hidden="1">
+	
+	<state name="horizontal" defines="VERTICAL,HORIZONTAL">0</state>
+	<state name="blur_distribution" defines="FLAT_BLUR,TRIANGLE_BLUR">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/blur.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" pass="post" type="procedural"/>
+	
+	<parameter name="m_blur_radius" shared="1" type="slider" >8.0</parameter>
+	
+</base_material>

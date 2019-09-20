@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>153213b5a9c5d959b6bc31b12ea6a658b38b39b7</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="153213b5a9c5d959b6bc31b12ea6a658b38b39b7" name="water_base_foam.dds" link="0"/>
+	</runtimes>
+</asset>

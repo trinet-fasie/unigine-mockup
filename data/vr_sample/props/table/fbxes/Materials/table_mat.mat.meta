@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>363d6ce0df6e7a53aa581f180aae229ca09b3654</guid>
+	<type>material</type>
+	<hash>59863d09</hash>
+	<runtimes>
+		<runtime id="363d6ce0df6e7a53aa581f180aae229ca09b3654" name="table_mat" link="0"/>
+	</runtimes>
+</asset>

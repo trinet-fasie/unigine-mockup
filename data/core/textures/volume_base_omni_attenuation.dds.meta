@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>7f007b6ade028423fffa18e4fec82097418ea60c</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="7f007b6ade028423fffa18e4fec82097418ea60c" name="volume_base_omni_attenuation.dds" link="0"/>
+	</runtimes>
+</asset>

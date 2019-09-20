@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>d6a7af134530254f6dae4886d160be8e6c6891c9</guid>
+	<type>property</type>
+	<hash>2830b34e</hash>
+	<runtimes>
+		<runtime id="d6a7af134530254f6dae4886d160be8e6c6891c9" name="gui.prop" link="0"/>
+	</runtimes>
+</asset>

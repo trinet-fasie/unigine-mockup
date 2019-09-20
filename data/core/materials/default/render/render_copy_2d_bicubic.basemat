@@ -1,0 +1,8 @@
+<base_material version="2.8.0.0" name="render_copy_2d_bicubic" hidden="1">
+	
+	<shader pass="post"
+		defines="BICUBIC_INTERPOLATION"
+		fragment="core/shaders/screen_space/fragment/copy_2d.frag"/>
+	
+	<texture name="color" pass="post" type="procedural"/>
+</base_material>

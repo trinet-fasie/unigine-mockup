@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>53326b58040891cae3f2b3db0836ccacb05d5cbf</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="53326b58040891cae3f2b3db0836ccacb05d5cbf" name="buildings_preset_1_level_2_complex.mat" link="0"/>
+	</runtimes>
+</asset>

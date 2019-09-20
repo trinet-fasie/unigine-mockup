@@ -1,0 +1,46 @@
+<base_material version="2.8.0.0" name="decal_terrain_hole_base" editable="0" parameters_prefix="m">
+	
+	<options transparent="0" depth_mask="0"/>
+	
+	<!-- states -->
+	<group name="Default">
+		<state name="jitter_transparency" defines="name"/>
+		<state name="only_touched_lods"/>
+	</group>
+	
+	<group name="UV Mapping">
+		<state name="base_mapping" items="uv,world" defines="name_items" title="Base" tooltip="UV map source for base textures"/>
+	</group>
+	
+	<!-- textures -->
+	<group name="Base">
+		<texture unit="0" name="mask" anisotropy="1" tooltip="">core/textures/common/red.dds</texture>
+	</group>
+	
+	<texture unit="2" jitter_transparency="1" name="internal_noise" filter="point"	hidden="1">core/textures/common/noise.dds</texture>
+	
+	<!-- base -->
+	<group name="Base">
+		<parameter name="uv_transform" type="expression" title="UV Transform" tooltip="UV transform" widget="uv">vec4(1.0f,1.0f,0.0f,0.0f)</parameter>
+		<slider name="transparent"			max="10.0"	flags="max_expand" title="Transparent Multiplier"	tooltip="Transparency multiplier.">1.0</slider>
+		<slider name="transparent_pow"		max="2.0"	flags="max_expand" title="Transparent Pow"			tooltip="Transparency power.">1.0</slider>
+	</group>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="decal_proj"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/decal/decal.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="ambient" node="decal_proj"
+		defines="BASE_AMBIENT,AMBIENT"
+		vertex="core/shaders/decal/decal.vert"
+		geometry="core/shaders/decal/decal.geom"
+		fragment="core/shaders/decal/decal_hole.frag"/>
+	
+	<!-- bindings -->
+	<bind node="decal_ortho" to="decal_proj"/>
+	<bind node="decal_mesh" to="decal_proj" defines="DEFERRED_MESH"/>
+	
+</base_material>

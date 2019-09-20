@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>b54a67af925478f0947c2fcb4682cc89f2df454e</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="b54a67af925478f0947c2fcb4682cc89f2df454e" name="default_coverage.dds" link="0"/>
+	</runtimes>
+</asset>

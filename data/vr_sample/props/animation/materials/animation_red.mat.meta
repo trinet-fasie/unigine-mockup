@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>1511c00821a0e3c74acace7a00ea0b91aa164fbc</guid>
+	<type>material</type>
+	<hash>128f9c89</hash>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="1511c00821a0e3c74acace7a00ea0b91aa164fbc" name="animation_red" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,34 @@
+<base_material version="2.8.0.0" name="volume_light_base" editable="0">
+	
+	<!-- blending -->
+	<blend src="one" dest="one"/>
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" cast_world_shadow="0" receive_shadow="0" receive_world_shadow="0"/>
+	<options transparent="2"/>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_volume_sphere"
+		vertex="core/shaders/volume/vertex/light/sphere_ambient.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="visualizer_solid" node="object_volume_sphere"
+		vertex="core/shaders/volume/vertex/light/sphere_ambient.vert"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- ambient shaders -->
+	<shader pass="ambient" node="object_volume_sphere"
+		vertex="core/shaders/volume/vertex/light/sphere_ambient.vert"
+		fragment="core/shaders/volume/fragment/light/sphere_ambient.frag"/>
+	
+	<!-- textures -->
+	<texture unit="15" type="opacity_depth"/>
+	
+	<!-- parameters -->
+	<parameter name="diffuse_color" type="color" title="Diffuse" group="Base"										tooltip="&lt;p&gt;Diffuse color multiplier.&lt;/p&gt;&lt;p&gt;Determines the color of the light sphere.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+	<group name="Density">
+		<parameter name="volume_power" type="slider" min="0.0" max="2.0" flags="max_expand"		title="Power"		tooltip="&lt;p&gt;Determines the scale of the volume sphere radius.&lt;/p&gt;">1.0</parameter>
+		<parameter name="volume_density" type="slider" min="-3.0" max="1.0" flags="max_expand"	title="Multiplier"	tooltip="&lt;p&gt;Determines the density of the volume sphere color.&lt;/p&gt;">0.1</parameter>
+	</group>
+</base_material>

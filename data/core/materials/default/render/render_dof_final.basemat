@@ -1,0 +1,16 @@
+<base_material version="2.8.0.0" name="render_dof_final" hidden="1">
+	
+	<state name="chromatic_aberration" defines="name">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/dof/final.frag"/>
+	
+	<!-- textures -->
+	<texture name="dof" type="procedural"/>
+	<texture type="dof_mask"/>
+	<texture name="dof_mask_blur" type="procedural"/>
+	
+	<!-- parameters -->
+	<parameter name="chromatic_aberration" type="slider">0.0</parameter>
+</base_material>

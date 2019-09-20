@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="animation_orange" guid="a456d1219863b80cae0013fb0de8f91e18738de5" base_material="mesh_base">
+	<texture name="albedo">guid://96f61b94eab6dbac77ad18a9bf5a1260af065cce</texture>
+</material>

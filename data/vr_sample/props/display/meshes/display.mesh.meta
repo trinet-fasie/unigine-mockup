@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>ed1d40fc476ba82b2e1a9f8ec439a195f14a85f0</guid>
+	<type>mesh</type>
+	<hash>f997d12a</hash>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="bool" name="animation">1</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="ed1d40fc476ba82b2e1a9f8ec439a195f14a85f0" name="display.mesh" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>7fea7b4131cc1bacca9ee31b02a03dbe3eb9ca05</guid>
+	<type>script</type>
+	<hash>f29d3b8c</hash>
+	<runtimes>
+		<runtime id="7fea7b4131cc1bacca9ee31b02a03dbe3eb9ca05" name="script_display.h" link="0"/>
+	</runtimes>
+</asset>

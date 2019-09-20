@@ -1,0 +1,113 @@
+<base_material version="2.8.0.0" name="terrain_global_base" editable="0">
+	
+	<state name="tessellation"			internal="1"	>1</state>
+	<state name="dynamic"				internal="1"	defines="name">0</state>
+	<state name="geodetic"				internal="1"	defines="name">0</state>
+	<state name="tessellation_factor"	internal="1"	defines="name" type="int" pass_defines="wireframe,depth_pre_pass,shadow">17</state>
+	
+	<state name="max_num_lods_height"	internal="1"	defines="name" type="int" pass_defines="wireframe,depth_pre_pass,shadow">32</state>
+	<state name="max_num_lods_albedo"	internal="1"	defines="name" type="int">32</state>
+	<state name="max_num_lods_normal"	internal="1"	defines="name" type="int">32</state>
+	<state name="max_num_lods_masks"	internal="1"	defines="name" type="int">32</state>
+	
+	<state name="num_details"			internal="1"	defines="name" type="int"/>
+	<state name="num_masks"				internal="1"	defines="name" type="int"/>
+	<state name="use_insets"							defines="name">1</state>
+	<state name="fast_frustum_culling"					defines="name">1</state>
+	
+	<state name="has_displacement"			internal="1" defines="name" pass_defines="wireframe,depth_pre_pass,shadow">0</state>
+	<state name="has_displacement_normal"	internal="1" defines="name" pass_defines="wireframe,depth_pre_pass,shadow">0</state>
+	<state name="has_triplanar"				internal="1" defines="name">0</state>
+	
+	<group name="Visualizer">
+		<state name="visualizer_lods"		items="none,albedo,normal" defines="name_items" pass_defines="post"	title="LODs"	tooltip="&lt;p&gt;Enable visualizer for the selected type of LODs.&lt;/p&gt;">0</state>
+		<state name="visualizer_no_imagery_data" defines="name" pass_defines="post" 							title="No Imagery Data"	tooltip="&lt;p&gt;Enable visualizer for areas with no imagery data available.&lt;/p&gt;">1</state>
+	</group>
+	
+	<state name="filter_mask_albedo"	defines="name"	pass_defines="post"						tooltip="&lt;p&gt;Enable linear filtering for the masks of the albedo LODs.&lt;/p&gt;">1</state>
+	<state name="filter_mask_normal"	defines="name"	pass_defines="post"						tooltip="&lt;p&gt;Enable linear filtering for the masks of the normal LODs.&lt;/p&gt;">1</state>
+	<state name="filter_mask_masks"		defines="name"	pass_defines="post"						tooltip="&lt;p&gt;Enable linear filtering for the masks of the masks LODs.&lt;/p&gt;">1</state>
+	
+	<state name="curvature"				defines="name"	pass_defines="post"	title="SSDirt"		tooltip="&lt;p&gt;Enable the SSDirt effect.&lt;/p&gt;&lt;p&gt;This effect allows you to simulate worn scratched edges and accumulation of dirt and dust in cavities in the screen space globally. It saves time for large complex scenes with a lot of various models and elements making them look more natural without having to prepare textures for each of them individually.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Notice:&lt;/b&gt; &lt;em&gt;enabling this effect for the terrain result in having it rendered for dynamic objects (like characters and so on) moving across its surface.&lt;/emp&gt;&lt;/p&gt;"/>
+	
+	<group name="Post Processing">
+		<state name="material_ssao"			title="Material SSAO"				tooltip="&lt;p&gt;Enable the Screen Space Ambient Occlusion effect for the global terrain material.&lt;/p&gt;">1</state>
+		<state name="material_ssr"			title="Material SSR"				tooltip="&lt;p&gt;Enable the Screen Space Reflections effect for the global terrain material.&lt;/p&gt;">1</state>
+		<state name="material_sssss"		title="Material SSSSS"				tooltip="&lt;p&gt;Enable the Subsurface Scattering effect for the global terrain material.&lt;/p&gt;">0</state>
+
+		<state name="material_dof"			title="Material DOF"				tooltip="&lt;p&gt;Enable the Depth Of Field effect for the global terrain material.&lt;/p&gt;">1</state>
+		<state name="material_motion_blur"	title="Material Motion Blur"		tooltip="&lt;p&gt;Enable the Motion Blur effect for the global terrain material.&lt;/p&gt;">1</state>
+		<state name="material_sun_shafts"	title="Material Sun Shafts"			tooltip="&lt;p&gt;Enable the Sun Shafts effect for the global terrain material.&lt;/p&gt;">1</state>
+	</group>
+
+	<!-- blending -->
+	<blend src="none" dest="none"/>
+	
+	<!-- options -->
+	<options cast_shadow="1" cast_world_shadow="1"/>
+	<options two_sided="0"/>
+	<options transparent="0"/>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_terrain_global"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/terrain_global/vertex/heights.vert"
+		control="core/shaders/terrain_global/tessellation/heights.cont"
+		evaluate="core/shaders/terrain_global/tessellation/heights.eval"
+		geometry="core/shaders/terrain_global/geometry/wireframe.geom"
+		fragment="core/shaders/terrain_global/fragment/wireframe.frag"/>
+	
+	<!-- depth shaders -->
+	<shader pass="depth_pre_pass" node="object_terrain_global"
+		vertex="core/shaders/terrain_global/vertex/heights.vert"
+		control="core/shaders/terrain_global/tessellation/heights.cont"
+		evaluate="core/shaders/terrain_global/tessellation/heights.eval"
+		fragment="core/shaders/terrain_global/fragment/heights.frag"/>
+	
+	<!-- shadow shaders -->
+	<shader pass="shadow" node="object_terrain_global"
+		defines="BASE_SHADOW"
+		vertex="core/shaders/terrain_global/vertex/heights.vert"
+		control="core/shaders/terrain_global/tessellation/heights.cont"
+		evaluate="core/shaders/terrain_global/tessellation/heights.eval"
+		fragment="core/shaders/terrain_global/fragment/heights.frag"/>
+	
+	<!-- deferred shaders -->
+	<shader pass="post" node="object_terrain_global"
+		defines="BASE_DEFERRED"
+		vertex="core/shaders/terrain_global/vertex/deferred.vert"
+		fragment="core/shaders/terrain_global/fragment/deferred.frag"/>
+	
+	<!-- geometry surface -->
+	<parameter name="material_mask"	shared="0"	type="expression"				group="Default" widget="mask24"		tooltip="&lt;p&gt;Material bitmask.&lt;/p&gt;&lt;p&gt;The decal will be projected onto the terrain surface if the material mask of the decal material matches this mask (one bit, at least).&lt;/p&gt;">0xffffffff</parameter>
+	
+	<parameter name="albedo_color"				type="color"	title="Albedo"	group="Base"	tooltip="Albedo color multiplier">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="roughness"					type="slider"					group="Base"	tooltip="Roughness multiplier">1.0</parameter>
+	<parameter name="microfiber"				type="slider"					group="Base"	tooltip="Microfiber multiplier">1.0</parameter>
+	
+	<parameter name="fade_lods_albedo"	type="slider"	group="Fade lods"	title="Albedo"	tooltip="&lt;p&gt;Linear interpolation factor for albedo LODs.&lt;/p&gt;&lt;p&gt;Determines crossfading smoothness.&lt;/p&gt;">0.2</parameter>
+	<parameter name="fade_lods_normal"	type="slider"	group="Fade lods"	title="Normal"	tooltip="&lt;p&gt;Linear interpolation factor for normal LODs.&lt;/p&gt;&lt;p&gt;Determines crossfading smoothness.&lt;/p&gt;">0.2</parameter>
+	<parameter name="fade_lods_height"	type="slider"	group="Fade lods"	title="Height"	tooltip="&lt;p&gt;Linear interpolation factor for height LODs.&lt;/p&gt;&lt;p&gt;Determines crossfading smoothness.&lt;/p&gt;">0.2</parameter>
+	<parameter name="fade_lods_masks"	type="slider"	group="Fade lods"	title="Masks"	tooltip="&lt;p&gt;Linear interpolation factor for masks LODs.&lt;/p&gt;&lt;p&gt;Determines crossfading smoothness.&lt;/p&gt;">0.2</parameter>
+	
+	<parameter name="shadow_offset"					type="slider"	max="100.0" flags="max_expand">10.0</parameter>
+	<parameter name="lod_padding"					type="slider"	max="1.0" flags="max_expand">0.15</parameter>
+	<parameter name="frustum_culling_padding"		type="slider"	max="1.0" flags="max_expand">0.1</parameter>
+	<parameter name="subpixel_polygons_reduction"	type="slider"	max="50.0" flags="max_expand">10.0</parameter>
+	<parameter name="back_face_culling"				type="slider"	max="1.0" flags="max_expand">0.5</parameter>
+	<parameter name="oblique_frustum_culling"		type="slider"	max="1.0" flags="max_expand">0.9</parameter>
+	
+		<!--curavture-->
+	<group name="SSDirt">
+		<slider	name="curvature_scale_cavity"		curvature="1"						flags="max_expand"	title="Cavity Scale"				tooltip="&lt;p&gt;Scale factor for the SSDirt effect in concave areas.&lt;/p&gt;&lt;p&gt;Higher values result in more pronounced effect in slits and cavities.&lt;/p&gt;">1.0</slider>
+		<slider	name="curvature_scale_convexity"	curvature="1"						flags="max_expand"	title="Convexity Scale"				tooltip="&lt;p&gt;Scale factor for the SSDirt effect in convex areas.&lt;/p&gt;&lt;p&gt;Higher values result in more pronounced effect on edges and convexities.&lt;/p&gt;">1.0</slider>
+		<uv		name="curvature_uv_transform"		curvature="1"											title="Curvature UV Transform"		tooltip="&lt;p&gt;UV-coordinates transformation for textures applied in concave and convex areas. (X,Y) - scale, (Z,W) - offset.&lt;/p&gt;">vec4(1.0f,1.0f,0.0f,0.0f)</uv>
+	</group>
+	
+	<texture unit="3" name="no_imagery_data" hidden="1">core/textures/no_imagery_data.dds</texture>
+	<texture unit="4" type="terrain_flat_position" pass="post" filter="point" geodetic="1"/>
+	<texture unit="5" type="current_depth" pass="post" filter="point"/>
+	<texture unit="6" type="opacity_depth" pass="post" filter="point"/>
+	<texture unit="12" name="curvature" wrap="repeat" anisotropy="1" pass="post" curvature="1" title="SSDirt"	tooltip="&lt;p&gt;Texture used for the SSDirt effect, 3 channels: R - ignored, G - cavity mask, B - convexity mask&lt;/p&gt;">core/textures/common/white.dds</texture>
+	
+</base_material>

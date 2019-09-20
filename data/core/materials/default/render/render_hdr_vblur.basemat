@@ -1,0 +1,11 @@
+<base_material version="2.8.0.0" name="render_hdr_vblur" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		defines="VBLUR"
+		vertex="core/shaders/default/render/vertex_hdr_blur.shader"
+		fragment="core/shaders/default/render/fragment_hdr_blur.shader"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+</base_material>

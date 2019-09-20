@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="ObjectMeshStatic" id="1311746614" name="cube">
+		<mesh_name>guid://4dee35401622a05a352c274b3fbfb3076af328ab</mesh_name>
+		<surface name="cube_mat" physics_friction="1" physics_restitution="1" material="856a527c0a972ae0b1a7012ba883608a786bfe78"/>
+		<body type="BodyRigid" id="978614569" frozen="0">
+			<shape type="ShapeBox" id="285180821">
+				<size>0.100000001 0.100000001 0.100000001</size>
+			</shape>
+			<shape type="ShapeSphere" id="1428780555" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.0375000015 -0.0375000015 -0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+			<shape type="ShapeSphere" id="119311552" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.0375000015 -0.0375000015 -0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+			<shape type="ShapeSphere" id="76784637" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.0375000015 0.0375000015 -0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+			<shape type="ShapeSphere" id="1576491747" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.0375000015 0.0375000015 -0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+			<shape type="ShapeSphere" id="949575631" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.0375000015 -0.0375000015 0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+			<shape type="ShapeSphere" id="944418172" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.0375000015 -0.0375000015 0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+			<shape type="ShapeSphere" id="1201927973" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.0375000015 0.0375000015 0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+			<shape type="ShapeSphere" id="1763874036" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.0375000015 0.0375000015 0.0375000015 1">
+				<radius>0.0125000002</radius>
+			</shape>
+		</body>
+		<properties>
+			<property parent="60e5d2c8e421b4a67909e20938d5d9d8935a2fe2" guid="52b29a6f2de005025000007958702f8410f3f513"/>
+		</properties>
+		<transform>0.99999988 -5.9604645e-008 0 0.0 5.9604645e-008 0.99999988 0 0.0 0 0 0.99999982 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

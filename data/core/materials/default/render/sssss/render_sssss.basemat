@@ -1,0 +1,33 @@
+<base_material version="2.8.0.0" name="render_sssss" hidden="1">
+	
+	<state name="quality" defines="QUALITY_0,QUALITY_1,QUALITY_2,QUALITY_3">0</state>
+
+	<state name="diffuse" defines="name">1</state>
+	<state name="environment" defines="name">0</state>
+
+	<!-- Interleaved -->
+	<state name="interleaved" defines="name">1</state>
+	<state name="interleaved_samples" defines="name_items" items="1x2,2x2"/>
+	<!--  -->
+
+	<state name="resolution" defines="name" type="int"/>
+
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/sssss/sssss.frag"/>
+	
+	<texture type="linear_depth"/>
+	<texture type="gbuffer_material_mask"/>
+	<texture type="gbuffer_shading"/>
+	<texture name="noise" filter="point">core/textures/common/noise.dds</texture>
+	
+	<texture name="prepare_light" type="procedural"/>
+	<texture name="prepare_depth" type="procedural"/>
+	
+	<slider name="radius">1.0</slider>
+	<color name="color">1.0 0.0 0.0 1.0</color>
+	<slider name="noise_step">0.5</slider>
+	<slider name="noise_ray">0.5</slider>
+	<slider name="min_threshold">4.0</slider>
+	<slider name="max_threshold">10.0</slider>
+	
+</base_material>

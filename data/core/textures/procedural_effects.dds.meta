@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>837fb41b70ad8a04bbceacfcea1b2bc1698b4eaf</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="837fb41b70ad8a04bbceacfcea1b2bc1698b4eaf" name="procedural_effects.dds" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="sky_base_error" base_material="sky_base" manual="1" hidden="1">
+	<blend src="none" dest="none"/>
+	<state name="background">1</state>
+	<state name="clouds">0</state>
+	<texture name="background_0">core/textures/common/environment_white.dds</texture>
+	<parameter name="background_color">1 0 0 1</parameter>
+</material>

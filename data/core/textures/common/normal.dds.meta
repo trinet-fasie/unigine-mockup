@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>692dbb7d56d633e22551bd47f4d92cd2d498270d</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="692dbb7d56d633e22551bd47f4d92cd2d498270d" name="normal.dds" link="0"/>
+	</runtimes>
+</asset>

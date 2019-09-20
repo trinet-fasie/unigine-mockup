@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="NodeReference" id="1285361090" name="table">
+		<reference>guid://5205fd0ad443ec2f36bb4a217cb0e82ca53cae7f</reference>
+		<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 0 0 0 1.0</transform>
+	</node>
+	<node type="NodeReference" id="70803414" name="cone">
+		<reference>guid://8826793d7964115cf9b7cc324078808ecaff9f9a</reference>
+		<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 0.26209369 -0.10684502 0.85266656 1.0</transform>
+	</node>
+	<node type="NodeReference" id="1022887288" name="cube">
+		<reference>guid://dcb71446f6831245b2be0a5af70be111cd441ae1</reference>
+		<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 0.061177086 -0.073100306 0.8531782 1.0</transform>
+	</node>
+	<node type="NodeReference" id="1326202069" name="cylinder">
+		<reference>guid://1f2cc7e097a23d77edfb375ecb5a299dcfbc584e</reference>
+		<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 0.11424735 0.1524699 0.85369211 1.0</transform>
+	</node>
+	<node type="NodeReference" id="1932081012" name="sphere">
+		<reference>guid://247fd69876c5d8e677f734c89b744de05c9c0dd2</reference>
+		<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 -0.071041822 0.080802068 0.8533836 1.0</transform>
+	</node>
+</nodes>

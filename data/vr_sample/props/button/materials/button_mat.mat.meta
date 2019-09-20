@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>152c435e75d6ef60e1df8cbe24f612c42b50be6e</guid>
+	<type>material</type>
+	<hash>30928a83</hash>
+	<runtimes>
+		<runtime id="152c435e75d6ef60e1df8cbe24f612c42b50be6e" name="button_mat" link="0"/>
+	</runtimes>
+</asset>

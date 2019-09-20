@@ -1,0 +1,17 @@
+<base_material version="2.8.0.0" name="render_dof_mask_blur" hidden="1">
+	
+	<state name="horizontal" defines="VERTICAL,HORIZONTAL">0</state>
+	<state name="quality">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/dof/mask_blur.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	<texture type="opacity_depth"/>
+	
+	<!-- parameters -->
+	<parameter name="blur_radius" type="slider">1.0</parameter>
+	
+</base_material>

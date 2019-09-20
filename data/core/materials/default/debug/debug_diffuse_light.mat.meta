@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>e809893aa2a0b06b183949e6e30b5a86c4f850c0</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="e809893aa2a0b06b183949e6e30b5a86c4f850c0" name="debug_diffuse_light.mat" link="0"/>
+	</runtimes>
+</asset>

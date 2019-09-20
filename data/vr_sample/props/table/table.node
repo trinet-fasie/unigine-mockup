@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="ObjectMeshStatic" id="1071416335" name="table">
+		<mesh_name>guid://f76549bad4c05c9c201a43c4fca6c9b3ef82521b</mesh_name>
+		<surface name="table_mat" physics_friction="1" physics_restitution="1" material="0e59fa203450b20e59b1398494c3797fc0a67a7e"/>
+		<body type="BodyDummy" id="1213754578" frozen="0">
+			<shape type="ShapeBox" id="572979463" transform="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.775623441 1">
+				<size>1.505162 0.720413983 0.0528430045</size>
+			</shape>
+			<shape type="ShapeBox" id="2082017574" transform="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.63876152 1">
+				<size>1.505162 0.720413983 0.0170488413</size>
+			</shape>
+			<shape type="ShapeBox" id="97830241" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.695795476 -0.320715725 0.395629644 1">
+				<size>0.0633970872 0.0616435595 0.791035295</size>
+			</shape>
+			<shape type="ShapeBox" id="1104505826" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.70192188 -0.320499003 0.3900657 1">
+				<size>0.0570756011 0.063725248 0.779907405</size>
+			</shape>
+			<shape type="ShapeBox" id="2093651372" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.699423194 0.303289503 0.390914142 1">
+				<size>0.0608723462 0.0594088919 0.78160429</size>
+			</shape>
+			<shape type="ShapeBox" id="87858003" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.693991959 0.300648093 0.390631974 1">
+				<size>0.0580621473 0.0618958883 0.781039953</size>
+			</shape>
+			<shape type="ShapeBox" id="1206148268" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.411881685 0 0.717594802 1">
+				<size>0.662745237 0.720413983 0.155082867</size>
+			</shape>
+			<shape type="ShapeBox" id="1826192075" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.693953633 -0.00946274959 0.199782088 1">
+				<size>0.0239422079 0.574417114 0.0423623286</size>
+			</shape>
+			<shape type="ShapeBox" id="1542077311" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.700586438 -0.00811995938 0.20049876 1">
+				<size>0.0251153335 0.566657901 0.039756272</size>
+			</shape>
+			<shape type="ShapeBox" id="1113483929" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.00299082976 0.299162388 0.199354753 1">
+				<size>1.39309645 0.0228118431 0.0408503972</size>
+			</shape>
+			<shape type="ShapeBox" id="38758442" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.733991206 -0.000220973641 0.603929222 1">
+				<size>0.0192367248 0.699653566 0.360533893</size>
+			</shape>
+			<shape type="ShapeBox" id="519222293" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.736469805 1.58590574e-005 0.610257983 1">
+				<size>0.0169518776 0.696194112 0.374383181</size>
+			</shape>
+			<shape type="ShapeBox" id="184360219" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.00162082131 0.339754105 0.608849108 1">
+				<size>1.48843646 0.0173061788 0.37146762</size>
+			</shape>
+		</body>
+		<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="508435892" name="drawer">
+			<mesh_name>guid://1fd5d2c686eee14523784fb8a4ed5a14e1d03bf0</mesh_name>
+			<surface name="table_mat" physics_friction="1" physics_restitution="1" material="0e59fa203450b20e59b1398494c3797fc0a67a7e"/>
+			<body type="BodyRigid" id="1826504906" frozen="0">
+				<freezable>0</freezable>
+				<shape type="ShapeBox" id="208991913" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.00155212567 0.323108613 -0.00222777575 1">
+					<size>0.557262182 0.0476866439 0.0763938278</size>
+					<mass>0</mass>
+				</shape>
+				<shape type="ShapeBox" id="1796961974" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.000399988552 0.0145506524 -0.0608299971 1">
+					<size>0.531708837 0.572415173 0.050127171</size>
+					<mass>0</mass>
+				</shape>
+				<shape type="ShapeBox" id="952601046" transform="1 0 0 0 0 1 0 0 0 0 1 0 -0.29335475 0.016985938 -0.00176971511 1">
+					<size>0.0593174137 0.57672739 0.0765944272</size>
+					<mass>0</mass>
+				</shape>
+				<shape type="ShapeBox" id="1809408476" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.288644493 0.0159615371 -0.000815677166 1">
+					<size>0.0477462076 0.575757504 0.0749416128</size>
+					<mass>0</mass>
+				</shape>
+				<shape type="ShapeBox" id="270068540" transform="1 0 0 0 0 1 0 0 0 0 1 0 0 -0.298514366 -0.000196624547 1">
+					<size>0.574716985 0.0565389991 0.096935533</size>
+					<mass>0</mass>
+				</shape>
+			</body>
+			<properties>
+				<property parent="a2dd7ec666aacd57fc6d0571db038b51deb9fb6e" guid="dd2ca19371f29b081d34a3a1863ff4e9a02b0c59">
+					<parameter name="change_rot">0</parameter>
+					<parameter name="handle_min_pos">0.377999991 0.0529999994 0.69599998</parameter>
+					<parameter name="handle_max_pos">0.377999991 0.56400001 0.69599998</parameter>
+				</property>
+			</properties>
+			<transform>0.99999988 -5.0663937e-007 0 0.0 5.0663931e-007 0.99999976 0 0.0 0 0 1.0000001 0.0 0.37826252 0.052999999 0.69563055 1.0</transform>
+		</node>
+	</node>
+</nodes>

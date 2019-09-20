@@ -1,0 +1,12 @@
+<base_material version="2.8.0.0" name="render_dof_mask_focus" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/dof/mask_focus.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	<texture type="dof_mask"/>
+	<texture name="dof_mask_blur" type="procedural"/>
+	
+</base_material>

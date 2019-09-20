@@ -1,0 +1,9 @@
+<base_material version="2.8.0.0" name="render_clear_material_mask" hidden="1">
+	
+	<shader pass="post"
+		defines="BASE_DEFERRED"
+		fragment="core/shaders/screen_space/fragment/clear_material_mask.frag"/>
+	
+	<texture type="current_depth"/>
+	
+</base_material>

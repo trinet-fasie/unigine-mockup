@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="LightVoxelProbe">
+		<box_size>8 8 4</box_size>
+		<attenuation_distance>0.2 0.2 0.2</attenuation_distance>
+		<voxel_size>0.5</voxel_size>
+		<use_sun_color>0</use_sun_color>
+		<additive_blending>0</additive_blending>
+		<ambient_color>1 1 1 1</ambient_color>
+		<ambient_intensity>1</ambient_intensity>
+		<ambient_bias>0.5</ambient_bias>
+		<ambient_cubic_filtering>0</ambient_cubic_filtering>
+		<reflection_enabled>1</reflection_enabled>
+		<reflection_color>1 1 1 1</reflection_color>
+		<reflection_intensity>1</reflection_intensity>
+		<reflection_visibility_roughness_min>0</reflection_visibility_roughness_min>
+		<reflection_visibility_roughness_max>0.800000012</reflection_visibility_roughness_max>
+		<reflection_bias>2</reflection_bias>
+		<reflection_cubic_filtering>0</reflection_cubic_filtering>
+		<bake_viewport_mask>-1</bake_viewport_mask>
+		<bake_sampling_resolution>-1</bake_sampling_resolution>
+		<bake_sampling_mip_ofsset>6</bake_sampling_mip_ofsset>
+		<bake_num_rays>1024</bake_num_rays>
+		<bake_znear>0.001</bake_znear>
+		<bake_zfar>1000</bake_zfar>
+		<bake_fix_light_bleeding_bounce>1</bake_fix_light_bleeding_bounce>
+		<bake_fix_light_bleeding_intensity>1</bake_fix_light_bleeding_intensity>
+		<bake_fix_light_bleeding_radius>0</bake_fix_light_bleeding_radius>
+		<bake_internal_volume>2</bake_internal_volume>
+		<bake_full_resolution_bounces>0</bake_full_resolution_bounces>
+		<bake_caustic>0</bake_caustic>
+		<bake_visibility_emission>1</bake_visibility_emission>
+		<bake_visibility_sky>1</bake_visibility_sky>
+		<bake_visibility_light_world>1</bake_visibility_light_world>
+		<bake_visibility_light_omni>1</bake_visibility_light_omni>
+		<bake_visibility_light_proj>1</bake_visibility_light_proj>
+		<bake_visibility_voxel_probe>1</bake_visibility_voxel_probe>
+		<bake_visibility_environment_probe>1</bake_visibility_environment_probe>
+		<texture/>
+		<shadow_bias>1</shadow_bias>
+		<fade_distance>4</fade_distance>
+		<mode>1</mode>
+		<shadow_screen_space>0</shadow_screen_space>
+		<shadow_screen_space_num_rays>8</shadow_screen_space_num_rays>
+		<shadow_screen_space_num_steps>8</shadow_screen_space_num_steps>
+		<shadow_screen_space_noise_ray>1</shadow_screen_space_noise_ray>
+		<shadow_screen_space_noise_step>0.5</shadow_screen_space_noise_step>
+		<shadow_screen_space_step_size>0.5</shadow_screen_space_step_size>
+		<shadow_screen_space_threshold>1</shadow_screen_space_threshold>
+		<shadow_screen_space_softness>0.4</shadow_screen_space_softness>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

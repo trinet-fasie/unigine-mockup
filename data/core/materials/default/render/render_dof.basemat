@@ -1,0 +1,21 @@
+<base_material version="2.8.0.0" name="render_dof" hidden="1">
+	
+	<state name="quality" defines="QUALITY_0,QUALITY_1,QUALITY_2,QUALITY_3">0</state>
+	<state name="focus_improvement" defines="name">0</state>
+	<state name="bokeh_mode" items="ring,circle" defines="name_items">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/dof/dof.frag"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	<texture name="dof_mask_blur" type="procedural"/>
+	<texture name="iris" filter="linear">core/textures/render_hdr_bokeh_iris.dds</texture>
+	<texture type="opacity_depth"/>
+	
+	<!-- parameters -->
+	<parameter name="blur_radius" type="slider">1.0</parameter>
+	<parameter name="smoothness_ring" type="slider">0.0</parameter>
+	
+</base_material>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>2ba3d92b408d6b164bcb300f790cae75cbea4cf5</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="2ba3d92b408d6b164bcb300f790cae75cbea4cf5" name="mesh_layer_mask.dds" link="0"/>
+	</runtimes>
+</asset>

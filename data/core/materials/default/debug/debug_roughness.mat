@@ -1,0 +1,7 @@
+<material version="2.8.0.0" name="debug_roughness" base_material="render_composite_deferred" parent_name="debug_materials" editable="0" manual="1">
+	<state name="srgb">0</state>
+	<state name="auto_exposure">0</state>
+	<parameter name="exposure">1</parameter>
+	<parameter name="albedo_visible">1</parameter>
+	<parameter name="buffer_roughness_visible">1</parameter>
+</material>

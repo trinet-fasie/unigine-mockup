@@ -1,0 +1,8 @@
+<base_material version="2.8.0.0" name="render_downscale_x" hidden="1">
+	
+	<shader pass="post"
+		defines="HORIZONTAL"
+		fragment="core/shaders/screen_space/fragment/downscale.frag"/>
+	
+	<texture name="color" pass="post" type="procedural"/>
+</base_material>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<base_material version="2.6" name="vr_post_filter_selection">
+	<blend src="none" dest="none"/>
+	<state name="filter_width" type="switch" items="quart_width">0</state>
+	<state name="filter_height" type="switch" items="quart_height">0</state>
+	<state name="filter_format" type="switch" items="rgba8">0</state>
+	<shader pass="post"
+		vertex="core/shaders/screen_space/vertex/default.vert"
+		fragment="shaders/screen_space/filter_selection.frag"/>
+	<texture name="color" type="procedural" shader="all" pass="post" filter="bilinear"/>
+	<texture name="auxiliary" type="auxiliary" shader="all" filter="bilinear"/>
+</base_material>

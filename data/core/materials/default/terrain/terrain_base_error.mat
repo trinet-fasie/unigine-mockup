@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="terrain_base_error" base_material="terrain_base" manual="1" hidden="1">
+	<options cast_shadow="0" cast_world_shadow="0"/>
+	<state name="material_detail">0</state>
+	<state name="material_roughness">0</state>
+	<state name="material_normal">0</state>
+	<state name="material_ssao">0</state>
+	<state name="material_ssr">0</state>
+	<state name="material_dof">0</state>
+	<state name="material_motion_blur">0</state>
+	<state name="material_sun_shafts">0</state>
+	<parameter name="albedo_color">1 0 0 1</parameter>
+</material>

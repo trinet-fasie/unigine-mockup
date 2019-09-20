@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="water_mesh_base_error" base_material="water_mesh_base" manual="1" hidden="1">
+	<parameter name="subsurface_color">1 0 0 1</parameter>
+	<parameter name="underwater_fog_transparency">0</parameter>
+	<parameter name="underwater_fog_color">1 0 0 1</parameter>
+</material>

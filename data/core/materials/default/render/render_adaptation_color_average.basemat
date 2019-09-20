@@ -1,0 +1,16 @@
+<base_material version="2.8.0.0" name="render_adaptation_color_average" hidden="1">
+	
+	<state name="auto_exposure" defines="name">0</state>
+	<state name="auto_white_balance" defines="name">0</state>
+	<state name="quadratic" defines="name">0</state>
+	<state name="stereo_hidden_area_vr" defines="name">0</state>
+	
+	<shader pass="post"
+		vertex="core/shaders/screen_space/adaptation_color/vertex/average.vert"
+		fragment="core/shaders/screen_space/adaptation_color/fragment/average.frag"/>
+	
+	<texture name="color" type="procedural"/>
+	
+	<float4 name="viewport_transform" stereo_hidden_area_vr="1">1.0 1.0 0.0 0.0</float4>
+	
+</base_material>

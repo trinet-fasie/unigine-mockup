@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>4c773a07e2054239168a5187d0ed71ad10db3c99</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="4c773a07e2054239168a5187d0ed71ad10db3c99" name="volume_base_proj_diffuse.dds" link="0"/>
+	</runtimes>
+</asset>

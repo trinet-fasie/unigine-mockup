@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>eb40098cb80df71476d76e13b1fe049c9f4d2983</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="eb40098cb80df71476d76e13b1fe049c9f4d2983" name="debug_highlights.mat" link="0"/>
+	</runtimes>
+</asset>

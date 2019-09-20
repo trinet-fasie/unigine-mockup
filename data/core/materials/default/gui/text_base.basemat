@@ -1,0 +1,39 @@
+<base_material version="2.8.0.0" name="text_base" editable="0">
+		
+	<!-- blending -->
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	
+	<!-- options -->
+	<options cast_shadow="0" cast_world_shadow="0"/>
+	<options depth_mask="0"/>
+	<options transparent="2"/>
+	<options offset="20"/>
+	<options two_sided="1"/>
+	<options overlap="1"/>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_text"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/text/vertex/default.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="visualizer_solid" node="object_text"
+		defines="BASE_VISUALIZER_SOLID"
+		vertex="core/shaders/text/vertex/default.vert"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- ambient shaders -->
+	<shader pass="ambient" node="object_text"
+		defines="BASE_AMBIENT,AMBIENT"
+		vertex="core/shaders/text/vertex/default.vert"
+		fragment="core/shaders/text/fragment/ambient.frag"/>
+	
+	<shader pass="shadow" node="object_text"
+		vertex="core/shaders/text/vertex/default.vert"
+		fragment="core/shaders/text/fragment/shadow.frag"/>
+		
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	
+</base_material>

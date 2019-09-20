@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.9.0.0">
+	<node type="ObjectText">
+		<font_name>core/gui/font.ttf</font_name>
+		<text>Text</text>
+		<font_size>100</font_size>
+		<text_wrap_width>0</text_wrap_width>
+		<surface name="text" material="8230661da494b0c1e2c7ac49ce3a4fd5bbaa36ee"/>
+		<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+	</node>
+</nodes>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>3186f00a64c66bce1b9e927486b23a61800eed37</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="3186f00a64c66bce1b9e927486b23a61800eed37" name="mesh_noise_mask.dds" link="0"/>
+	</runtimes>
+</asset>

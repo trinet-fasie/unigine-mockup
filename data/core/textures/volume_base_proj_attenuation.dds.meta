@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>35d987f84c0681c9b575fd13edfc11a03cf1a3bb</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="35d987f84c0681c9b575fd13edfc11a03cf1a3bb" name="volume_base_proj_attenuation.dds" link="0"/>
+	</runtimes>
+</asset>

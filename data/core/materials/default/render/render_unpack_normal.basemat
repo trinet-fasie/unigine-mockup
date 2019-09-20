@@ -1,0 +1,7 @@
+<base_material version="2.8.0.0" name="render_unpack_normal" hidden="1">
+	
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/unpack_normal.frag"/>
+	
+	<texture type="gbuffer_normal"/>
+</base_material>

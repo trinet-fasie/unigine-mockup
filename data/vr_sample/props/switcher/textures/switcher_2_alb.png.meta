@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>6ad742435ac926fb4eb5ad5b74196d64197c01f2</guid>
+	<type>texture</type>
+	<hash>cda521cc</hash>
+	<parameters>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="string" name="width">1024</parameter>
+		<parameter type="string" name="height">1024</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="preset_name">albedo (rgb)</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="0101f484d974f6b363f44bc2114db0190a093ccc" name="switcher_2_alb.dds" link="1"/>
+		<runtime id="6ad742435ac926fb4eb5ad5b74196d64197c01f2" name="switcher_2_alb.png" link="0"/>
+	</runtimes>
+</asset>

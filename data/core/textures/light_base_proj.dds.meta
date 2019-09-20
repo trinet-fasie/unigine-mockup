@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>a464bf4eb11d243a8b4df30531fde7b278d580a9</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="a464bf4eb11d243a8b4df30531fde7b278d580a9" name="light_base_proj.dds" link="0"/>
+	</runtimes>
+</asset>

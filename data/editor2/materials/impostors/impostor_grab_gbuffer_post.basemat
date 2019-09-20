@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="impostor_grab_gbuffer_post" hidden="1">
+	<state name="grab_mode" type="switch" defines="name_items" items="albedo,albedo_ssao,normal,bent_normal,shading,ao,ssao,translucence,depth">0</state>
+	<shader pass="post"
+		fragment="editor2/shaders/impostors/impostor_grab_gbuffer_post.frag"/>
+	<texture type="opacity_depth"/>
+	<texture type="gbuffer_albedo"/>
+	<texture type="gbuffer_normal"/>
+	<texture type="gbuffer_shading"/>
+	<texture type="bent_normal"/>
+	<texture type="ssao"/>
+	
+	<slider name="impostor_plane_distance" >1.0</slider>
+</base_material>

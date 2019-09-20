@@ -1,0 +1,14 @@
+<material version="2.8.0.0" name="billboards_stars" base_material="billboards_base" editable="0" manual="1">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options transparent="2" depth_mask="0"/>
+	<state name="deferred">0</state>
+	<state name="screen">1</state>
+	<state name="angular">1</state>
+	<state name="emission">1</state>
+	<state name="emission_texture">0</state>
+	<state name="ambient">0</state>
+	<state name="haze">0</state>
+	<state name="light_omni">0</state>
+	<state name="light_proj">0</state>
+	<state name="light_world">0</state>
+</material>

@@ -1,0 +1,17 @@
+<base_material version="2.8.0.0" name="render_shafts" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/default/render/vertex_hdr_shaft.shader"
+		fragment="core/shaders/default/render/fragment_hdr_shaft.shader"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	<texture name="noise" filter="linear">core/textures/render_hdr_shaft_noise.dds</texture>
+	
+	<!-- parameters -->
+	<float4 name="color">1.0 1.0 1.0 1.0</float4>
+	<float4 name="texcoord">1.0 1.0 1.0 1.0</float4>
+	<slider name="threshold">1.0</slider>
+	<slider name="attenuation">1.0</slider>
+</base_material>

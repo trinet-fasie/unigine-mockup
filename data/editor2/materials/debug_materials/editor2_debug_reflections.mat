@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="editor2_debug_reflections" guid="01c5dd65ea19cc99ed89b3d33f06e6063c9b7f8d" parent="a1f4572ec0870aecf956120b940823116d772bfc" base_material="render_composite_deferred" hidden="1">
+	<parameter name="intensity">1</parameter>
+</material>

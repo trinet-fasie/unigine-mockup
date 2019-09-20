@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>8f5752e36236780dc74797f0ba78b039972d74b9</guid>
+	<type>texture</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="8f5752e36236780dc74797f0ba78b039972d74b9" name="mesh_leaf_color.dds" link="0"/>
+	</runtimes>
+</asset>

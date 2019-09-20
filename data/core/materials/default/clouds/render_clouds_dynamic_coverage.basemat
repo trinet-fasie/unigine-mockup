@@ -1,0 +1,13 @@
+<base_material version="2.8.0.0" name="render_clouds_dynamic_coverage" parameters_prefix="m" hidden="1">
+		
+	<state name="attenuation_type" defines="name_items" items="sphere,box">0</state>
+	
+	<shader pass="post"
+		fragment="core/shaders/clouds/fragment/dynamic_coverage.frag"
+		vertex="core/shaders/clouds/vertex/dynamic_coverage.vert"/>
+	
+	<parameter name="attenuation" type="slider">1.0</parameter>
+	<parameter name="power" type="slider">1.0</parameter>
+	<parameter name="intensity" type="slider">1.0</parameter>
+	
+</base_material>

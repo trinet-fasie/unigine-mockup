@@ -1,0 +1,18 @@
+<material version="2.8.0.0" name="water_global_beaufort_1" base_material="water_global_base" editable="0" manual="1">
+	<parameter name="max_tessellation_factor">14</parameter>
+	<parameter name="tessellation_distance">0.1</parameter>
+	<parameter name="procedural_normal_blur">0.1</parameter>
+	<parameter name="procedural_normal_easing">0.2</parameter>
+	<parameter name="geometry_contraction_normal_blur">0.1</parameter>
+	<parameter name="geometry_contraction_normal_easing">8</parameter>
+	<parameter name="wave0_height_scale">0.4</parameter>
+	<parameter name="wave1_height_scale">0.25</parameter>
+	<parameter name="wave2_height_scale">0.2</parameter>
+	<parameter name="foam0_uv_size">100</parameter>
+	<parameter name="foam0_uv_speed">0.01</parameter>
+	<parameter name="foam1_uv_size">5</parameter>
+	<parameter name="foam1_uv_speed">-0.01</parameter>
+	<parameter name="coast_foam_intensity">0.6</parameter>
+	<parameter name="shoreline_wave_tiling">25</parameter>
+	<parameter name="shoreline_falloff">0.04</parameter>
+</material>

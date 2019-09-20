@@ -1,0 +1,15 @@
+<base_material version="2.8.0.0" name="render_cross" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="core/shaders/default/render/vertex_hdr_cross.shader"
+		fragment="core/shaders/default/render/fragment_hdr_cross.shader"/>
+	
+	<!-- textures -->
+	<texture name="color" pass="post" type="procedural"/>
+	
+	<!-- parameters -->
+	<float4 name="color" internal="1" >1.0 1.0 1.0 1.0</float4>
+	<float4 name="direction" internal="1" >1.0 1.0 1.0 1.0</float4>
+	<parameter name="threshold" type="slider" >1.0</parameter>
+</base_material>

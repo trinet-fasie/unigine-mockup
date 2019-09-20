@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.8.0.0" name="volume_light_base_error" base_material="volume_light_base" manual="1" hidden="1">
+	<parameter name="diffuse_color">1 0 0 1</parameter>
+	<parameter name="volume_density">-3</parameter>
+</material>

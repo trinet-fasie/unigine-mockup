@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>a3e5411c529dfbdf1027b39f1946ac437cf827a4</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="a3e5411c529dfbdf1027b39f1946ac437cf827a4" name="volume_fog_base.basemat" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.8.0.0">
+	<node type="NodeDummy" id="1636361024" name="monitor">
+		<transform>1 5.6843419e-014 -1.6007107e-010 0.0 5.6843419e-014 0.99999988 1.1641532e-009 0.0 2.7648639e-010 -9.3132257e-010 1 0.0 2.0861626e-007 -3.7252903e-008 -8.1461621e-008 1.0</transform>
+		<node type="ObjectMeshStatic" id="1287145298" name="Monitor">
+			<mesh_name>guid://1d1029a6380f34cd4c434fc8b82bb0873c2bb43a</mesh_name>
+			<surface name="Material" physics_friction="1" physics_restitution="1" material="883b167be467199e6a4e3465e924da8018dd0bdf"/>
+			<properties>
+				<property parent="60e5d2c8e421b4a67909e20938d5d9d8935a2fe2" guid="785ab54f31fea26216a23e591e3493e4294b4df3">
+					<parameter name="use_physics">0</parameter>
+					<parameter name="use_sounds">0</parameter>
+				</property>
+			</properties>
+			<transform>-1.9999993 -6.4465993e-008 1.6053567e-006 0.0 1.6053568e-006 1.1920928e-007 1.9999996 0.0 -6.4466008e-008 1.9999999 1.1920929e-007 0.0 -2.9802322e-008 0 -5.9604645e-008 1.0</transform>
+			<node type="ObjectGuiMesh" id="1042242403" name="Display">
+				<mesh_name>guid://ed1d40fc476ba82b2e1a9f8ec439a195f14a85f0</mesh_name>
+				<gui_name/>
+				<mouse_show>0</mouse_show>
+				<control_distance>0</control_distance>
+				<screen_width>1680</screen_width>
+				<screen_height>780</screen_height>
+				<surface name="plane" physics_friction="1" physics_restitution="1" material="45130945fbfdc3e6f898cbb99e9d01e51d3f4bbd"/>
+				<properties>
+					<property parent="cb5346a081dcf654061b7f897ea14d9b43140712" guid="f30bbab67c31f29d22f7d35864d1bed7901e4e4a">
+						<parameter name="script">guid://2cd933a018a8527f9c40bdd280dc43091634f0d4</parameter>
+					</property>
+				</properties>
+				<transform>0.49999982 -7.2180192e-005 -7.0124635e-008 0.0 7.2180221e-005 0.49999827 0.0012062828 0.0 -1.0400663e-007 -0.0012062829 0.49999833 0.0 2.0861626e-007 0.16499788 0.0058457032 1.0</transform>
+			</node>
+		</node>
+	</node>
+</nodes>

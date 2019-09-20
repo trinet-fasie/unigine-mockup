@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>0369029980be0b249509dc333ca673f6f61cdadd</guid>
+	<type>mesh</type>
+	<hash>661593b3</hash>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="bool" name="animation">1</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="0369029980be0b249509dc333ca673f6f61cdadd" name="agent.mesh" link="0"/>
+	</runtimes>
+</asset>

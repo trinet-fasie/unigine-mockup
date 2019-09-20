@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material version="2.8.0.0" name="terrain_blend_by_mask_post" hidden="1">
+	<shader pass="post"
+		fragment="editor2/shaders/terrain/terrain_blend_by_mask_post.frag"/>
+</base_material>

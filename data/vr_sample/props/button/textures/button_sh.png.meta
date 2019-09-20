@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>4230de38570082746c5a0f3ff20c95fcfb99a761</guid>
+	<type>texture</type>
+	<hash>2b0ab8ec</hash>
+	<parameters>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="string" name="width">auto</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="preset_name">shading (rgb)</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="f92ac497aa47a4c2b1e930993a2ef84eabe8311d" name="button_sh.dds" link="1"/>
+		<runtime id="4230de38570082746c5a0f3ff20c95fcfb99a761" name="button_sh.png" link="0"/>
+	</runtimes>
+</asset>

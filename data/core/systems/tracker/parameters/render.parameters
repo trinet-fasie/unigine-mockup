@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright (C) 2005-2019, UNIGINE. All rights reserved.
+ *
+ * This file is a part of the UNIGINE 2.9 SDK.
+ *
+ * Your use and / or redistribution of this software in source and / or
+ * binary form, with or without modification, is subject to: (i) your
+ * ongoing acceptance of and compliance with the terms and conditions of
+ * the UNIGINE License Agreement; and (ii) your inclusion of this notice
+ * in any version of this software that you use or redistribute.
+ * A copy of the UNIGINE License Agreement is available by contacting
+ * UNIGINE. at http://unigine.com/
+ */
+
+-->
+
+<parameters version="1.00">
+	
+	<!-- Common parameters -->
+	<parameter type="render.enabled" track="toggle">
+		<set>engine.render.setEnabled(VALUE);</set>
+		<get>VALUE = engine.render.isEnabled();</get>
+	</parameter>
+	<parameter type="render.firstFrame" track="toggle">
+		<set>engine.render.setFirstFrame(VALUE);</set>
+		<get>VALUE = engine.render.isFirstFrame();</get>
+	</parameter>
+	
+	<!-- Distance parameters -->
+	<parameter type="render.distanceScale" track="float" min="0.0">
+		<set>engine.render.setDistanceScale(VALUE);</set>
+		<get>VALUE = engine.render.getDistanceScale();</get>
+	</parameter>
+	<parameter type="render.lightDistance" track="float">
+		<set>engine.render.setLightDistance(VALUE);</set>
+		<get>VALUE = engine.render.getLightDistance();</get>
+	</parameter>
+	<parameter type="render.decalDistance" track="float">
+		<set>engine.render.setDecalDistance(VALUE);</set>
+		<get>VALUE = engine.render.getDecalDistance();</get>
+	</parameter>
+	<parameter type="render.objectDistance" track="float">
+		<set>engine.render.setObjectDistance(VALUE);</set>
+		<get>VALUE = engine.render.getObjectDistance();</get>
+	</parameter>
+	<parameter type="render.clutterDistance" track="float">
+		<set>engine.render.setClutterDistance(VALUE);</set>
+		<get>VALUE = engine.render.getClutterDistance();</get>
+	</parameter>
+	<parameter type="render.shadowDistance" track="float">
+		<set>engine.render.setShadowDistance(VALUE);</set>
+		<get>VALUE = engine.render.getShadowDistance();</get>
+	</parameter>
+	<parameter type="render.reflectionDistance" track="float">
+		<set>engine.render.setReflectionDistance(VALUE);</set>
+		<get>VALUE = engine.render.getReflectionDistance();</get>
+	</parameter>
+	
+	<!-- Stereo parameters -->
+	<parameter type="render.stereo.separation" track="float" min="0.0">
+		<set>engine.render.setStereoSeparation(VALUE);</set>
+		<get>VALUE = engine.render.getStereoSeparation();</get>
+	</parameter>
+	<parameter type="render.stereo.distance" track="float" min="0.0">
+		<set>engine.render.setStereoDistance(VALUE);</set>
+		<get>VALUE = engine.render.getStereoDistance();</get>
+	</parameter>
+	
+	<!-- Impostor parameters -->
+	<parameter type="render.reflection.distance" track="float">
+		<set>engine.render.setImpostorDistance(VALUE);</set>
+		<get>VALUE = engine.render.getImpostorDistance();</get>
+	</parameter>
+	
+	<!-- Tessellation parameters -->
+	<parameter type="render.tessellation.scale" track="float" min="0.0">
+		<set>engine.render.setTessellationScale(VALUE);</set>
+		<get>VALUE = engine.render.getTessellationScale();</get>
+	</parameter>
+	<parameter type="render.tessellation.factor" track="float" min="0.0">
+		<set>engine.render.setTessellationFactor(VALUE);</set>
+		<get>VALUE = engine.render.getTessellationFactor();</get>
+	</parameter>
+	<parameter type="render.tessellation.distance" track="float" min="0.0">
+		<set>engine.render.setTessellationDistance(VALUE);</set>
+		<get>VALUE = engine.render.getTessellationDistance();</get>
+	</parameter>
+	
+	<!-- Animation parameters -->
+	<parameter type="render.animation.stem" track="float" min="0.0">
+		<set>engine.render.setAnimationStem(VALUE);</set>
+		<get>VALUE = engine.render.getAnimationStem();</get>
+	</parameter>
+	<parameter type="render.animation.leaf" track="float" min="0.0">
+		<set>engine.render.setAnimationLeaf(VALUE);</set>
+		<get>VALUE = engine.render.getAnimationLeaf();</get>
+	</parameter>
+	<parameter type="render.animation.scale" track="float" min="0.0">
+		<set>engine.render.setAnimationScale(VALUE);</set>
+		<get>VALUE = engine.render.getAnimationScale();</get>
+	</parameter>
+	<parameter type="render.animation.wind" track="vec3">
+		<set>engine.render.setAnimationWind(VALUE);</set>
+		<get>VALUE = engine.render.getAnimationWind();</get>
+	</parameter>
+	
+	<!-- Refraction parameters -->
+	<parameter type="render.refractionDispersion" track="vec3">
+		<set>engine.render.setRefractionDispersion(VALUE);</set>
+		<get>VALUE = engine.render.getRefractionDispersion();</get>
+	</parameter>
+	
+	<!-- MotionBlur parameters -->
+	<parameter type="render.motionBlur.velocityScale" track="float" min="0.0">
+		<set>engine.render.setMotionBlurVelocityScale(VALUE);</set>
+		<get>VALUE = engine.render.getMotionBlurVelocityScale();</get>
+	</parameter>
+	
+	<!-- shadow shafts parameters -->
+	<parameter type="render.shadowShafts.exposure" track="float" min="0.0" max="1.0">
+		<set>engine.render.setShadowShaftsExposure(VALUE);</set>
+		<get>VALUE = engine.render.getShadowShaftsExposure();</get>
+	</parameter>
+	<parameter type="render.shadowShafts.length" track="float" min="0.0" max="1.0">
+		<set>engine.render.setShadowShaftsLength(VALUE);</set>
+		<get>VALUE = engine.render.getShadowShaftsLength();</get>
+	</parameter>
+	<parameter type="render.shadowShafts.attenuation" track="float" min="0.0" max="1.0">
+		<set>engine.render.setShadowShaftsAttenuation(VALUE);</set>
+		<get>VALUE = engine.render.getShadowShaftsAttenuation();</get>
+	</parameter>
+	
+	<!-- DOF parameters -->
+	<parameter type="render.dof.focalDistance" track="float" min="0.0">
+		<set>engine.render.setDOFFocalDistance(VALUE);</set>
+		<get>VALUE = engine.render.getDOFFocalDistance();</get>
+	</parameter>
+	<parameter type="render.dof.blur" track="float" min="0.0">
+		<set>engine.render.setDOFBlur(VALUE);</set>
+		<get>VALUE = engine.render.getDOFBlur();</get>
+	</parameter>
+	<parameter type="render.dof.chromaticAberration" track="float" min="0.0">
+		<set>engine.render.setDOFChromaticAberration(VALUE);</set>
+		<get>VALUE = engine.render.getDOFChromaticAberration();</get>
+	</parameter>
+	
+	<parameter type="render.dof.farDistance" track="float" min="0.0">
+		<set>engine.render.setDOFFarDistance(VALUE);</set>
+		<get>VALUE = engine.render.getDOFFarDistance();</get>
+	</parameter>
+	<parameter type="render.dof.farFocalOffset" track="float" min="0.0">
+		<set>engine.render.setDOFFarFocalOffset(VALUE);</set>
+		<get>VALUE = engine.render.getDOFFarFocalOffset();</get>
+	</parameter>
+	
+	<parameter type="render.dof.nearDistance" track="float" min="0.0">
+		<set>engine.render.setDOFNearDistance(VALUE);</set>
+		<get>VALUE = engine.render.getDOFNearDistance();</get>
+	</parameter>
+	<parameter type="render.dof.nearFocalOffset" track="float" min="0.0">
+		<set>engine.render.setDOFNearFocalOffset(VALUE);</set>
+		<get>VALUE = engine.render.getDOFNearFocalOffset();</get>
+	</parameter>
+	
+	<!-- camera effects parameters -->
+	<parameter type="render.cameraEffects.threshold" track="float" min="0.0">
+		<set>engine.render.setCameraEffectsThreshold(VALUE);</set>
+		<get>VALUE = engine.render.getCameraEffectsThreshold();</get>
+	</parameter>
+	<parameter type="render.dirtScale" track="float" min="0.0">
+		<set>engine.render.setDirtScale(VALUE);</set>
+		<get>VALUE = engine.render.getDirtScale();</get>
+	</parameter>
+	<parameter type="render.dirtTexture" track="string" filter="image">
+		<set>if(engine.render.getDirtTextureName() != VALUE) engine.render.setDirtTextureName(VALUE);</set>
+		<get>VALUE = engine.render.getDirtTextureName();</get>
+	</parameter>
+	
+	<!-- exposure parameters -->
+	<parameter type="render.exposure.scale" track="float" min="0.0">
+		<set>engine.render.setExposure(VALUE);</set>
+		<get>VALUE = engine.render.getExposure();</get>
+	</parameter>
+	<parameter type="render.exposure.adaptation" track="float" min="0.0">
+		<set>engine.render.setExposureAdaptation(VALUE);</set>
+		<get>VALUE = engine.render.getExposureAdaptation();</get>
+	</parameter>
+	<parameter type="render.exposure.minLuminance" track="float" min="-10.0" max="10.0">
+		<set>engine.render.setExposureMinLuminance(VALUE);</set>
+		<get>VALUE = engine.render.getExposureMinLuminance();</get>
+	</parameter>
+	<parameter type="render.exposure.maxLuminance" track="float" min="-10.0" max="10.0">
+		<set>engine.render.setExposureMaxLuminance(VALUE);</set>
+		<get>VALUE = engine.render.getExposureMaxLuminance();</get>
+	</parameter>
+	
+	<!-- filmic parameters -->
+	<parameter type="render.filmic.shoulderScale" track="float" min="0.0" max="1.0">
+		<set>engine.render.setFilmicShoulderScale(VALUE);</set>
+		<get>VALUE = engine.render.getFilmicShoulderScale();</get>
+	</parameter>
+	<parameter type="render.filmic.linearScale" track="float" min="0.0" max="1.0">
+		<set>engine.render.setFilmicLinearScale(VALUE);</set>
+		<get>VALUE = engine.render.getFilmicLinearScale();</get>
+	</parameter>
+	<parameter type="render.filmic.linearAngle" track="float" min="0.0" max="1.0">
+		<set>engine.render.setFilmicLinearAngle(VALUE);</set>
+		<get>VALUE = engine.render.getFilmicLinearAngle();</get>
+	</parameter>
+	<parameter type="render.filmic.toeScale" track="float" min="0.0" max="1.0">
+		<set>engine.render.setFilmicToeScale(VALUE);</set>
+		<get>VALUE = engine.render.getFilmicToeScale();</get>
+	</parameter>
+	<parameter type="render.filmic.toeNumerator" track="float" min="0.0" max="1.0">
+		<set>engine.render.setFilmicToeNumerator(VALUE);</set>
+		<get>VALUE = engine.render.getFilmicToeNumerator();</get>
+	</parameter>
+	<parameter type="render.filmic.toeDenominator" track="float" min="0.0" max="1.0">
+		<set>engine.render.setFilmicToeDenominator(VALUE);</set>
+		<get>VALUE = engine.render.getFilmicToeDenominator();</get>
+	</parameter>
+	<parameter type="render.filmic.whiteLevel" track="float" min="0.0">
+		<set>engine.render.setFilmicWhiteLevel(VALUE);</set>
+		<get>VALUE = engine.render.getFilmicWhiteLevel();</get>
+	</parameter>
+	
+	<!-- bloom parameters -->
+	<parameter type="render.bloom.scale" track="float" min="0.0">
+		<set>engine.render.setBloomScale(VALUE);</set>
+		<get>VALUE = engine.render.getBloomScale();</get>
+	</parameter>
+	<parameter type="render.bloom.power" track="float" min="0.0">
+		<set>engine.render.setBloomPower(VALUE);</set>
+		<get>VALUE = engine.render.getBloomPower();</get>
+	</parameter>
+	
+	<!-- cross parameters -->
+	<parameter type="render.cross.enabled" track="toggle">
+		<set>engine.render.setCross(VALUE);</set>
+		<get>VALUE = engine.render.isCross();</get>
+	</parameter>
+	<parameter type="render.cross.color" track="color">
+		<set>engine.render.setCrossColor(VALUE);</set>
+		<get>VALUE = engine.render.getCrossColor();</get>
+	</parameter>
+	<parameter type="render.cross.scale" track="float" min="0.0">
+		<set>engine.render.setCrossScale(VALUE);</set>
+		<get>VALUE = engine.render.getCrossScale();</get>
+	</parameter>
+	<parameter type="render.cross.shafts" track="switch" min="2" max="8">
+		<set>engine.render.setCrossShafts(VALUE);</set>
+		<get>VALUE = engine.render.getCrossShafts();</get>
+	</parameter>
+	<parameter type="render.cross.length" track="float" min="0.0" max="2.0">
+		<set>engine.render.setCrossLength(VALUE);</set>
+		<get>VALUE = engine.render.getCrossLength();</get>
+	</parameter>
+	<parameter type="render.cross.angle" track="float">
+		<set>engine.render.setCrossAngle(VALUE);</set>
+		<get>VALUE = engine.render.getCrossAngle();</get>
+	</parameter>
+	<parameter type="render.cross.threshold" track="float" min="0.0">
+		<set>engine.render.setCrossThreshold(VALUE);</set>
+		<get>VALUE = engine.render.getCrossThreshold();</get>
+	</parameter>
+	
+	<!-- sun shafts parameters -->
+	<parameter type="render.sunShafts.enabled" track="toggle">
+		<set>engine.render.setSunShafts(VALUE);</set>
+		<get>VALUE = engine.render.isSunShafts();</get>
+	</parameter>
+	<parameter type="render.sunShafts.color" track="color">
+		<set>engine.render.setSunShaftsColor(VALUE);</set>
+		<get>VALUE = engine.render.getSunShaftsColor();</get>
+	</parameter>
+	<parameter type="render.sunShafts.scale" track="float" min="0.0">
+		<set>engine.render.setSunShaftsScale(VALUE);</set>
+		<get>VALUE = engine.render.getSunShaftsScale();</get>
+	</parameter>
+	<parameter type="render.sunShafts.length" track="float" min="0.0" max="1.0">
+		<set>engine.render.setSunShaftsLength(VALUE);</set>
+		<get>VALUE = engine.render.getSunShaftsLength();</get>
+	</parameter>
+	<parameter type="render.sunShafts.attenuation" track="float" min="0.0" max="1.0">
+		<set>engine.render.setSunShaftsAttenuation(VALUE);</set>
+		<get>VALUE = engine.render.getSunShaftsAttenuation();</get>
+	</parameter>
+	<parameter type="render.sunShafts.threshold" track="float" min="0.0">
+		<set>engine.render.setSunShaftsThreshold(VALUE);</set>
+		<get>VALUE = engine.render.getSunShaftsThreshold();</get>
+	</parameter>
+	
+	<!-- lens parameters -->
+	<parameter type="render.lens.enabled" track="toggle">
+		<set>engine.render.setLens(VALUE);</set>
+		<get>VALUE = engine.render.isLens();</get>
+	</parameter>
+	<parameter type="render.lens.color" track="color">
+		<set>engine.render.setLensColor(VALUE);</set>
+		<get>VALUE = engine.render.getLensColor();</get>
+	</parameter>
+	<parameter type="render.lens.scale" track="float" min="0.0">
+		<set>engine.render.setLensScale(VALUE);</set>
+		<get>VALUE = engine.render.getLensScale();</get>
+	</parameter>
+	<parameter type="render.lens.length" track="float" min="0.0" max="1.0">
+		<set>engine.render.setLensLength(VALUE);</set>
+		<get>VALUE = engine.render.getLensLength();</get>
+	</parameter>
+	<parameter type="render.lens.radius" track="float" min="0.0" max="1.0">
+		<set>engine.render.setLensRadius(VALUE);</set>
+		<get>VALUE = engine.render.getLensRadius();</get>
+	</parameter>
+	<parameter type="render.lens.threshold" track="float" min="0.0">
+		<set>engine.render.setLensThreshold(VALUE);</set>
+		<get>VALUE = engine.render.getLensThreshold();</get>
+	</parameter>
+	<parameter type="render.dispersion" track="vec3">
+		<set>engine.render.setLensDispersion(VALUE);</set>
+		<get>VALUE = engine.render.getLensDispersion();</get>
+	</parameter>
+	
+	<!-- Color post parameters -->
+	<parameter type="render.color.brightness" track="float" min="-1.0" max="1.0">
+		<set>engine.render.setColorBrightness(VALUE);</set>
+		<get>VALUE = engine.render.getColorBrightness();</get>
+	</parameter>
+	<parameter type="render.color.contrast" track="float" min="-1.0" max="1.0">
+		<set>engine.render.setColorContrast(VALUE);</set>
+		<get>VALUE = engine.render.getColorContrast();</get>
+	</parameter>
+	<parameter type="render.color.saturation" track="float" min="0.0" max="2.0">
+		<set>engine.render.setColorSaturation(VALUE);</set>
+		<get>VALUE = engine.render.getColorSaturation();</get>
+	</parameter>
+	<parameter type="render.color.gamma" track="float" min="0.5" max="1.5">
+		<set>engine.render.setColorGamma(VALUE);</set>
+		<get>VALUE = engine.render.getColorGamma();</get>
+	</parameter>
+	<parameter type="render.color.white" track="color">
+		<set>engine.render.setColorWhite(VALUE);</set>
+		<get>VALUE = engine.render.getColorWhite();</get>
+	</parameter>
+	<parameter type="render.color.texture" track="string" filter="image">
+		<set>if(engine.render.getColorTextureName() != VALUE) engine.render.setColorTextureName(VALUE);</set>
+		<get>VALUE = engine.render.getColorTextureName();</get>
+	</parameter>
+	
+	<!-- Render post parameters -->
+	<parameter type="render.renderMaterials" track="string" filter="material">
+		<set>engine.render.setRenderMaterials(VALUE);</set>
+		<get>VALUE = engine.render.getRenderMaterials();</get>
+	</parameter>
+	<parameter type="render.compositeMaterial" track="string" filter="material">
+		<set>engine.render.setCompositeMaterial(VALUE);</set>
+		<get>VALUE = engine.render.getCompositeMaterial();</get>
+	</parameter>
+	<parameter type="render.postMaterials" track="string" filter="material">
+		<set>engine.render.setPostMaterials(VALUE);</set>
+		<get>VALUE = engine.render.getPostMaterials();</get>
+	</parameter>
+	
+	<!-- Fade post parameters -->
+	<parameter type="render.fadeColor" track="color">
+		<set>engine.render.setFadeColor(VALUE);</set>
+		<get>VALUE = engine.render.getFadeColor();</get>
+	</parameter>
+	
+	<!-- Environment parameters -->
+	
+	<!-- preset 0 -->
+	<parameter type="render.environment.preset0.intensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.scattering.baseLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setScatteringBaseLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getScatteringBaseLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.scattering.mieLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setScatteringMieLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getScatteringMieLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.scattering.lightColorLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setScatteringLightColorLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getScatteringLightColorLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.scattering.groundLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setScatteringGroundLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getScatteringGroundLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.scattering.groundColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setScatteringGroundColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getScatteringGroundColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.environmentTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.environmentTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.hazeColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setHazeColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getHazeColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.hazeMaxDistance" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setHazeMaxDistance(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getHazeMaxDistance();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.hazeDensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setHazeDensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getHazeDensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.ambientIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setAmbientIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getAmbientIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.reflectionIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setReflectionIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getReflectionIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.skyIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setSkyIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getSkyIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- sun 0 -->
+	<parameter type="render.environment.preset0.sunTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setSunTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getSunTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.sunAngularSize" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setSunAngularSize(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getSunAngularSize();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.sunTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setSunTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getSunTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.sunTextureIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setSunTextureIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getSunTextureIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- moon 0 -->
+	<parameter type="render.environment.preset0.moonTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setMoonTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getMoonTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.moonAngularSize" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setMoonAngularSize(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getMoonAngularSize();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.moonTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setMoonTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getMoonTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset0.moonTextureIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			preset.setMoonTextureIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(0);
+			VALUE = preset.getMoonTextureIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- preset 1 -->
+	<parameter type="render.environment.preset1.intensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.scattering.baseLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setScatteringBaseLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getScatteringBaseLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.scattering.mieLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setScatteringMieLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getScatteringMieLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.scattering.lightColorLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setScatteringLightColorLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getScatteringLightColorLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.scattering.groundLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setScatteringGroundLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getScatteringGroundLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.scattering.groundColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setScatteringGroundColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getScatteringGroundColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.environmentTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.environmentTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.hazeColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setHazeColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getHazeColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.hazeMaxDistance" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setHazeMaxDistance(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getHazeMaxDistance();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.hazeDensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setHazeDensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getHazeDensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.ambientIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setAmbientIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getAmbientIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.reflectionIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setReflectionIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getReflectionIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.skyIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setSkyIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getSkyIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- sun 1 -->
+	<parameter type="render.environment.preset1.sunTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setSunTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getSunTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.sunAngularSize" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setSunAngularSize(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getSunAngularSize();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.sunTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setSunTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getSunTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.sunTextureIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setSunTextureIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getSunTextureIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- moon 1 -->
+	<parameter type="render.environment.preset1.moonTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setMoonTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getMoonTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.moonAngularSize" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setMoonAngularSize(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getMoonAngularSize();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.moonTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setMoonTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getMoonTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset1.moonTextureIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			preset.setMoonTextureIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(1);
+			VALUE = preset.getMoonTextureIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- preset 2 -->
+	<parameter type="render.environment.preset2.intensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.scattering.baseLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setScatteringBaseLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getScatteringBaseLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.scattering.mieLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setScatteringMieLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getScatteringMieLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.scattering.lightColorLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setScatteringLightColorLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getScatteringLightColorLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.scattering.groundLUT" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setScatteringGroundLUTName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getScatteringGroundLUTName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.scattering.groundColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setScatteringGroundColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getScatteringGroundColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.environmentTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.environmentTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.hazeColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setHazeColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getHazeColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.hazeMaxDistance" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setHazeMaxDistance(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getHazeMaxDistance();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.hazeDensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setHazeDensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getHazeDensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.ambientIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setAmbientIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getAmbientIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.reflectionIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setReflectionIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getReflectionIntensity();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.skyIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setSkyIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getSkyIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- sun 2 -->
+	<parameter type="render.environment.preset2.sunTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setSunTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getSunTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.sunAngularSize" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setSunAngularSize(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getSunAngularSize();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.sunTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setSunTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getSunTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.sunTextureIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setSunTextureIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getSunTextureIntensity();
+		}]]></get>
+	</parameter>
+	
+	<!-- moon 2 -->
+	<parameter type="render.environment.preset2.moonTexture" track="string" filter="image">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setMoonTextureName(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getMoonTextureName();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.moonAngularSize" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setMoonAngularSize(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getMoonAngularSize();
+		}]]>
+		</get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.moonTextureColor" track="color">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setMoonTextureColor(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getMoonTextureColor();
+		}]]></get>
+	</parameter>
+	
+	<parameter type="render.environment.preset2.moonTextureIntensity" track="float" min="0.0" max="inf">
+		<set><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			preset.setMoonTextureIntensity(VALUE);
+		}]]></set>
+		<get><![CDATA[{
+			RenderEnvironmentPreset preset = engine.render.getEnvironmentPreset(2);
+			VALUE = preset.getMoonTextureIntensity();
+		}]]></get>
+	</parameter>
+	
+</parameters>

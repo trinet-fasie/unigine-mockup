@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.9.0.0">
+	<guid>374ef6b5996a989065b212af2d02a04237dd62b9</guid>
+	<type>node</type>
+	<hash>a6a9cc62</hash>
+	<runtimes>
+		<runtime id="374ef6b5996a989065b212af2d02a04237dd62b9" name="animation.node" link="0"/>
+	</runtimes>
+</asset>

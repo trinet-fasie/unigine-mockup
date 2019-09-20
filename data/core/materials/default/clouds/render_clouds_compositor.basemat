@@ -1,0 +1,30 @@
+<base_material version="2.8.0.0" name="render_clouds_compositor" parameters_prefix="m" hidden="1">
+	
+	<state name="has_clouds_dynamic_coverage"	defines="name" type="toggle">0</state>
+	<state name="clouds_num_layers"		defines="name" type="int">1</state>
+	
+	<state name="interleaved_rendering" defines="name" type="toggle">0</state>
+	<state name="sampling_quality" defines="name_items" items="low,medium,high,ultra">3</state>
+	<state name="lighting_quality" defines="name_items" items="low,medium,high,ultra">3</state>
+	<state name="samples_count" defines="name_items" items="low,medium,high,ultra">2</state>
+	
+	<state name="simplified_depth_test" defines="name" type="toggle">0</state>
+	
+	<state name="global_receive_shadows" defines="name" type="toggle">0</state>
+	<state name="geodetic" defines="name" type="toggle">0</state>
+	
+	<state name="disable_haze" defines="name" type="toggle">0</state>
+	
+	<shader pass="post"
+		compute="core/shaders/clouds/compute/compositor.comp"/>
+		
+	<texture unit="0" shader="all" filter="linear" name="clouds_noise">core/textures/clouds/cloud_noise.dds</texture>
+	<texture unit="1" shader="all" filter="linear" name="clouds_noise_detail">core/textures/clouds/cloud_noise_detail.dds</texture>
+	<texture unit="2" shader="all" name="curl_noise">core/textures/clouds/curl_noise.dds</texture>
+	
+	<texture unit="3" shader="all" type="clouds_static_coverage"/>
+	<texture unit="4" shader="all" type="clouds_dynamic_coverage"/>
+	
+	<texture unit="5" shader="all" name="noise" filter="point">core/textures/common/noise.dds</texture>
+	
+</base_material>

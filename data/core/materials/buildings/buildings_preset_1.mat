@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="buildings_preset_1" guid="95d0c1ab9b6ceedb1c083497b0cca9cf206bc8f2" base_material="mesh_base" editable="0">
+	<state name="noise_3d">1</state>
+	<texture name="albedo">guid://badef8fb7418499586d25da29dc3964803904f74</texture>
+	<parameter name="noise_3d_scale">0.100000001</parameter>
+	<parameter name="noise_3d_transform">vec3(0.02f,0.02f,0.02f)</parameter>
+</material>

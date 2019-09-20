@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>456685a81abe07cd71cb0a52f9408b5aad619e50</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="456685a81abe07cd71cb0a52f9408b5aad619e50" name="post_vblur_cube.basemat" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,34 @@
+<base_material version="2.8.0.0" name="render_ssr" hidden="1">
+	
+	<state name="importance_sampling"	defines="name"/>
+	<state name="fast_tracing"			defines="name"/>
+	<state name="increased_accuracy"	defines="name"/>
+	
+	<state name="num_steps"				defines="name" type="int"/>
+	<state name="num_rays"				defines="name" type="int"/>
+	
+	<state name="resolution"			defines="name" type="int"/>
+	<state name="depth_resolution"		defines="name" type="int"/>
+	<state name="color_resolution"		defines="name" type="int"/>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/ssr.frag"/>
+	
+	<!-- textures -->
+	<texture type="screen_color_old_reprojection"/>
+	<texture type="linear_depth"/>
+	<texture type="gbuffer_normal"/>
+	<texture name="noise"	filter="point">core/textures/common/noise.dds</texture>
+	<texture unit="8" type="gbuffer_shading"/>
+	
+	<!-- parameters -->
+	<slider name="step_size">1.0</slider>
+	<slider name="noise_ray">1.0</slider>
+	<slider name="noise_step">1.0</slider>
+	
+	<slider name="threshold">1.0</slider>
+	<slider name="threshold_occlusion">1.0</slider>
+	<float4 name="visibility_roughness">1.0 1.0 1.0 1.0</float4>
+	
+</base_material>

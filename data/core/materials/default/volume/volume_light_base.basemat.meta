@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>d6ced8e87e163c86cded294ea5e2d87216a74680</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="d6ced8e87e163c86cded294ea5e2d87216a74680" name="volume_light_base.basemat" link="0"/>
+	</runtimes>
+</asset>

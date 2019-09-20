@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="editor2_debug_ssr" guid="3c188c25a75c54df569093d853bcd096a04f7c6d" parent="8065f4ce1c294c8df4eac20309539be1a39c7c47" base_material="render_composite_deferred" hidden="1">
+	<parameter name="intensity">1</parameter>
+	<parameter name="albedo_visible">0</parameter>
+</material>

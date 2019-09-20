@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.8.0.0">
+	<guid>553f9d03eb3e95ef4f81fe52a5b1aad3b9d94511</guid>
+	<type>material</type>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+	<runtimes>
+		<runtime id="553f9d03eb3e95ef4f81fe52a5b1aad3b9d94511" name="billboards_stars.mat" link="0"/>
+	</runtimes>
+</asset>

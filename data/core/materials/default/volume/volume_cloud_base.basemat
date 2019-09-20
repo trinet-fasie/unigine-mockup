@@ -1,0 +1,52 @@
+<base_material version="2.8.0.0" name="volume_cloud_base" editable="0">
+	
+	<!-- blending -->
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	
+	<!-- options -->
+	<options depth_mask="0" cast_shadow="0" cast_world_shadow="0" receive_shadow="0" receive_world_shadow="0"/>
+	<options transparent="2"/>
+	
+	<!-- states -->
+	<state name="samples" type="switch" items="8,16,32,64,128,256">3</state>
+	<state name="attenuation" type="toggle">0</state>
+	<state name="volume" type="toggle" title="Soft Interaction" group="Options" tooltip="Soft depth interaction">1</state>
+	<state name="use_sky_color" defines="name" type="toggle">0</state>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_volume_box"
+		vertex="core/shaders/volume/vertex/cloud/box_ambient.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="visualizer_solid" node="object_volume_box"
+		vertex="core/shaders/volume/vertex/cloud/box_ambient.vert"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- ambient shaders -->
+	<shader pass="ambient" node="object_volume_box"
+		samples_defines="SAMPLES_8,SAMPLES_16,SAMPLES_32,SAMPLES_64,SAMPLES_128,SAMPLES_256"
+		attenuation_defines=",ATTENUATION"
+		volume_defines=",VOLUME"
+		vertex="core/shaders/volume/vertex/cloud/box_ambient.vert"
+		fragment="core/shaders/volume/fragment/cloud/box_ambient.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" name="density"		filter="linear"	wrap="clamp" anisotropy="0"	tooltip="&lt;p&gt;Volumetric cloud density texture.&lt;/p&gt;&lt;p&gt;Determines the shape of the cloud and its density.&lt;/p&gt;">core/textures/volume_base_cloud_density.dds</texture>
+	<texture unit="1" name="attenuation"	filter="linear"	wrap="clamp_x" group="Base"	tooltip="Gradient texture for color modulation.">core/textures/volume_base_cloud_attenuation.dds</texture>
+	<texture unit="2" name="noise"			filter="point"	hidden="1">core/textures/common/noise.dds</texture>
+	<texture unit="14" type="reflection_cube"/>
+	<texture unit="15" type="opacity_depth"/>
+	
+	<!-- parameters -->
+	<group name="Transform">
+		<parameter name="attenuation_transform" type="slider" min="0.0" max="1.0"	title="Attenuation"	tooltip="&lt;p&gt;Attenuation texture V coordinate transformation.&lt;/p&gt;">0.5</parameter>
+		<parameter name="base_scale" type="expression"								title="Scale"		tooltip="&lt;p&gt;Density texture coordinates scale.&lt;/p&gt;">vec3(1.0f,1.0f,1.0f)</parameter>
+		<parameter name="base_offset" type="expression"								title="Offset"		tooltip="&lt;p&gt;Density texture coordinates offset.&lt;/p&gt;">vec3(0.0f,0.0f,0.0f)</parameter>
+	</group>
+	<parameter name="diffuse_color" type="color" title="Diffuse" group="Base"				tooltip="&lt;p&gt;Diffuse color multiplier.&lt;/p&gt;&lt;p&gt;Determines the color of the cloud.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="volume_density" type="slider"	group="Density"	min="0.0" max="2.0" flags="max_expand"	title="Multiplier"	tooltip="&lt;p&gt;Volume density multiplier.&lt;/p&gt;">1.0</parameter>
+	<parameter name="jitter" type="slider" min="0.0" max="3.0"		tooltip="">1.0</parameter>
+	<parameter name="volume_power" type="slider" min="0.0" max="2.0" tooltip="">0.5</parameter>
+	
+</base_material>

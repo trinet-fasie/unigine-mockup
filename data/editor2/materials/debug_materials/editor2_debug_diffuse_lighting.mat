@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.9.0.0" name="editor2_debug_diffuse_lighting" guid="6cd73d4170db3a64e3db21bff1ad65da8527439a" parent="b03488d605c8bcb8dd4eec60a42b7f9506f3d4f3" base_material="render_composite_deferred" hidden="1">
+	<state name="srgb">1</state>
+	<state name="auto_exposure">1</state>
+	<parameter name="intensity">1</parameter>
+	<parameter name="baked_lightmap_visible">1</parameter>
+	<parameter name="lights_diffuse_visible">1</parameter>
+</material>

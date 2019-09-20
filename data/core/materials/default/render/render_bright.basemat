@@ -1,0 +1,13 @@
+<base_material version="2.8.0.0" name="render_bright" hidden="1">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		fragment="core/shaders/screen_space/fragment/bright.frag"/>
+	
+	<!-- textures -->
+	<texture type="screen_color"/>
+	
+	<!-- parameters -->
+	<parameter name="threshold" type="slider" >1.0</parameter>
+	
+</base_material>
